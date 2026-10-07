@@ -613,7 +613,7 @@ Reserve the final three hours for integration and presentation. If delayed, cut 
 
 ## 9. Proposed opportunity dashboard redesign — 7 October 2026
 
-Status: planning only; no application changes are authorized by this planning request. Main was clean and checkpointed first at `04b1182` (after `63b6217`). This section supersedes the earlier dashboard layout proposal after review.
+Status: planning only; this request updates the plan rather than the application. Main was clean and checkpointed first at `04b1182` (after `63b6217`). This section supersedes the earlier dashboard layout proposal after review.
 
 ### Manager workflow and layout
 
@@ -674,9 +674,58 @@ Every card and table uses the full intersection of filters and selected cluster,
 | Activity concerns | Selected accounts with a supported inactivity flag; show cadence/volume evidence and investigate the explanation |
 | Open follow-ups | Open local tasks for selected accounts, including due/overdue subset; progress agreed next steps |
 
-These replace the current all-database totals. Never relabel calibration events as orders or inactivity flags as churn probability. No profit card is populated from unsupported estimates. A later optional scenario mode can accept explicit service prices, costs/margins and conversion assumptions, with scenario-only amounts and unit alignment; that is outside this first dashboard implementation. Probability of a return is not probability of recovery after outreach.
+These replace the current all-database totals. Never relabel calibration events as orders or inactivity flags as churn probability. Keep these four cards as the default. Add an optional commercial-scenario mode after the map, cohort totals and evidence workflow work; in that mode, the demand card switches to estimated contribution while retaining forecast quantity and coverage beneath it. The financial calculation and assumptions are specified below. Probability of a return is not probability of recovery after outreach.
 
 The demand card is account-wide. A product/category cohort filter selects relevant accounts, but cannot turn an existing account forecast into a product-specific forecast. Its caption must retain all-services scope. Due-instrument breakdown can additionally show selected-category counts. Do not prorate three-month predictions into 30/60-day figures.
+
+### Model-derived estimates and optional financial scenarios
+
+Requested planning addition: use data-science methods to construct useful activity, quantity and commercial-potential estimates. Keep observed evidence, evaluated predictions, business-rule scores and assumption-based scenarios distinct in contracts and presentation. The additions in this section are proposed work, not features already delivered.
+
+| Output | Method and target | Display and validation |
+|---|---|---|
+| Expected calibration demand | Forecast next-three-month calibration-event counts from covered historical volume, cadence and seasonality; compare candidate models with the existing baseline | Explicit target dates, supported account count and historical error; current customer baseline WAPE is 65.05%, so treat quantities as directional and improve the model before adding precision |
+| Probability of no activity | For the existing any-calibration target, calculate `1 - probability_of_any_calibration_next_3_months` | For example, 81% probability of activity means 19% probability of no activity in the same window; neither percentage establishes churn or the effect of contact |
+| Missed-cycle review | Retain current cadence/volume-deviation evidence; optionally define a future missed-expected-cycle label using only cutoff-time history and evaluate chronologically | Keep a rule flag separate from a learned probability. Freeze cycle definitions, support checks and label horizons; do not call a proxy confirmed customer churn |
+| Expected next calibration window | Optional survival-analysis experiment using time to next observed provider calibration, with right-censoring for accounts not yet returning | Evaluate against a cadence baseline on later periods; publish supported windows only if the experiment succeeds. Not required for the first dashboard |
+| Commercial potential scenario | Multiply supported forecast quantity by explicitly supplied contribution per calibration, or by supplied price minus variable cost | Label as a scenario, publish assumption provenance and quantity coverage, and distinguish revenue, contribution and net profit |
+| Opportunity priority | Existing explainable timing/quantity/activity/evidence rule score, plus separate urgency/size axes | Score 0–100 with components and version; it is not a probability or learned monetary return |
+
+Financial example: `100 expected calibrations × (€40 assumed price - €25 assumed variable cost) = €1,500 scenario contribution`. This is contribution associated with forecast activity, not extra contribution caused by outreach; it excludes fixed costs. Allow service-specific inputs only when quantity forecasts have matching service scope. The current account-wide forecast can use an explicitly assumed blended contribution per calibration; filtering to an equipment category must not silently make the forecast category-specific.
+
+- Keep assumed price/cost or unit contribution editable, with currency, unit, author/source and saved scenario name. Do not preset fabricated Perschmann prices.
+- Missing financial inputs return null and excluded-account/quantity coverage, never zero-valued profit. Do not monetize due instruments as though each becomes a completed calibration.
+- Offer user-supplied low/base/high assumption sets and sensitivity comparisons. These are scenario ranges, not measured prediction intervals or statistical confidence bounds. Forecast uncertainty can be added only after its coverage has been evaluated.
+- The existing volume forecast already includes zero-activity outcomes. Do not multiply it by return probability again. A future two-part model may use `P(N > 0) × E[N | N > 0]` only if its count forecast is explicitly conditional and jointly evaluated.
+- Incremental-outreach calculations are optional later scenarios: `assumed additional calibrations caused by contact × unit contribution - contact cost`. Keep the extra-activity assumption separate from ordinary return probability. Estimating causal uplift would require contact/intervention and outcome data, with randomization or justified confounding assumptions.
+- Future distinct-order forecasts need validated order IDs, deduplication, timestamp semantics and their own temporal evaluation. Calibration counts and order-position counts are not distinct orders.
+
+Proposed optional scenario contract: `scenario_id`, `currency`, `quantity_unit=calibration_event`, `forecast_scope`, `target_start/end`, `assumptions` (blended contribution or price/variable cost, provenance, low/base/high settings), `expected_quantity`, `supported_account_count`, `excluded_account_count`, `estimated_contribution`, and `interpretation=scenario_not_outreach_uplift`. Add typed financial assumptions rather than an unqualified `profit` field. Persist them separately from SQL evidence; recalculation uses the same selected cohort and selection revision. Chat must explain the assumptions and may change them only through validated workspace controls.
+
+### Sales-manager additions to the Dashboard
+
+The manager needs to decide who to review, who owns the next action, what can be done in available time, and which agreed tasks are slipping. Keep the main screen focused on those decisions; detailed sector/model charts stay on Insights. The following are priorities, not measured business improvements.
+
+| Priority | Addition | Decision and implementation boundary |
+|---|---|---|
+| Core | Act now shortlist with purpose presets | Show a small ranked list for upcoming needs, retention review or discovery; each row has why now, quantity, evidence status and next step. High return probability does not by itself mean the best account to contact |
+| Core | Ownership and deadline strip | Show overdue follow-ups and timely unassigned actions; link to claim/assign and customer follow-up controls. Use local workflow owners, not an inferred CRM owner; overdue task dates follow the workflow clock |
+| Core | Evidence and readiness badges | Separate supported evidence from manual contact/order checks, unresolved unknowns and suppression. A historical absence is not proof that no quotation or contact exists. Explicit stop/suppression rules remain binding |
+| Core | Selection summary and coverage | Show selected account count, share of all matching opportunities, supported forecast count and unsupported evidence count; keep every total on the full filtered cohort, not the plotted sample |
+| Core | Conversation preparation drawer | Open an account's existing facts, affected instruments, unknowns and discovery questions from the shortlist; record outcome, owner and next follow-up without losing cluster selection |
+| Core | Saved action list and export | Save selected account IDs, cluster/filter settings, evidence/reference dates, model/rule versions and selection time; export a handover brief. Reopening revalidates current workflow suppressions and flags a changed snapshot rather than treating an old list as current |
+| Next | Contact-budget planner | Choose 5/10/custom accounts or a supplied time budget, then preview a shortlist and assignments. Start with user-supplied effort assumptions and deadline-first tasks; record manual overrides and do not describe the list as optimized conversion |
+| Next | Financial-scenario switch | Use supplied financial inputs to compare the selected cohort's contribution under low/base/high assumptions; preserve the default quantity view when inputs are missing |
+| Next | Local outcome funnel | Summarize reviewed, contacted, qualified need, quotation requested and next step where explicitly recorded; missing stages remain unknown. Contacted does not mean sold; quotation requested does not mean quotation issued or converted |
+| Later | Recommendation-quality review | Show rejected reasons, snoozes and overdue/completed workflow trends after enough dated local records accumulate; no fabricated historical trend or claimed uplift |
+
+Recommended compact layout: filters → opportunity map → four scoped cards → a small deadline/unassigned strip → priority table with preparation drawer. Put contact-budget, scenario and export controls in the table toolbar. Coverage is a short caption or card footer, not another large chart. Outcome review can be a collapsed panel or Insights subview so the Dashboard remains useful at a glance.
+
+The assistant shares the exact map selection, KPI scope, shortlist, ownership/deadline context, readiness checks and active financial assumptions. It can filter to a cluster, prepare a saved shortlist, explain the assumptions and open the account for recording a confirmed outcome. Unsupported outcomes must not be filled in by generated text, and customer outreach is not automatically sent.
+
+Reuse the existing workflow store and preparation/ranking services. Check which ownership, outcome and assignment operations already exist before proposing new endpoints; add only the missing contract fields/actions. Coverage and financial scenarios use the single opportunity response/composition boundary rather than an independent frontend calculation with different denominators.
+
+Method references: survival analysis and censoring ([lifelines](https://lifelines.readthedocs.io/en/latest/Survival%20analysis%20with%20lifelines.html)); requirements for treatment-effect estimation ([EconML](https://www.pywhy.org/EconML/spec/estimation/dml.html)). These describe candidate methods, not completed evaluations on this dataset.
 
 ### Controls and table
 
@@ -705,6 +754,7 @@ Agent context includes current page, selected cluster ID/name, axes and componen
 3. Build ECharts group/point interactions and Zustand filter/selection state; connect all four cards and the paginated table to the same selection.
 4. Move sector/quality views to Insights and fold Follow-ups into Customers while preserving existing routes.
 5. Add typed agent selection/filter/evidence tools and exact page context, then exercise the full manager workflow in the browser. Preserve streamed Markdown, returned reasoning, tool traces and chat memory.
-6. Commit each passing data, API, UI and agent slice separately. Verify selection totals, deterministic membership, sample-vs-population consistency, product/forecast scope, legacy navigation and mobile/desktop chart behavior.
+6. Connect manager essentials: deadline/unassigned strip, readiness/coverage, preparation drawer and saved action export. Then add the contact-budget planner and optional financial scenarios if the core is complete; survival timing and outcome trends remain later experiments.
+7. Commit each passing data, API, UI and agent slice separately. Verify selection totals, deterministic membership, sample-vs-population consistency, product/forecast scope, scenario units/assumptions, legacy navigation and mobile/desktop chart behavior.
 
 Demo: choose Act now, inspect due demand/activity concerns, filter to an industry and service category, open a ranked account, explain the reason with Pulse, record a timing correction, and see its next step reflected in the selected cohort. Success is a coherent supported decision workflow; incremental sales, prevented churn and profit require later outcome evidence.
