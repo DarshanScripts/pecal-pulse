@@ -748,7 +748,7 @@ Method references: survival analysis and censoring ([lifelines](https://lifeline
 
 First controls: industry, service/equipment category, purpose (all/upcoming/activity review/discovery), requirement window (30/60/90 days), optional behavioral segment, recorded-only/include inferred, and past-due review. Default history lookback is twelve covered months; keep any 6/12-month lookback switch behind separately versioned cached feature sets. Initially support the current historical reference only; arbitrary as-of dates need point-in-time source reconstruction.
 
-Point display limit: 500 / 1,000 / All. Sampling is deterministic and balanced across clusters; clearly show displayed count versus all matching accounts. KPI totals and table never aggregate the sampled points. Full filtered count is available even when fewer dots are shown.
+Point display limit: 200 (default) / 500 / 1,000. The API caps plotted points at 1,000 to limit browser memory. Sampling is deterministic and balanced across clusters; clearly show displayed count versus all matching accounts. KPI totals and table never aggregate the sampled points. Full filtered count is available even when fewer dots are shown.
 
 Table columns: account, industry, behavioral segment, opportunity reason, due instruments, activity-review badge, supported return probability with target window, priority score, owner, next action. Priority is a rule score rather than a calibrated percentage. Separate the activity-review badge from the return probability. Default sort uses existing transparent priority; purpose-specific sort presets can emphasize due quantity or activity concerns. Opening an account preserves the Dashboard selection for returning to it.
 
@@ -775,3 +775,12 @@ Agent context includes current page, selected cluster ID/name, axes and componen
 7. Commit each passing data, API, UI and agent slice separately. Verify selection totals, deterministic membership, sample-vs-population consistency, product/forecast scope, scenario units/assumptions, legacy navigation and mobile/desktop chart behavior.
 
 Demo: choose Act now, inspect due demand/activity concerns, filter to an industry and service category, open a ranked account, explain the reason with Pulse, record a timing correction, and see its next step reflected in the selected cohort. Success is a coherent supported decision workflow; incremental sales, prevented churn and profit require later outcome evidence.
+
+
+### Implementation checkpoint — 8 October 2026
+
+The opportunity model/API, scoped dashboard, preparation drawer, saved shortlists, supplied contribution scenario, Insights navigation and typed assistant filter/cluster tools are implemented. Four frozen clusters passed the configured quality checks (default silhouette 0.608, seed agreement ARI 0.983); opportunity groups remain separate from behavioral segments. The model yielded three urgent size groups and one quieter group, so their labels describe the observed centers rather than promising four artificial quadrants.
+
+Runtime processing uses a streamed compact snapshot and indexed account evidence: 63.2 MB runtime JSON instead of approximately 652 MB. A measured API process used about 724 MB rather than roughly 3 GB. Plot sampling defaults to 200 points and never changes full-cohort totals. Account evidence is capped at 500 loaded records, with at most 50 displayed and separate source-wide tier counts. Large source snapshots cannot be loaded directly by the API.
+
+Custom time-budget allocation, low/base/high scenario sensitivity, survival timing and outcome trends remain later work. The implemented contribution scenario uses an explicitly supplied unit contribution and supported calibration quantity; it does not estimate incremental outreach benefit, net profit or confirmed churn.
