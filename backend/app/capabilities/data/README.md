@@ -27,6 +27,17 @@ uv run python -m unittest discover -s backend/tests -v
 - `backend/app/contracts/sales_v2.py` — frozen shared Pydantic models (plan §4):
   snapshot rows, Member 2 prediction types, requirements/actions/preparation,
   screen metadata, workflow writes, v2 chat context.
+- `backend/app/capabilities/data/service.py` — immutable snapshot loader
+  (`load_snapshot`, `get_customer_detail`, `recency_months`); synthetic fixture
+  in `data/mock/`, real extracts in `data/runtime/snapshots/` (gitignored).
+- `backend/app/capabilities/data/requirements.py` — four-tier due inference
+  (recorded / nominal ±1m / repeat-history ≥3 gaps / unknown), rule
+  `requirements-v1`. Inference reproduces the fixture tiers exactly.
+- `backend/app/capabilities/data/workflow.py` — SQLite owner/checks/
+  signal-scoped suppressions/audit + v2 follow-ups (reason links in audit).
+- `backend/app/api/v2.py` — bootstrap, customers list/detail, followups,
+  contracts, workflow PATCH. Predictions/actions/sectors/model-report return
+  explicit unavailable (503 or null) until Members 2/3 merge; v1 routes intact.
 - `data/mock/v2_snapshot_synthetic.json` — small valid synthetic snapshot
   (`synthetic-v1`, reference 2026-08-31) covering all requirement tiers:
   recorded / nominal-interval / repeat-history / unknown, plus stopped→excluded
