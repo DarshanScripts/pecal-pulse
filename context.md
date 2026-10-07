@@ -2,6 +2,10 @@
 
 Updated: 7 October 2026. Read this before implementing your assigned functionality. [plan.md](plan.md) is the detailed work split and contract specification; [README.md](README.md) contains current run commands. If this repository gains an `AGENTS.md`, read its applicable instructions too.
 
+## Model selection update — 7 October 2026
+
+The user has superseded the fixed Muse model choice: use `LLM_MODEL` from the root `.env`, with environment overrides. Earlier fixed-model references below describe the original selection. Chat status reports the active configured model.
+
 ## Product and user
 
 We chose **Perschmann Challenge 2: Customer Activity Monitoring**. The primary user is an Inside Sales representative with little time for proactive contact because quotation preparation occupies their day.
@@ -34,11 +38,11 @@ The current application is a **runnable mock**, not the completed historical-dat
 - Dashboard has 10 initial opportunity rows, segment/industry charts and an illustrative sector correlation heatmap.
 - Customers has dropdown filters, search, a list/detail view, mock activity probability/forecast, reason evidence, portfolio discovery and conversation/follow-up form.
 - Follow-ups persist in local SQLite and support complete/reopen.
-- assistant-ui chat uses a **scripted Python responder** which can change filters and create bar-chart artifacts through typed events.
-- Current dependencies do not yet include the full agent/checkpoint stack. The v2 APIs/modules/contracts described in the plan are **proposed work**, not already available endpoints.
-- The baseline was checked with a production build, TypeScript, four backend contract/persistence tests and desktop/mobile browser flows.
+- assistant-ui chat now uses a **LangChain ReAct agent** with typed workspace tools and SQLite conversation recovery. Evidence is still synthetic; the active model comes from `LLM_MODEL` and its live streaming/tool-call probe succeeds.
+- LangChain/OpenRouter/checkpoint dependencies are installed. See `backend/app/agents/README.md` for chat routes and merge boundaries. The v2 business APIs/modules/contracts remain **proposed work**.
+- The agent/streaming slice adds nine tests for checkpoint recovery, fresh context, thread isolation, selection commands and tool validation to the four existing backend tests. Token Markdown, provider-returned Thinking blocks, tool calls/results and cancellation are implemented. Historical-data integration and Daytona execution remain pending.
 
-At the initial planning check this folder was **not yet a Git repository**. Aditya must publish the runnable baseline and contract commit so teammates can clone it. Check current Git state before acting; do not assume a remote already exists or initialize someone else's repository implicitly.
+The project is now a Git repository on `main`; Aditya has published the baseline. Check current Git state before integration.
 
 ### Current code map
 
@@ -132,7 +136,8 @@ The detailed schemas and examples live in **plan §4**, not in each person's not
 2. Member 2 exports `CustomerPrediction`, `VolumeForecast`, `SegmentSummary`, sector data and model-quality report.
 3. Member 3 produces `PeerOpportunity`, `AccountAction`/`ActionReason`, `PreparationCard` and structured insight metrics.
 4. Member 1's composition service serves the screen response. The frontend consumes this API; it does not assemble model files or compute business scores itself.
-5. Aditya + Codex own `WorkspaceContext`, `ChatReply`, thread history, control/artifact events and registered agent tools wrapping these services.
+5. Dashboard cards and chatbot grounding share `frontend/src/modules/sales/page-context.ts`. `WorkspaceContext.page_snapshot` carries exact displayed metric labels, values, units, definitions and scope at send time. The backend must preserve this optional snapshot; never substitute the selected account for a dashboard aggregate. Snapshots from a different page are omitted by the context tool.
+6. Aditya + Codex own `WorkspaceContext`, `ChatReply`, thread history, control/artifact events and registered agent tools wrapping these services.
 
 Use opaque consistent IDs; dates/months in ISO forms; explicit units; probabilities `[0,1]`; null for unknown. Match snapshot IDs. Do not divide a quarterly prediction into fake monthly values, invent uncertainty bounds, or return mock values under historical mode.
 

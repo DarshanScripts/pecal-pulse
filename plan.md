@@ -2,6 +2,20 @@
 
 Date: 7 October 2026. Team: Aditya + three backend members. Replace the member labels below with names when assigning work. Aditya and Codex own **both the frontend and the chatbot/agent/workspace manipulation**, including conversation checkpointing and optional Daytona execution.
 
+## Model selection update — 7 October 2026
+
+The user has superseded the fixed Muse model choice: use `LLM_MODEL` from the root `.env`, with environment overrides. Earlier fixed-model references below describe the original selection. Chat status reports the active configured model.
+
+## Implementation update — 7 October 2026
+
+Aditya/Codex's first agent slice is implemented: ReAct/OpenRouter wiring, async SQLite
+memory/display history, fresh page context, registered evidence/filter/navigation/
+selection/tab/list-size/chart tools, and assistant-ui integration. See
+`backend/app/agents/README.md` for endpoints and Member 1 merge boundaries. Evidence
+remains synthetic. Live model access is currently blocked by the OpenRouter account's
+paid-model training privacy restriction; no provider/model substitution was made.
+Streaming Markdown, returned reasoning, and tool-call parts are now implemented and verified with the env-selected model. Daytona execution and browser application acknowledgements remain pending.
+
 ## 1. What we are building
 
 An Inside Sales assistant answering: **“Which customer should I contact next, why now, what should I ask, and what happens afterwards?”**
