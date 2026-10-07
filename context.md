@@ -1,6 +1,6 @@
 # PeCal Pulse — context for the three backend members and their coding agents
 
-Updated: 7 October 2026. Read this before implementing your assigned functionality. [plan.md](plan.md) is the detailed work split and contract specification; [README.md](README.md) contains current run commands. If this repository gains an `AGENTS.md`, read its applicable instructions too.
+Updated: 8 October 2026. Read [AGENTS.md](AGENTS.md) first for the current implementation checkpoint, then read this for team/product context. [plan.md](plan.md) is the detailed work split and contract specification; [README.md](README.md) contains current run commands. Earlier dated notes below are historical; current-state instructions in `AGENTS.md` take precedence over stale implementation descriptions.
 
 ## Model selection update — 7 October 2026
 
@@ -19,7 +19,7 @@ The demo should show a complete customer action, not just prediction dashboards:
 ## Fixed decisions from the user
 
 - **Frontend and chatbot owner:** Aditya with Codex. We own the ReAct agent, checkpointing, artifact creation, data-analysis tools and website manipulation in addition to the frontend. The other three people build data/API, ML/analytics and sales-intelligence functionality.
-- **Frontend:** Next.js + TypeScript; maximum three navigation pages: Dashboard, Customers, Follow-ups. Soft, rounded, attractive UI; usability first.
+- **Frontend:** Next.js + TypeScript; three main navigation pages: Dashboard, Customers, Insights. Follow-ups live inside Customers; legacy routes remain compatible. Soft, rounded, attractive UI; usability first.
 - **Chat:** assistant-ui thread/composer/actions in a drawer. Reuse React Bits and `/c/micro` components where suitable; do not rebuild library behavior.
 - **Backend:** FastAPI, uv, NumPy/scikit-learn as needed. SQLite for local workflow and conversation persistence.
 - **Agent:** LangChain/LangGraph ReAct via `langchain.agents.create_agent`, using registered sales tools.
@@ -29,19 +29,19 @@ The demo should show a complete customer action, not just prediction dashboards:
 - **Agent UI control:** typed filters/navigation/customer-selection/chart commands through the existing event router. No generated JavaScript/React or arbitrary SQL.
 - **Current page context:** the agent receives the active page/tab, selected account, visible IDs/metrics, filter values/options, sorting/pagination, plot settings, source dates, artifacts and the registry of available controls. It can explain the displayed page or change actual dropdowns/plots through typed commands. See plan §4G.
 - **Optional coding/artifacts:** use Daytona for sandboxed Python/bash if needed; `DAYTONA_API_KEY` is configured in root `.env` on Aditya's machine. Reuse the template sandbox/files/artifacts implementation. Aditya + Codex own this, and the normal evidence/control tools work without it.
-- **Hackathon focus:** core workflow and defensible data/ML results within roughly 16 productive implementation hours; leave integration time. Voice/streaming/multivariate forecasting are later enhancements.
+- **Hackathon focus:** core workflow and defensible data/ML results within roughly 16 productive implementation hours; leave integration time. Voice and multivariate forecasting remain later enhancements; chat streaming is implemented.
 
 ## What exists now — distinguish implementation from the plan
 
 The current application integrates all three members' shared v2 services with the frontend and chatbot. Read [integration-audit.md](integration-audit.md) before extending it.
 
-- Dashboard: ranked account actions, real sector history/correlation/one-month outlook, coverage and model-quality disclosures.
+- Dashboard: opportunity map with four shaded model regions, frozen relative axes, shared filters/selection, scoped metrics, ranked accounts and preparation drawer. Sector history/correlation/one-month outlook and quality disclosures are on Insights.
 - Customers: paginated server-side filters, independent account details, history and supported three-month forecasts, due-date tiers, peer discovery, preparation export and local workflow corrections.
-- Follow-ups: persisted local tasks, completion/reopening; historical views exclude old synthetic account tasks.
+- Follow-ups inside Customers: persisted local tasks, completion/reopening; historical views exclude old synthetic account tasks.
 - Chat: assistant-ui streamed Markdown, returned reasoning/tool parts, history/cancellation, exact page metrics, actual industry/segment controls and observed-data chart artifacts.
 - `PECAL_SNAPSHOT` selects the source. Default `synthetic-v1` is a fixture with unsupported analytics. Aditya's ignored `.env` selects `historical-full-20260831-v2`; private extracts and model artifacts are not in Git.
 - New UI types: `frontend/src/types/sales-v2.ts`. Preserve v1 compatibility routes and chat history while changing v2 APIs.
-- Current validation: 119 backend tests, frontend typecheck/build, live browser grounding and industry-filter/navigation checks. Daytona/voice/CRM and browser event receipts remain enhancements.
+- Current validation: 142 backend tests, frontend typecheck/build, live browser grounding and industry-filter/navigation checks. Daytona/voice/CRM and browser event receipts remain enhancements.
 
 ### Current code map
 
@@ -49,7 +49,7 @@ The current application integrates all three members' shared v2 services with th
 |---|---|
 | `frontend/src/modules/sales/` | Dashboard, Customers, Follow-ups, API client and Zustand state |
 | `frontend/src/modules/chat/SalesAssistant.tsx` | assistant-ui external-store runtime and drawer |
-| `frontend/src/types/sales.ts` | Current **v1 mock** TypeScript contracts |
+| `frontend/src/types/sales.ts` | Compatibility and chat/context/control TypeScript contracts |
 | `frontend/src/core/events/router.ts` | One command/domain-event application boundary |
 | `frontend/src/modules/artifacts/Chart.tsx` | ECharts lifecycle and constrained bar/line artifacts |
 | `backend/app/api/sales.py` | Current `/api` routes including bootstrap/chat/follow-ups |
@@ -69,10 +69,10 @@ Next.js sends `/api/sales/*` through its rewrite to Python `/api/*`. New `/api/v
 
 The selected integrated snapshot is **as of 31 August 2026**, targeting September–November 2026. It contains 6,564 accounts (including current owners without historical activity) and 3,180 model-supported accounts. Earlier analysis had 6,515/3,321 under different extraction filters; use the current model report for performance claims. The mock instead uses fictional names and a 30 September reference. These dates/data must not be substituted for one another.
 
-- Integrated activity benchmark selects raw logistic regression using disjoint chronological evaluation stages (ROC AUC 0.789; Brier 0.186). Earlier isotonic results refer to the previous analysis.
+- Integrated activity benchmark selects raw logistic regression using disjoint chronological evaluation stages (analytics-v3 ROC AUC 0.810; Brier 0.176). Earlier isotonic results refer to the previous analysis.
 - Current volume comparison selected the **previous 12 months divided by four** baseline. Do not claim a boosted volume model won.
-- Existing behavior clusters have four labels: Long inactive, Intermittent batches, Frequent/high-volume, Occasional/low-volume. The mock's three fixed segment labels are not the real clustering contract.
-- Existing training code uses hard-coded month indices and emits a quarterly total. Parameterize its cutoff before refreshing and do not fabricate three monthly predictions from one quarterly number.
+- Behavioral segment labels come from the active analytics artifacts. They are independent of the four opportunity groups; do not hardcode segment labels from earlier experiments.
+- The shared offline analytics runner uses the snapshot cutoff and emits a three-month total. Older standalone training scripts describe previous experiments; do not fabricate monthly predictions from a quarterly total.
 - Existing groups export counts calibration rows; it is not a distinct-instrument portfolio count. Member 1 supplies both measures explicitly.
 - Existing display IDs truncate a customer hash. The shared integration ID must be stable/full or have demonstrated collision safety.
 
