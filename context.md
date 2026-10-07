@@ -188,3 +188,5 @@ Suggested prompt for a teammate's agent:
 ## Context maintenance
 
 Keep assignments and contracts in `plan.md`; keep this file as a short onboarding/state guide. Update the “What exists now” section when major slices merge so the next agent can distinguish shipped features from proposed ones. Put module implementation notes in that module's README rather than duplicating the whole contract here.
+
+Customer overview now uses historical calibration bars plus a shaded three-month forecast window, with no future bars or line. The quantity estimate is not orders or sales. `forecast_quality` on the detail response reports input months for baseline methods and the selected quantity model’s test WAPE/MAE and customer-origin sample size. Keep aggregate historical error distinct from individual accuracy and activity probability. The assistant’s activity-view control selects 24 versus 3 months of visible history; both retain the shaded forecast window. Current analytics-v3 improves activity prediction (ROC AUC 0.810); the previous-12-month average still wins quantity validation (test WAPE 65.05%). Financial scenarios are parked outside the main sales UI.
