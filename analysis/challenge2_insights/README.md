@@ -32,10 +32,14 @@ uv run python -m unittest backend.tests.test_insights_services -v
   peer question asks about Torque tools without claiming ownership.
 - EDA: `AUTO/G-TORQUE 3/4 = 75%`; opportunity mix + account coverage.
 
-## Validating on the shared historical snapshot
+## Validating on the shared snapshots
 
-When Member 1 publishes the normalized snapshot + Member 2 the predictions
-for the same `snapshot_id`, rerun the same service calls with default
-thresholds (20 accounts / 25%) and `SnapshotStats` from Member 1, then
-paste the resulting queue top-10 + prevalence table into the handoff.
+Done for Member 1's `synthetic-v1` (2026-08-31): ran the real blob
+through `ranking_fn_for_composition` + peer discovery with default
+thresholds — SYN-001 → 4 upcoming reasons (score 53.75), SYN-002 → 1
+unknown review (3.75), SYN-003 → no action, 0 peer opps (sparse,
+correct). Shared-shape vectors (nested prediction, full workflow,
+null-distinct portfolio, null group/windows) are pinned in
+`backend/tests/test_insights_compat.py`. Rerun against Member 2
+predictions once published for the same `snapshot_id`.
 Do not commit real extracts or model binaries here (see `.gitignore`).

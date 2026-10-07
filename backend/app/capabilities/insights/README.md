@@ -20,6 +20,9 @@ uv run python analysis/challenge2_insights/run_eda.py
 |---|---|---|
 | `build_peer_index` / `get_peer_opportunities` | `PortfolioRow[]` + industry map (M1) | `PeerOpportunity[]` |
 | `build_account_action` | profile reqs + `CustomerPrediction` (M2) + peers + `AccountWorkflow` (M1) + `SnapshotStats` | `AccountAction \| None` |
+| `ranking_fn_for_composition(stats)` | Member 1's `refresh_after_correction` injects the result as `ranking_fn(profile, requirements, prediction, peers, workflow)`; accepts local- or shared-shaped args | `AccountAction \| None` |
+| `action_to_shared_payload` | local `AccountAction` | dict validating as shared `AccountAction` |
+| `prediction_from_shared` etc. (`compat.py`) | shared nested prediction / full-field workflow / row-count portfolio dicts or objects (never Member 1/2 imports) | local models |
 | `get_ranked_actions` | per-customer maps (same as above) | `AccountAction[]` sorted |
 | `build_preparation` | profile + action + peers + prediction + reqs + workflow | `PreparationCard` |
 | `get_evidence` / `evidence_lookup` | refs from reasons/facts | record table for API/agent |
@@ -29,7 +32,9 @@ uv run python analysis/challenge2_insights/run_eda.py
 ## Rules that matter
 
 - **Account-level peers:** one account = one vote per category, regardless
-  of row counts. Target account excluded. Defaults: ≥20 eligible accounts,
+  of row counts. `distinct_instruments=None` (row-count export) falls back
+  to `calibration_events > 0` as presence; explicit `0` always means not
+  owned. Target account excluded. Defaults: ≥20 eligible accounts,
   ≥25% prevalence (configurable). `Unknown`/`Sonstiges` → no discovery.
 - **Bundling:** requirements group by (group, window); instrument lists
   deduplicated; each reason keeps its requirement IDs as evidence.
@@ -51,13 +56,16 @@ uv run python analysis/challenge2_insights/run_eda.py
 
 ## Limitations
 
-- Needs Member 1's `SnapshotStats` + normalized snapshot and Member 2's
-  `CustomerPrediction` for production data; until then runs on the
-  synthetic fixture in `analysis/challenge2_insights/fixtures/`.
+- Local models stay canonical (team decision); `compat.py` coerces
+  shared-shape inputs, `action_to_shared_payload` renders shared-shape
+  output. `SnapshotStats` anchors come from Member 1 per snapshot.
+- Validated end-to-end on Member 1's `synthetic-v1` snapshot (all four
+  requirement tiers, stopped+excluded, null group/windows, null industry):
+  SYN-001 ranks 4 upcoming reasons, SYN-002 one unknown review, SYN-003
+  correctly absent; sparse peers correctly yield nothing at defaults.
+  Member 2 predictions plug in via `prediction_from_shared` once published
+  for the same `snapshot_id`.
 - No frontend/chat/checkpoint/Daytona code here (Aditya + Codex own that).
-- At the shared-contract freeze these models stay the canonical insight
-  I/O (Member 1 imports/composes them into `sales_v2.py` and screen
-  responses; this module is not rewritten as aliases).
 
 ## Representative fixture
 
