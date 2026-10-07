@@ -1,0 +1,209 @@
+{
+  "customer_return_classification": [
+    {
+      "test_period": "Apr-Jun 2025",
+      "train_rows": 12520,
+      "validation_rows": 2681,
+      "test_rows": 8866,
+      "return_prevalence": 0.5213173922851342,
+      "recency_baseline_auc": 0.7212551657421722,
+      "constant_rate_brier": 0.25708494345904087,
+      "validation_auc": {
+        "logistic": 0.7876729963862724,
+        "boosted_15leaves": 0.805518624596133,
+        "boosted_31leaves": 0.8082770539689484
+      },
+      "selected_using_validation": "boosted_31leaves",
+      "test_models": {
+        "logistic": {
+          "roc_auc": 0.783127176055508,
+          "average_precision": 0.8315269975570023,
+          "brier": 0.30046952153549694,
+          "top_decile_return_rate": 0.9909706546275395,
+          "top_decile_lift": 1.9008969761851506
+        },
+        "boosted_15leaves": {
+          "roc_auc": 0.7734389752162648,
+          "average_precision": 0.8134903399846933,
+          "brier": 0.21144394764698876,
+          "top_decile_return_rate": 0.9887133182844243,
+          "top_decile_lift": 1.8965669147359816
+        },
+        "boosted_31leaves": {
+          "roc_auc": 0.769503493312115,
+          "average_precision": 0.8112488161733542,
+          "brier": 0.21465690518882258,
+          "top_decile_return_rate": 0.989841986455982,
+          "top_decile_lift": 1.8987319454605662
+        }
+      },
+      "top_validation_features": [
+        {
+          "feature": "historical_active_month_fraction",
+          "auc_drop_when_shuffled": 0.058833486753463116
+        },
+        {
+          "feature": "log_mean_monthly_volume",
+          "auc_drop_when_shuffled": 0.05151109333868035
+        },
+        {
+          "feature": "log_observed_tenure",
+          "auc_drop_when_shuffled": 0.03158052733992286
+        },
+        {
+          "feature": "active_month_gap_std",
+          "auc_drop_when_shuffled": 0.022012750579882574
+        },
+        {
+          "feature": "log_volume_last3",
+          "auc_drop_when_shuffled": 0.01546258447600953
+        },
+        {
+          "feature": "log_recent_group_breadth",
+          "auc_drop_when_shuffled": 0.011958700364410787
+        }
+      ]
+    },
+    {
+      "test_period": "Jan-May 2026",
+      "train_rows": 29674,
+      "validation_rows": 6305,
+      "test_rows": 16266,
+      "return_prevalence": 0.47848272470183206,
+      "recency_baseline_auc": 0.70805109095836,
+      "constant_rate_brier": 0.25779453064150626,
+      "validation_auc": {
+        "logistic": 0.8157668865641914,
+        "boosted_15leaves": 0.8108250939016772,
+        "boosted_31leaves": 0.8090488510663711
+      },
+      "selected_using_validation": "logistic",
+      "test_models": {
+        "logistic": {
+          "roc_auc": 0.8190872300942627,
+          "average_precision": 0.8305925348483698,
+          "brier": 0.18333686390928533,
+          "top_decile_return_rate": 0.9797047970479705,
+          "top_decile_lift": 2.047523863392302
+        },
+        "boosted_15leaves": {
+          "roc_auc": 0.8002413212727427,
+          "average_precision": 0.8211060776708838,
+          "brier": 0.17823618306037153,
+          "top_decile_return_rate": 0.984009840098401,
+          "top_decile_lift": 2.0565211433946535
+        },
+        "boosted_31leaves": {
+          "roc_auc": 0.798387639227787,
+          "average_precision": 0.818981577461988,
+          "brier": 0.1797183903647405,
+          "top_decile_return_rate": 0.9833948339483395,
+          "top_decile_lift": 2.055235817680032
+        }
+      },
+      "top_validation_features": [
+        {
+          "feature": "historical_active_month_fraction",
+          "auc_drop_when_shuffled": 0.10311977259141743
+        },
+        {
+          "feature": "log_observed_tenure",
+          "auc_drop_when_shuffled": 0.026233402767577574
+        },
+        {
+          "feature": "median_active_month_gap",
+          "auc_drop_when_shuffled": 0.014420602708608085
+        },
+        {
+          "feature": "recency_relative_to_cadence",
+          "auc_drop_when_shuffled": 0.012921014041266776
+        },
+        {
+          "feature": "log_volume_current_month",
+          "auc_drop_when_shuffled": 0.004947189890417277
+        },
+        {
+          "feature": "active_month_gap_std",
+          "auc_drop_when_shuffled": 0.004578043041160755
+        }
+      ]
+    }
+  ],
+  "customer_segmentation": [
+    {
+      "k": 3,
+      "customers": 5935,
+      "cluster_sizes": [
+        3486,
+        772,
+        1677
+      ],
+      "sampled_silhouette": 0.4023155923896896,
+      "seed_stability_ari": 0.9956928743932657
+    },
+    {
+      "k": 4,
+      "customers": 5935,
+      "cluster_sizes": [
+        2152,
+        823,
+        1742,
+        1218
+      ],
+      "sampled_silhouette": 0.3297263335447601,
+      "seed_stability_ari": 1.0
+    },
+    {
+      "k": 5,
+      "customers": 5935,
+      "cluster_sizes": [
+        1241,
+        1440,
+        659,
+        1743,
+        852
+      ],
+      "sampled_silhouette": 0.3261888437582228,
+      "seed_stability_ari": 0.9937842563847883
+    },
+    {
+      "k": 6,
+      "customers": 5935,
+      "cluster_sizes": [
+        745,
+        1216,
+        600,
+        1678,
+        1059,
+        637
+      ],
+      "sampled_silhouette": 0.3379409252186998,
+      "seed_stability_ari": 0.998372215872079
+    }
+  ],
+  "lab_four_week_demand": {
+    "labs": 12,
+    "train_rows": 804,
+    "validation_rows": 108,
+    "test_rows": 396,
+    "baseline_test_wape": 0.1703322604354107,
+    "validation_wape": {
+      "ridge": 0.12524657823388435,
+      "boosted": 0.1459212930605034
+    },
+    "selected_using_validation": "ridge",
+    "test_wape": {
+      "ridge": 0.10473238004108174,
+      "boosted": 0.13101421863645177
+    }
+  },
+  "limitations": [
+    "Aggregate calibration activity is not confirmed churn, sales revenue or productive capacity.",
+    "Customer classification is restricted to established recurring customers; cold starts require a separate strategy.",
+    "Temporal rows from the same customer and overlapping outcome windows are correlated.",
+    "Completed history ends Sep 2026; latest customer outcome uses Aug 2026 to avoid incomplete September.",
+    "Segmentation stability across random seeds does not establish business usefulness or stability over time.",
+    "No current instrument snapshot or future due dates are used in historical classification features.",
+    "These are feasibility benchmarks, not final model selection or 3/6/12-month forecast validation."
+  ]
+}

@@ -1,0 +1,104 @@
+PROCESSING TIME ARTICLE EXAMPLES
+Artikelnummer|Beschreibung|BearbeitungszeitMin
+-------------|------------|-------------------
+011030 1000|Werks-Kalibr. Mess/Tiefenmessschieber|13.6000
+011030 200|Werks-Kalibr. Mess/Tiefenmessschieber|4.7000
+011030 2000|Werks-Kalibr. Mess/Tiefenmessschieber|25.0000
+011030 300|Werks-Kalibr. Mess/Tiefenmessschieber|5.9000
+011030 3000|Werks-Kalibr. Mess/Tiefenmessschieber|25.0000
+011030 500|Werks-Kalibr. Mess/Tiefenmessschieber|8.5000
+011035 1000|Werks-Kalibr. Mess/Tiefenmessschieber|15.6000
+011035 200|Werks-Kalibr. Mess/Tiefenmessschieber|5.5000
+011035 2000|Werks-Kalibr. Mess/Tiefenmessschieber|25.0000
+011035 300|Werks-Kalibr. Mess/Tiefenmessschieber|6.2000
+011035 3000|Werks-Kalibr. Mess/Tiefenmessschieber|26.2000
+011035 500|Werks-Kalibr. Mess/Tiefenmessschieber|10.2000
+SERVICE ARTICLE EXAMPLES
+ARTIKELNUMMER|KATALOGNUMMER|services
+-------------|-------------|--------
+10184050 000010|018405 20|45468
+10186050 000020|018605 20|38080
+10183950 000000|018395|36596
+10110350 000200|011035 200|33145
+10179950 000100|017995 100|28240
+10186150 000020|018615 20|22790
+10188250 000050|018825 400|16953
+10184350 000020|018435 50|16674
+10181450 000100|018145 100|16030
+10186150 000030|018615 60|15672
+10184050 000020|018405 60|15550
+10177550 000040|017755 50|15322
+10189450 000010|018945|14586
+10197550 000000|019755|14415
+10183850 000040|018385 20|12966
+CATALOG MATCH
+services|positive_time_via_catalog
+--------|-------------------------
+789616|747092
+ASSESSMENT COUNTS
+LETZTE_BEWERTUNG|instruments
+----------------|-----------
+EINSATZFAEHIG|412698
+ISTMASS|31976
+NICHT_EINSATZFAEHIG|27833
+BEDINGT_EINSATZFAEHIG_GELB|12739
+BEDINGT_EINSATZFAEHIG_BLAU|2933
+SIEHE_KALIBRIERSCHEIN|482
+NULL|27
+NICHT_GEPRUEFT|11
+DUE DATE YEAR COUNTS
+yr|instruments
+--|-----------
+NULL|140390
+2017|1
+2021|1
+2022|1
+2023|5
+2024|1524
+2025|20639
+2026|80644
+2027|145833
+2028|66617
+2029|21158
+2030|7808
+2031|2682
+2032|167
+2033|95
+2034|311
+2035|227
+2036|352
+2037|6
+2038|48
+2040|1
+2045|1
+2046|1
+2047|5
+2048|10
+2059|1
+2060|1
+2064|1
+2072|1
+2107|120
+2108|4
+2124|2
+2125|3
+2225|2
+2607|30
+2608|7
+CUSTOMER HISTORY DEPTH
+customers_with_history|customers_multiple_months|customers_six_months|customers_ten_calibrations
+----------------------|-------------------------|--------------------|--------------------------
+6546|4326|2015|3155
+INDUSTRY IN CALIBRATION COHORT
+customers|with_industry|other_industry
+---------|-------------|--------------
+6546|6498|1547
+LAB CAPACITY GRAIN
+dataset|rows|distinct_date_kst_lab|null_attendance|negative_attendance
+-------|----|---------------------|---------------|-------------------
+actual|10617|10617|434|0
+planned|10358|10358|180|0
+INSTRUMENT TO HISTORY MATCH
+instruments_with_history|matched_current_instrument
+------------------------|--------------------------
+487089|487084

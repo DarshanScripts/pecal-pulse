@@ -1,0 +1,327 @@
+{
+  "data": {
+    "complete_calendar_months": 32,
+    "first_month": "2024-01",
+    "last_month": "2026-08",
+    "weekly_lab_series": 12,
+    "complete_weeks": 142
+  },
+  "exact_calendar_month_aggregate_demand": [
+    {
+      "horizon_calendar_months": 3,
+      "overlapping_origins": 18,
+      "maximum_disjoint_target_windows_after_one_year_context": 6,
+      "total_horizon_wape_last6_mean": 0.05741673761240829,
+      "total_horizon_wape_last_year_seasonality": 0.06989993161295725,
+      "total_horizon_wape_shrunk_recent_trend": 0.06841264310274858,
+      "individual_month_wape_last_year_seasonality": 0.09544784208640959,
+      "max_supervised_training_origins_at_latest_test_with_six_month_features": 21
+    },
+    {
+      "horizon_calendar_months": 6,
+      "overlapping_origins": 15,
+      "maximum_disjoint_target_windows_after_one_year_context": 3,
+      "total_horizon_wape_last6_mean": 0.05104255118407397,
+      "total_horizon_wape_last_year_seasonality": 0.05101334806967414,
+      "total_horizon_wape_shrunk_recent_trend": 0.06374628247712946,
+      "individual_month_wape_last_year_seasonality": 0.09462595303240647,
+      "max_supervised_training_origins_at_latest_test_with_six_month_features": 15
+    },
+    {
+      "horizon_calendar_months": 12,
+      "overlapping_origins": 9,
+      "maximum_disjoint_target_windows_after_one_year_context": 1,
+      "total_horizon_wape_last6_mean": 0.05269196822594881,
+      "total_horizon_wape_last_year_seasonality": 0.03516412837317609,
+      "total_horizon_wape_shrunk_recent_trend": 0.01816076385433993,
+      "individual_month_wape_last_year_seasonality": 0.09477897128692418,
+      "max_supervised_training_origins_at_latest_test_with_six_month_features": 3
+    },
+    {
+      "horizon_calendar_months": 13,
+      "overlapping_origins": 8,
+      "maximum_disjoint_target_windows_after_one_year_context": 1,
+      "total_horizon_wape_last6_mean": 0.05250408128456912,
+      "total_horizon_wape_last_year_seasonality": 0.04712799395726225,
+      "total_horizon_wape_shrunk_recent_trend": 0.023533165760111854,
+      "individual_month_wape_last_year_seasonality": 0.10094344679710533,
+      "max_supervised_training_origins_at_latest_test_with_six_month_features": 1
+    }
+  ],
+  "weekly_lab_demand": [
+    {
+      "horizon_weeks": 13,
+      "labs": 12,
+      "approximate_months": 3,
+      "overlapping_baseline_origins": 20,
+      "baseline_total_horizon_wape_recent13_weeks": 0.10259833873955426,
+      "baseline_total_horizon_wape_last_year": 0.08099524755462797,
+      "seasonal_baseline_per_lab": [
+        {
+          "lab": "MR1",
+          "seasonal_total_horizon_wape": 0.18282239675703066
+        },
+        {
+          "lab": "MR11",
+          "seasonal_total_horizon_wape": 0.08255427239636526
+        },
+        {
+          "lab": "MR12",
+          "seasonal_total_horizon_wape": 0.10377600821988184
+        },
+        {
+          "lab": "MR14",
+          "seasonal_total_horizon_wape": 0.1423898822503271
+        },
+        {
+          "lab": "MR2",
+          "seasonal_total_horizon_wape": 0.09065586532379702
+        },
+        {
+          "lab": "MR3",
+          "seasonal_total_horizon_wape": 0.11019564692305628
+        },
+        {
+          "lab": "MR4",
+          "seasonal_total_horizon_wape": 0.13820634059375242
+        },
+        {
+          "lab": "MR5",
+          "seasonal_total_horizon_wape": 0.05652026836556351
+        },
+        {
+          "lab": "MR6",
+          "seasonal_total_horizon_wape": 0.07082137214322273
+        },
+        {
+          "lab": "MR7",
+          "seasonal_total_horizon_wape": 0.07714687484847016
+        },
+        {
+          "lab": "MR8",
+          "seasonal_total_horizon_wape": 0.09249462721110928
+        },
+        {
+          "lab": "MR9",
+          "seasonal_total_horizon_wape": 0.12177449168207025
+        }
+      ],
+      "supervised_rolling_origins": 20,
+      "supervised_train_rows_range": [
+        84,
+        312
+      ],
+      "supervised_total_horizon_wape": 0.133774502473292,
+      "seasonal_baseline_wape_on_same_supervised_origins": 0.08099524755462797,
+      "supervised_first_origin": "2024-12-23",
+      "supervised_last_origin": "2026-06-08"
+    },
+    {
+      "horizon_weeks": 26,
+      "labs": 12,
+      "approximate_months": 6,
+      "overlapping_baseline_origins": 17,
+      "baseline_total_horizon_wape_recent13_weeks": 0.08380912706757251,
+      "baseline_total_horizon_wape_last_year": 0.06396730751406951,
+      "seasonal_baseline_per_lab": [
+        {
+          "lab": "MR1",
+          "seasonal_total_horizon_wape": 0.1761265492893724
+        },
+        {
+          "lab": "MR11",
+          "seasonal_total_horizon_wape": 0.06762932673282691
+        },
+        {
+          "lab": "MR12",
+          "seasonal_total_horizon_wape": 0.08016717325227964
+        },
+        {
+          "lab": "MR14",
+          "seasonal_total_horizon_wape": 0.1326478149100257
+        },
+        {
+          "lab": "MR2",
+          "seasonal_total_horizon_wape": 0.04625656392278936
+        },
+        {
+          "lab": "MR3",
+          "seasonal_total_horizon_wape": 0.07789811133724915
+        },
+        {
+          "lab": "MR4",
+          "seasonal_total_horizon_wape": 0.10345144537892366
+        },
+        {
+          "lab": "MR5",
+          "seasonal_total_horizon_wape": 0.04558578847414329
+        },
+        {
+          "lab": "MR6",
+          "seasonal_total_horizon_wape": 0.053764190631775725
+        },
+        {
+          "lab": "MR7",
+          "seasonal_total_horizon_wape": 0.06602556486445293
+        },
+        {
+          "lab": "MR8",
+          "seasonal_total_horizon_wape": 0.05581070287539936
+        },
+        {
+          "lab": "MR9",
+          "seasonal_total_horizon_wape": 0.10732192254495158
+        }
+      ],
+      "supervised_rolling_origins": 15,
+      "supervised_train_rows_range": [
+        72,
+        240
+      ],
+      "supervised_total_horizon_wape": 0.08980677752071907,
+      "seasonal_baseline_wape_on_same_supervised_origins": 0.06016176170423356,
+      "supervised_first_origin": "2025-02-17",
+      "supervised_last_origin": "2026-03-16"
+    },
+    {
+      "horizon_weeks": 52,
+      "labs": 12,
+      "approximate_months": 12,
+      "overlapping_baseline_origins": 10,
+      "baseline_total_horizon_wape_recent13_weeks": 0.07687782109215818,
+      "baseline_total_horizon_wape_last_year": 0.03878965953823207,
+      "seasonal_baseline_per_lab": [
+        {
+          "lab": "MR1",
+          "seasonal_total_horizon_wape": 0.16111427241218768
+        },
+        {
+          "lab": "MR11",
+          "seasonal_total_horizon_wape": 0.05705656305108836
+        },
+        {
+          "lab": "MR12",
+          "seasonal_total_horizon_wape": 0.0895599432184798
+        },
+        {
+          "lab": "MR14",
+          "seasonal_total_horizon_wape": 0.11763422086425142
+        },
+        {
+          "lab": "MR2",
+          "seasonal_total_horizon_wape": 0.04113080105677683
+        },
+        {
+          "lab": "MR3",
+          "seasonal_total_horizon_wape": 0.06050745290598252
+        },
+        {
+          "lab": "MR4",
+          "seasonal_total_horizon_wape": 0.07363013698630137
+        },
+        {
+          "lab": "MR5",
+          "seasonal_total_horizon_wape": 0.03314082399379511
+        },
+        {
+          "lab": "MR6",
+          "seasonal_total_horizon_wape": 0.03632811506023585
+        },
+        {
+          "lab": "MR7",
+          "seasonal_total_horizon_wape": 0.024246895964372572
+        },
+        {
+          "lab": "MR8",
+          "seasonal_total_horizon_wape": 0.04398138263802895
+        },
+        {
+          "lab": "MR9",
+          "seasonal_total_horizon_wape": 0.10875027714137905
+        }
+      ],
+      "supervised_rolling_origins": 1,
+      "supervised_train_rows_range": [
+        72,
+        72
+      ],
+      "supervised_total_horizon_wape": 0.06469615903555134,
+      "seasonal_baseline_wape_on_same_supervised_origins": 0.04355359841575903,
+      "supervised_first_origin": "2025-09-01",
+      "supervised_last_origin": "2025-09-01"
+    },
+    {
+      "horizon_weeks": 56,
+      "labs": 12,
+      "approximate_months": 13,
+      "overlapping_baseline_origins": 9,
+      "baseline_total_horizon_wape_recent13_weeks": 0.07944543954234384,
+      "baseline_total_horizon_wape_last_year": 0.048644603541232664,
+      "seasonal_baseline_per_lab": [
+        {
+          "lab": "MR1",
+          "seasonal_total_horizon_wape": 0.19110247331008226
+        },
+        {
+          "lab": "MR11",
+          "seasonal_total_horizon_wape": 0.06752023027209036
+        },
+        {
+          "lab": "MR12",
+          "seasonal_total_horizon_wape": 0.08737669954678752
+        },
+        {
+          "lab": "MR14",
+          "seasonal_total_horizon_wape": 0.13960017969451932
+        },
+        {
+          "lab": "MR2",
+          "seasonal_total_horizon_wape": 0.04766220576703048
+        },
+        {
+          "lab": "MR3",
+          "seasonal_total_horizon_wape": 0.07440104383554037
+        },
+        {
+          "lab": "MR4",
+          "seasonal_total_horizon_wape": 0.07705638173538065
+        },
+        {
+          "lab": "MR5",
+          "seasonal_total_horizon_wape": 0.039845330160618676
+        },
+        {
+          "lab": "MR6",
+          "seasonal_total_horizon_wape": 0.04732578783843764
+        },
+        {
+          "lab": "MR7",
+          "seasonal_total_horizon_wape": 0.03398348965822481
+        },
+        {
+          "lab": "MR8",
+          "seasonal_total_horizon_wape": 0.04795846532910947
+        },
+        {
+          "lab": "MR9",
+          "seasonal_total_horizon_wape": 0.11582717366455841
+        }
+      ],
+      "supervised_rolling_origins": 0,
+      "supervised_train_rows_range": null,
+      "supervised_total_horizon_wape": null,
+      "seasonal_baseline_wape_on_same_supervised_origins": null,
+      "supervised_first_origin": null,
+      "supervised_last_origin": null
+    }
+  ],
+  "caveats": [
+    "Calendar-month totals cover customer-attributed calibration records across all labs.",
+    "Weekly lab horizons are approximations to calendar-month horizons.",
+    "Demand-count forecasts do not validate productive-hour or utilization forecasts.",
+    "Cumulative horizon errors conceal within-horizon peaks and lab-level bottlenecks.",
+    "Long-horizon origins overlap heavily; only one disjoint annual target window is available after a year of context.",
+    "Fixed ridge settings, no tuning on held-out targets; small long-horizon training sets remain inadequate for durable claims.",
+    "Fresh SQL refresh failed during prelogin; analysis uses previously exported data."
+  ]
+}

@@ -1,0 +1,4428 @@
+{
+  "lab": "MR7",
+  "generated_at": "2026-10-07T13:04:29.164070+00:00",
+  "source_metadata": {
+    "calibrations": "2026-09-24T10:22:53.363000",
+    "services": "2026-09-25T13:23:30.412000",
+    "actual_capacity": "2026-07-31T00:00:00",
+    "planned_capacity": "2026-08-31T00:00:00"
+  },
+  "history": [
+    {
+      "week": "2024-01-01",
+      "count": 1290.0,
+      "workload": null,
+      "attendance": 189.89999999999998
+    },
+    {
+      "week": "2024-01-08",
+      "count": 1806.0,
+      "workload": 4.116666,
+      "attendance": 262.88
+    },
+    {
+      "week": "2024-01-15",
+      "count": 2383.0,
+      "workload": 7.685,
+      "attendance": 278.09000000000003
+    },
+    {
+      "week": "2024-01-22",
+      "count": 2848.0,
+      "workload": 57.601666,
+      "attendance": 323.63
+    },
+    {
+      "week": "2024-01-29",
+      "count": 2547.0,
+      "workload": 100.33,
+      "attendance": 291.84999999999997
+    },
+    {
+      "week": "2024-02-05",
+      "count": 2338.0,
+      "workload": 66.755,
+      "attendance": 291.48
+    },
+    {
+      "week": "2024-02-12",
+      "count": 2322.0,
+      "workload": 107.788333,
+      "attendance": 311.04
+    },
+    {
+      "week": "2024-02-19",
+      "count": 2398.0,
+      "workload": 112.448333,
+      "attendance": 301.66
+    },
+    {
+      "week": "2024-02-26",
+      "count": 2673.0,
+      "workload": 153.686666,
+      "attendance": 322.65
+    },
+    {
+      "week": "2024-03-04",
+      "count": 2652.0,
+      "workload": 142.913333,
+      "attendance": 292.73
+    },
+    {
+      "week": "2024-03-11",
+      "count": 2354.0,
+      "workload": 126.808333,
+      "attendance": 266.36
+    },
+    {
+      "week": "2024-03-18",
+      "count": 2637.0,
+      "workload": 145.736666,
+      "attendance": 254.94
+    },
+    {
+      "week": "2024-03-25",
+      "count": 1371.0,
+      "workload": 39.475,
+      "attendance": 181.07999999999998
+    },
+    {
+      "week": "2024-04-01",
+      "count": 1394.0,
+      "workload": 87.408333,
+      "attendance": 176.95
+    },
+    {
+      "week": "2024-04-08",
+      "count": 2237.0,
+      "workload": 126.771666,
+      "attendance": 283.55
+    },
+    {
+      "week": "2024-04-15",
+      "count": 2677.0,
+      "workload": 151.138333,
+      "attendance": 308.73
+    },
+    {
+      "week": "2024-04-22",
+      "count": 2640.0,
+      "workload": 147.058333,
+      "attendance": 336.34000000000003
+    },
+    {
+      "week": "2024-04-29",
+      "count": 1482.0,
+      "workload": 88.721666,
+      "attendance": 155.39000000000001
+    },
+    {
+      "week": "2024-05-06",
+      "count": 1487.0,
+      "workload": 104.966666,
+      "attendance": 204.58
+    },
+    {
+      "week": "2024-05-13",
+      "count": 2466.0,
+      "workload": 182.791666,
+      "attendance": 271.34
+    },
+    {
+      "week": "2024-05-20",
+      "count": 1571.0,
+      "workload": 120.051666,
+      "attendance": 217.2
+    },
+    {
+      "week": "2024-05-27",
+      "count": 2354.0,
+      "workload": 233.061666,
+      "attendance": 324.17
+    },
+    {
+      "week": "2024-06-03",
+      "count": 2512.0,
+      "workload": 248.233333,
+      "attendance": 343.97
+    },
+    {
+      "week": "2024-06-10",
+      "count": 2314.0,
+      "workload": 200.75,
+      "attendance": 278.90000000000003
+    },
+    {
+      "week": "2024-06-17",
+      "count": 2177.0,
+      "workload": 225.848333,
+      "attendance": 288.91999999999996
+    },
+    {
+      "week": "2024-06-24",
+      "count": 1838.0,
+      "workload": 190.401666,
+      "attendance": 244.78000000000003
+    },
+    {
+      "week": "2024-07-01",
+      "count": 1767.0,
+      "workload": 154.15,
+      "attendance": 213.81
+    },
+    {
+      "week": "2024-07-08",
+      "count": 1573.0,
+      "workload": 157.955,
+      "attendance": 175.54
+    },
+    {
+      "week": "2024-07-15",
+      "count": 2427.0,
+      "workload": 233.353333,
+      "attendance": 290.23
+    },
+    {
+      "week": "2024-07-22",
+      "count": 2771.0,
+      "workload": 270.716666,
+      "attendance": 307.3
+    },
+    {
+      "week": "2024-07-29",
+      "count": 2353.0,
+      "workload": 232.195,
+      "attendance": 290.3
+    },
+    {
+      "week": "2024-08-05",
+      "count": 1828.0,
+      "workload": 201.22,
+      "attendance": 238.69000000000003
+    },
+    {
+      "week": "2024-08-12",
+      "count": 1797.0,
+      "workload": 180.146666,
+      "attendance": 244.44
+    },
+    {
+      "week": "2024-08-19",
+      "count": 2117.0,
+      "workload": 333.035,
+      "attendance": 251.04
+    },
+    {
+      "week": "2024-08-26",
+      "count": 1875.0,
+      "workload": 190.43,
+      "attendance": 241.76
+    },
+    {
+      "week": "2024-09-02",
+      "count": 1706.0,
+      "workload": 175.993333,
+      "attendance": 186.26
+    },
+    {
+      "week": "2024-09-09",
+      "count": 1207.0,
+      "workload": 117.19,
+      "attendance": 148.44
+    },
+    {
+      "week": "2024-09-16",
+      "count": 1323.0,
+      "workload": 161.528333,
+      "attendance": 211.81
+    },
+    {
+      "week": "2024-09-23",
+      "count": 1634.0,
+      "workload": 164.896666,
+      "attendance": 250.05999999999997
+    },
+    {
+      "week": "2024-09-30",
+      "count": 1231.0,
+      "workload": 127.521666,
+      "attendance": 138.2
+    },
+    {
+      "week": "2024-10-07",
+      "count": 1832.0,
+      "workload": 191.266666,
+      "attendance": 264.65
+    },
+    {
+      "week": "2024-10-14",
+      "count": 1627.0,
+      "workload": 162.468333,
+      "attendance": 198.55
+    },
+    {
+      "week": "2024-10-21",
+      "count": 2158.0,
+      "workload": 191.656666,
+      "attendance": 245.38000000000002
+    },
+    {
+      "week": "2024-10-28",
+      "count": 1654.0,
+      "workload": 151.063333,
+      "attendance": 183.48
+    },
+    {
+      "week": "2024-11-04",
+      "count": 2059.0,
+      "workload": 200.503333,
+      "attendance": 262.34000000000003
+    },
+    {
+      "week": "2024-11-11",
+      "count": 1684.0,
+      "workload": 201.185,
+      "attendance": 255.89
+    },
+    {
+      "week": "2024-11-18",
+      "count": 2247.0,
+      "workload": 231.616666,
+      "attendance": 264.84000000000003
+    },
+    {
+      "week": "2024-11-25",
+      "count": 2180.0,
+      "workload": 222.703333,
+      "attendance": 260.79
+    },
+    {
+      "week": "2024-12-02",
+      "count": 2770.0,
+      "workload": 276.781666,
+      "attendance": 322.24
+    },
+    {
+      "week": "2024-12-09",
+      "count": 1934.0,
+      "workload": 188.568333,
+      "attendance": 253.91000000000003
+    },
+    {
+      "week": "2024-12-16",
+      "count": 2057.0,
+      "workload": 209.116666,
+      "attendance": 238.55
+    },
+    {
+      "week": "2024-12-23",
+      "count": 0.0,
+      "workload": 0.0,
+      "attendance": 0.0
+    },
+    {
+      "week": "2024-12-30",
+      "count": 536.0,
+      "workload": 57.41,
+      "attendance": 62.03
+    },
+    {
+      "week": "2025-01-06",
+      "count": 1890.0,
+      "workload": 236.7,
+      "attendance": 267.0
+    },
+    {
+      "week": "2025-01-13",
+      "count": 1889.0,
+      "workload": 226.721666,
+      "attendance": 292.92
+    },
+    {
+      "week": "2025-01-20",
+      "count": 2001.0,
+      "workload": 198.823333,
+      "attendance": 257.63
+    },
+    {
+      "week": "2025-01-27",
+      "count": 1941.0,
+      "workload": 195.706666,
+      "attendance": 280.99
+    },
+    {
+      "week": "2025-02-03",
+      "count": 2050.0,
+      "workload": 198.183333,
+      "attendance": 281.54
+    },
+    {
+      "week": "2025-02-10",
+      "count": 2477.0,
+      "workload": 243.565,
+      "attendance": 308.39
+    },
+    {
+      "week": "2025-02-17",
+      "count": 2194.0,
+      "workload": 214.175,
+      "attendance": 272.04999999999995
+    },
+    {
+      "week": "2025-02-24",
+      "count": 2068.0,
+      "workload": 199.023333,
+      "attendance": 293.13
+    },
+    {
+      "week": "2025-03-03",
+      "count": 2227.0,
+      "workload": 206.425,
+      "attendance": 298.3
+    },
+    {
+      "week": "2025-03-10",
+      "count": 2360.0,
+      "workload": 213.611666,
+      "attendance": 266.21999999999997
+    },
+    {
+      "week": "2025-03-17",
+      "count": 2281.0,
+      "workload": 198.746666,
+      "attendance": 262.01
+    },
+    {
+      "week": "2025-03-24",
+      "count": 2475.0,
+      "workload": 249.086666,
+      "attendance": 311.28000000000003
+    },
+    {
+      "week": "2025-03-31",
+      "count": 2671.0,
+      "workload": 248.626666,
+      "attendance": 314.63
+    },
+    {
+      "week": "2025-04-07",
+      "count": 2059.0,
+      "workload": 235.333333,
+      "attendance": 289.25
+    },
+    {
+      "week": "2025-04-14",
+      "count": 1417.0,
+      "workload": 140.063333,
+      "attendance": 182.61
+    },
+    {
+      "week": "2025-04-21",
+      "count": 1683.0,
+      "workload": 145.525,
+      "attendance": 164.85999999999999
+    },
+    {
+      "week": "2025-04-28",
+      "count": 1451.0,
+      "workload": 147.341666,
+      "attendance": 155.70000000000002
+    },
+    {
+      "week": "2025-05-05",
+      "count": 2427.0,
+      "workload": 246.025,
+      "attendance": 296.38
+    },
+    {
+      "week": "2025-05-12",
+      "count": 2494.0,
+      "workload": 242.315,
+      "attendance": 282.84999999999997
+    },
+    {
+      "week": "2025-05-19",
+      "count": 2114.0,
+      "workload": 220.683333,
+      "attendance": 268.2
+    },
+    {
+      "week": "2025-05-26",
+      "count": 1436.0,
+      "workload": 177.773333,
+      "attendance": 181.31
+    },
+    {
+      "week": "2025-06-02",
+      "count": 2508.0,
+      "workload": 227.2,
+      "attendance": 282.5
+    },
+    {
+      "week": "2025-06-09",
+      "count": 1149.0,
+      "workload": 117.013333,
+      "attendance": 145.77
+    },
+    {
+      "week": "2025-06-16",
+      "count": 2100.0,
+      "workload": 209.605,
+      "attendance": 218.8
+    },
+    {
+      "week": "2025-06-23",
+      "count": 1806.0,
+      "workload": 212.303333,
+      "attendance": 230.78
+    },
+    {
+      "week": "2025-06-30",
+      "count": 1687.0,
+      "workload": 174.296666,
+      "attendance": 192.37
+    },
+    {
+      "week": "2025-07-07",
+      "count": 2181.0,
+      "workload": 211.538333,
+      "attendance": 227.42999999999998
+    },
+    {
+      "week": "2025-07-14",
+      "count": 1685.0,
+      "workload": 179.931666,
+      "attendance": 227.32999999999998
+    },
+    {
+      "week": "2025-07-21",
+      "count": 1528.0,
+      "workload": 141.971666,
+      "attendance": 191.69
+    },
+    {
+      "week": "2025-07-28",
+      "count": 1809.0,
+      "workload": 184.673333,
+      "attendance": 227.90000000000003
+    },
+    {
+      "week": "2025-08-04",
+      "count": 2157.0,
+      "workload": 237.521666,
+      "attendance": 275.19000000000005
+    },
+    {
+      "week": "2025-08-11",
+      "count": 1891.0,
+      "workload": 213.963333,
+      "attendance": 256.49
+    },
+    {
+      "week": "2025-08-18",
+      "count": 2030.0,
+      "workload": 195.708333,
+      "attendance": 217.16
+    },
+    {
+      "week": "2025-08-25",
+      "count": 2280.0,
+      "workload": 229.226666,
+      "attendance": 260.29
+    },
+    {
+      "week": "2025-09-01",
+      "count": 2387.0,
+      "workload": 243.99,
+      "attendance": 288.34000000000003
+    },
+    {
+      "week": "2025-09-08",
+      "count": 1692.0,
+      "workload": 170.165,
+      "attendance": 216.94
+    },
+    {
+      "week": "2025-09-15",
+      "count": 1509.0,
+      "workload": 188.255,
+      "attendance": 194.07
+    },
+    {
+      "week": "2025-09-22",
+      "count": 2502.0,
+      "workload": 239.436666,
+      "attendance": 242.57
+    },
+    {
+      "week": "2025-09-29",
+      "count": 1471.0,
+      "workload": 149.43,
+      "attendance": 159.78
+    },
+    {
+      "week": "2025-10-06",
+      "count": 2293.0,
+      "workload": 225.538333,
+      "attendance": 226.76999999999998
+    },
+    {
+      "week": "2025-10-13",
+      "count": 2310.0,
+      "workload": 257.356666,
+      "attendance": 244.87
+    },
+    {
+      "week": "2025-10-20",
+      "count": 2090.0,
+      "workload": 220.73,
+      "attendance": 231.83
+    },
+    {
+      "week": "2025-10-27",
+      "count": 1559.0,
+      "workload": 159.711666,
+      "attendance": 129.42000000000002
+    },
+    {
+      "week": "2025-11-03",
+      "count": 2152.0,
+      "workload": 218.456666,
+      "attendance": 239.24
+    },
+    {
+      "week": "2025-11-10",
+      "count": 2115.0,
+      "workload": 207.343333,
+      "attendance": 253.39
+    },
+    {
+      "week": "2025-11-17",
+      "count": 2583.0,
+      "workload": 265.036666,
+      "attendance": 265.39
+    },
+    {
+      "week": "2025-11-24",
+      "count": 1911.0,
+      "workload": 188.216666,
+      "attendance": 246.71
+    },
+    {
+      "week": "2025-12-01",
+      "count": 2000.0,
+      "workload": 201.368333,
+      "attendance": 221.21
+    },
+    {
+      "week": "2025-12-08",
+      "count": 2077.0,
+      "workload": 200.138333,
+      "attendance": 237.63
+    },
+    {
+      "week": "2025-12-15",
+      "count": 2011.0,
+      "workload": 189.858333,
+      "attendance": 215.21000000000004
+    },
+    {
+      "week": "2025-12-22",
+      "count": 223.0,
+      "workload": 20.125,
+      "attendance": 30.8
+    },
+    {
+      "week": "2025-12-29",
+      "count": 0.0,
+      "workload": 0.0,
+      "attendance": 0.0
+    },
+    {
+      "week": "2026-01-05",
+      "count": 1722.0,
+      "workload": 163.541666,
+      "attendance": 211.35000000000002
+    },
+    {
+      "week": "2026-01-12",
+      "count": 2243.0,
+      "workload": 215.968333,
+      "attendance": 278.47
+    },
+    {
+      "week": "2026-01-19",
+      "count": 1899.0,
+      "workload": 219.613333,
+      "attendance": 260.73
+    },
+    {
+      "week": "2026-01-26",
+      "count": 2244.0,
+      "workload": 261.4,
+      "attendance": 262.5
+    },
+    {
+      "week": "2026-02-02",
+      "count": 1892.0,
+      "workload": 171.306666,
+      "attendance": 226.29
+    },
+    {
+      "week": "2026-02-09",
+      "count": 2152.0,
+      "workload": 211.618333,
+      "attendance": 257.94
+    },
+    {
+      "week": "2026-02-16",
+      "count": 2296.0,
+      "workload": 252.716666,
+      "attendance": 265.93
+    },
+    {
+      "week": "2026-02-23",
+      "count": 1732.0,
+      "workload": 179.431666,
+      "attendance": 216.19
+    },
+    {
+      "week": "2026-03-02",
+      "count": 1805.0,
+      "workload": 186.505,
+      "attendance": 210.65
+    },
+    {
+      "week": "2026-03-09",
+      "count": 1636.0,
+      "workload": 154.19,
+      "attendance": 204.14
+    },
+    {
+      "week": "2026-03-16",
+      "count": 1773.0,
+      "workload": 181.638333,
+      "attendance": 259.57
+    },
+    {
+      "week": "2026-03-23",
+      "count": 2192.0,
+      "workload": 225.951666,
+      "attendance": 256.3
+    },
+    {
+      "week": "2026-03-30",
+      "count": 1648.0,
+      "workload": 175.075,
+      "attendance": 193.41
+    },
+    {
+      "week": "2026-04-06",
+      "count": 1734.0,
+      "workload": 190.291666,
+      "attendance": 180.70999999999998
+    },
+    {
+      "week": "2026-04-13",
+      "count": 2209.0,
+      "workload": 233.976666,
+      "attendance": 238.74
+    },
+    {
+      "week": "2026-04-20",
+      "count": 1996.0,
+      "workload": 221.395,
+      "attendance": 213.61
+    },
+    {
+      "week": "2026-04-27",
+      "count": 1527.0,
+      "workload": 168.653333,
+      "attendance": 161.40999999999997
+    },
+    {
+      "week": "2026-05-04",
+      "count": 1606.0,
+      "workload": 173.17,
+      "attendance": 168.44
+    },
+    {
+      "week": "2026-05-11",
+      "count": 915.0,
+      "workload": 102.916666,
+      "attendance": 131.48
+    },
+    {
+      "week": "2026-05-18",
+      "count": 1613.0,
+      "workload": 162.941666,
+      "attendance": 206.69999999999996
+    },
+    {
+      "week": "2026-05-25",
+      "count": 1198.0,
+      "workload": 131.863333,
+      "attendance": 137.93
+    },
+    {
+      "week": "2026-06-01",
+      "count": 2070.0,
+      "workload": 232.166666,
+      "attendance": 234.05
+    },
+    {
+      "week": "2026-06-08",
+      "count": 1925.0,
+      "workload": 201.971666,
+      "attendance": 244.55
+    },
+    {
+      "week": "2026-06-15",
+      "count": 2072.0,
+      "workload": 200.778333,
+      "attendance": 203.74
+    },
+    {
+      "week": "2026-06-22",
+      "count": 1844.0,
+      "workload": 191.311666,
+      "attendance": 204.59
+    },
+    {
+      "week": "2026-06-29",
+      "count": 1935.0,
+      "workload": 192.303333,
+      "attendance": 205.99
+    },
+    {
+      "week": "2026-07-06",
+      "count": 2425.0,
+      "workload": 246.183333,
+      "attendance": 247.10999999999999
+    },
+    {
+      "week": "2026-07-13",
+      "count": 2036.0,
+      "workload": 194.308333,
+      "attendance": 203.39
+    },
+    {
+      "week": "2026-07-20",
+      "count": 2395.0,
+      "workload": 270.463333,
+      "attendance": 266.83
+    },
+    {
+      "week": "2026-07-27",
+      "count": 2001.0,
+      "workload": 215.696666,
+      "attendance": null
+    },
+    {
+      "week": "2026-08-03",
+      "count": 1553.0,
+      "workload": 180.88,
+      "attendance": null
+    },
+    {
+      "week": "2026-08-10",
+      "count": 1632.0,
+      "workload": 156.366666,
+      "attendance": null
+    },
+    {
+      "week": "2026-08-17",
+      "count": 1531.0,
+      "workload": 153.818333,
+      "attendance": null
+    },
+    {
+      "week": "2026-08-24",
+      "count": 1522.0,
+      "workload": 142.596666,
+      "attendance": null
+    },
+    {
+      "week": "2026-08-31",
+      "count": 1691.0,
+      "workload": 165.035,
+      "attendance": null
+    },
+    {
+      "week": "2026-09-07",
+      "count": 1878.0,
+      "workload": 195.726666,
+      "attendance": null
+    },
+    {
+      "week": "2026-09-14",
+      "count": 741.0,
+      "workload": 63.35,
+      "attendance": null
+    }
+  ],
+  "monthly_history": [
+    {
+      "lab": "MR7",
+      "month": "2024-01",
+      "calibrations": 9793
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-02",
+      "calibrations": 10521
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-03",
+      "calibrations": 9305
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-04",
+      "calibrations": 9601
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-05",
+      "calibrations": 8707
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-06",
+      "calibrations": 8841
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-07",
+      "calibrations": 9981
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-08",
+      "calibrations": 8527
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-09",
+      "calibrations": 6199
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-10",
+      "calibrations": 7901
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-11",
+      "calibrations": 8442
+    },
+    {
+      "lab": "MR7",
+      "month": "2024-12",
+      "calibrations": 6761
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-01",
+      "calibrations": 8257
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-02",
+      "calibrations": 8789
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-03",
+      "calibrations": 9870
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-04",
+      "calibrations": 8476
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-05",
+      "calibrations": 8749
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-06",
+      "calibrations": 8017
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-07",
+      "calibrations": 8075
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-08",
+      "calibrations": 8719
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-09",
+      "calibrations": 8673
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-10",
+      "calibrations": 9140
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-11",
+      "calibrations": 8761
+    },
+    {
+      "lab": "MR7",
+      "month": "2025-12",
+      "calibrations": 6311
+    },
+    {
+      "lab": "MR7",
+      "month": "2026-01",
+      "calibrations": 8108
+    },
+    {
+      "lab": "MR7",
+      "month": "2026-02",
+      "calibrations": 8072
+    },
+    {
+      "lab": "MR7",
+      "month": "2026-03",
+      "calibrations": 8303
+    },
+    {
+      "lab": "MR7",
+      "month": "2026-04",
+      "calibrations": 8217
+    },
+    {
+      "lab": "MR7",
+      "month": "2026-05",
+      "calibrations": 5332
+    },
+    {
+      "lab": "MR7",
+      "month": "2026-06",
+      "calibrations": 8539
+    },
+    {
+      "lab": "MR7",
+      "month": "2026-07",
+      "calibrations": 10164
+    },
+    {
+      "lab": "MR7",
+      "month": "2026-08",
+      "calibrations": 6675
+    }
+  ],
+  "capacity_history": [
+    {
+      "source": "actual_capacity",
+      "month": "2024-01",
+      "attendance_hours": 1222.5100000000002,
+      "sick_hours": 353.00000000000006,
+      "vacation_hours": 147.45,
+      "other_hours": 7.7,
+      "total_hours": 1730.66
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-02",
+      "attendance_hours": 1303.5500000000002,
+      "sick_hours": 248.29999999999993,
+      "vacation_hours": 30.8,
+      "other_hours": 0.0,
+      "total_hours": 1582.65
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-03",
+      "attendance_hours": 1042.23,
+      "sick_hours": 98.10000000000001,
+      "vacation_hours": 100.10000000000001,
+      "other_hours": 0.0,
+      "total_hours": 1240.43
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-04",
+      "attendance_hours": 1171.91,
+      "sick_hours": 190.89999999999998,
+      "vacation_hours": 69.3,
+      "other_hours": 0.0,
+      "total_hours": 1432.1100000000001
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-05",
+      "attendance_hours": 1106.34,
+      "sick_hours": 103.05000000000003,
+      "vacation_hours": 184.79999999999998,
+      "other_hours": 0.0,
+      "total_hours": 1394.19
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-06",
+      "attendance_hours": 1156.57,
+      "sick_hours": 37.3,
+      "vacation_hours": 138.60000000000002,
+      "other_hours": 0.0,
+      "total_hours": 1332.4699999999998
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-07",
+      "attendance_hours": 1155.4799999999998,
+      "sick_hours": 78.05000000000001,
+      "vacation_hours": 377.2999999999998,
+      "other_hours": 0.0,
+      "total_hours": 1610.83
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-08",
+      "attendance_hours": 1097.6299999999999,
+      "sick_hours": 69.30000000000001,
+      "vacation_hours": 238.7,
+      "other_hours": 0.0,
+      "total_hours": 1405.6299999999999
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-09",
+      "attendance_hours": 843.47,
+      "sick_hours": 69.30000000000001,
+      "vacation_hours": 238.70000000000002,
+      "other_hours": 7.7,
+      "total_hours": 1159.17
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-10",
+      "attendance_hours": 960.1699999999998,
+      "sick_hours": 415.80000000000007,
+      "vacation_hours": 146.3,
+      "other_hours": 0.0,
+      "total_hours": 1522.2700000000004
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-11",
+      "attendance_hours": 1067.0500000000002,
+      "sick_hours": 154.0,
+      "vacation_hours": 53.900000000000006,
+      "other_hours": 15.4,
+      "total_hours": 1290.35
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2024-12",
+      "attendance_hours": 814.6999999999999,
+      "sick_hours": 101.55000000000001,
+      "vacation_hours": 373.45000000000005,
+      "other_hours": 7.7,
+      "total_hours": 1297.3999999999996
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-01",
+      "attendance_hours": 1160.5700000000002,
+      "sick_hours": 77.00000000000001,
+      "vacation_hours": 30.8,
+      "other_hours": 0.0,
+      "total_hours": 1268.3700000000003
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-02",
+      "attendance_hours": 1155.1100000000004,
+      "sick_hours": 138.6,
+      "vacation_hours": 23.1,
+      "other_hours": 7.7,
+      "total_hours": 1324.5100000000002
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-03",
+      "attendance_hours": 1207.12,
+      "sick_hours": 30.8,
+      "vacation_hours": 100.10000000000002,
+      "other_hours": 0.0,
+      "total_hours": 1338.0200000000002
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-04",
+      "attendance_hours": 1022.34,
+      "sick_hours": 32.15,
+      "vacation_hours": 230.99999999999994,
+      "other_hours": 0.0,
+      "total_hours": 1285.49
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-05",
+      "attendance_hours": 1044.14,
+      "sick_hours": 38.5,
+      "vacation_hours": 187.79999999999998,
+      "other_hours": 0.0,
+      "total_hours": 1270.4399999999998
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-06",
+      "attendance_hours": 922.87,
+      "sick_hours": 115.50000000000003,
+      "vacation_hours": 191.59999999999994,
+      "other_hours": 0.0,
+      "total_hours": 1229.97
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-07",
+      "attendance_hours": 975.1500000000003,
+      "sick_hours": 115.50000000000001,
+      "vacation_hours": 221.69999999999996,
+      "other_hours": 0.0,
+      "total_hours": 1312.3500000000004
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-08",
+      "attendance_hours": 1055.6799999999998,
+      "sick_hours": 61.60000000000001,
+      "vacation_hours": 169.99999999999997,
+      "other_hours": 0.0,
+      "total_hours": 1287.28
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-09",
+      "attendance_hours": 1018.9200000000001,
+      "sick_hours": 61.6,
+      "vacation_hours": 300.30000000000007,
+      "other_hours": 38.5,
+      "total_hours": 1419.3200000000002
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-10",
+      "attendance_hours": 915.6699999999998,
+      "sick_hours": 279.42,
+      "vacation_hours": 192.49999999999994,
+      "other_hours": 0.0,
+      "total_hours": 1387.5900000000001
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-11",
+      "attendance_hours": 1004.7299999999999,
+      "sick_hours": 231.00000000000006,
+      "vacation_hours": 53.900000000000006,
+      "other_hours": 31.27,
+      "total_hours": 1320.9
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2025-12",
+      "attendance_hours": 704.8499999999999,
+      "sick_hours": 207.90000000000003,
+      "vacation_hours": 488.95,
+      "other_hours": 0.0,
+      "total_hours": 1401.6999999999998
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2026-01",
+      "attendance_hours": 1013.05,
+      "sick_hours": 176.79999999999995,
+      "vacation_hours": 84.60000000000001,
+      "other_hours": 0.0,
+      "total_hours": 1274.4499999999998
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2026-02",
+      "attendance_hours": 966.35,
+      "sick_hours": 76.5,
+      "vacation_hours": 61.6,
+      "other_hours": 0.0,
+      "total_hours": 1104.45
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2026-03",
+      "attendance_hours": 1035.7700000000002,
+      "sick_hours": 15.4,
+      "vacation_hours": 112.62000000000002,
+      "other_hours": 0.0,
+      "total_hours": 1163.7900000000002
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2026-04",
+      "attendance_hours": 882.77,
+      "sick_hours": 190.79999999999995,
+      "vacation_hours": 184.70000000000002,
+      "other_hours": 38.5,
+      "total_hours": 1296.77
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2026-05",
+      "attendance_hours": 644.5500000000001,
+      "sick_hours": 261.19999999999993,
+      "vacation_hours": 192.50000000000006,
+      "other_hours": 0.0,
+      "total_hours": 1098.2499999999998
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2026-06",
+      "attendance_hours": 970.6399999999999,
+      "sick_hours": 289.2,
+      "vacation_hours": 65.4,
+      "other_hours": 0.0,
+      "total_hours": 1325.2400000000002
+    },
+    {
+      "source": "actual_capacity",
+      "month": "2026-07",
+      "attendance_hours": 1093.8600000000001,
+      "sick_hours": 115.50000000000001,
+      "vacation_hours": 98.79999999999998,
+      "other_hours": 0.0,
+      "total_hours": 1308.16
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-01",
+      "attendance_hours": 1153.8000000000002,
+      "sick_hours": 294.09999999999997,
+      "vacation_hours": 158.99999999999997,
+      "other_hours": 7.7,
+      "total_hours": 1614.5999999999995
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-02",
+      "attendance_hours": 1284.3,
+      "sick_hours": 209.79999999999998,
+      "vacation_hours": 30.8,
+      "other_hours": 0.0,
+      "total_hours": 1524.8999999999994
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-03",
+      "attendance_hours": 1165.0,
+      "sick_hours": 93.10000000000001,
+      "vacation_hours": 100.10000000000001,
+      "other_hours": 0.0,
+      "total_hours": 1358.1999999999996
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-04",
+      "attendance_hours": 1295.8999999999999,
+      "sick_hours": 111.60000000000002,
+      "vacation_hours": 84.7,
+      "other_hours": 0.0,
+      "total_hours": 1492.1999999999994
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-05",
+      "attendance_hours": 1059.9,
+      "sick_hours": 77.00000000000001,
+      "vacation_hours": 184.79999999999998,
+      "other_hours": 0.0,
+      "total_hours": 1321.6999999999996
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-06",
+      "attendance_hours": 1206.2000000000003,
+      "sick_hours": 30.8,
+      "vacation_hours": 138.60000000000002,
+      "other_hours": 0.0,
+      "total_hours": 1375.5999999999995
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-07",
+      "attendance_hours": 1139.6000000000001,
+      "sick_hours": 61.60000000000001,
+      "vacation_hours": 382.2999999999998,
+      "other_hours": 0.0,
+      "total_hours": 1583.4999999999995
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-08",
+      "attendance_hours": 1131.8999999999999,
+      "sick_hours": 53.900000000000006,
+      "vacation_hours": 238.7,
+      "other_hours": 0.0,
+      "total_hours": 1424.5
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-09",
+      "attendance_hours": 993.2999999999998,
+      "sick_hours": 38.5,
+      "vacation_hours": 238.70000000000002,
+      "other_hours": 7.7,
+      "total_hours": 1278.2
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-10",
+      "attendance_hours": 785.4,
+      "sick_hours": 323.4,
+      "vacation_hours": 153.59999999999997,
+      "other_hours": 0.0,
+      "total_hours": 1262.3999999999996
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-11",
+      "attendance_hours": 1106.1000000000004,
+      "sick_hours": 115.50000000000003,
+      "vacation_hours": 53.900000000000006,
+      "other_hours": 15.4,
+      "total_hours": 1290.8999999999999
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2024-12",
+      "attendance_hours": 762.3,
+      "sick_hours": 77.0,
+      "vacation_hours": 254.1,
+      "other_hours": 7.7,
+      "total_hours": 1101.1000000000001
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-01",
+      "attendance_hours": 1216.5999999999997,
+      "sick_hours": 69.30000000000001,
+      "vacation_hours": 30.8,
+      "other_hours": 0.0,
+      "total_hours": 1316.6999999999998
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-02",
+      "attendance_hours": 1088.0,
+      "sick_hours": 123.20000000000002,
+      "vacation_hours": 23.1,
+      "other_hours": 7.7,
+      "total_hours": 1242.0
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-03",
+      "attendance_hours": 1160.0,
+      "sick_hours": 30.8,
+      "vacation_hours": 100.10000000000002,
+      "other_hours": 0.0,
+      "total_hours": 1290.8999999999999
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-04",
+      "attendance_hours": 1106.1000000000001,
+      "sick_hours": 7.7,
+      "vacation_hours": 246.39999999999998,
+      "other_hours": 0.0,
+      "total_hours": 1360.1999999999996
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-05",
+      "attendance_hours": 962.5000000000001,
+      "sick_hours": 0.0,
+      "vacation_hours": 195.49999999999997,
+      "other_hours": 0.0,
+      "total_hours": 1158.0
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-06",
+      "attendance_hours": 962.0000000000002,
+      "sick_hours": 15.4,
+      "vacation_hours": 185.89999999999992,
+      "other_hours": 0.0,
+      "total_hours": 1163.3
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-07",
+      "attendance_hours": 994.5000000000003,
+      "sick_hours": 69.30000000000001,
+      "vacation_hours": 221.69999999999996,
+      "other_hours": 0.0,
+      "total_hours": 1285.5
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-08",
+      "attendance_hours": 1109.4,
+      "sick_hours": 38.5,
+      "vacation_hours": 169.99999999999997,
+      "other_hours": 0.0,
+      "total_hours": 1317.8999999999999
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-09",
+      "attendance_hours": 954.8,
+      "sick_hours": 38.5,
+      "vacation_hours": 308.00000000000006,
+      "other_hours": 38.5,
+      "total_hours": 1339.8000000000002
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-10",
+      "attendance_hours": 931.6999999999999,
+      "sick_hours": 92.4,
+      "vacation_hours": 230.9999999999999,
+      "other_hours": 0.0,
+      "total_hours": 1255.1000000000001
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-11",
+      "attendance_hours": 1047.2,
+      "sick_hours": 192.50000000000006,
+      "vacation_hours": 53.900000000000006,
+      "other_hours": 30.8,
+      "total_hours": 1324.4
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2025-12",
+      "attendance_hours": 746.8999999999999,
+      "sick_hours": 215.60000000000002,
+      "vacation_hours": 331.1,
+      "other_hours": 0.0,
+      "total_hours": 1293.6
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2026-01",
+      "attendance_hours": 1207.8999999999996,
+      "sick_hours": 53.900000000000006,
+      "vacation_hours": 77.0,
+      "other_hours": 0.0,
+      "total_hours": 1338.7999999999997
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2026-02",
+      "attendance_hours": 1145.6000000000001,
+      "sick_hours": 45.900000000000006,
+      "vacation_hours": 53.9,
+      "other_hours": 0.0,
+      "total_hours": 1245.4
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2026-03",
+      "attendance_hours": 1133.4999999999995,
+      "sick_hours": 0.0,
+      "vacation_hours": 119.60000000000002,
+      "other_hours": 0.0,
+      "total_hours": 1253.0999999999997
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2026-04",
+      "attendance_hours": 963.2000000000002,
+      "sick_hours": 135.39999999999995,
+      "vacation_hours": 185.39999999999998,
+      "other_hours": 38.5,
+      "total_hours": 1322.5000000000002
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2026-05",
+      "attendance_hours": 696.0000000000001,
+      "sick_hours": 168.90000000000003,
+      "vacation_hours": 192.50000000000006,
+      "other_hours": 0.0,
+      "total_hours": 1057.4
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2026-06",
+      "attendance_hours": 970.9,
+      "sick_hours": 254.10000000000002,
+      "vacation_hours": 65.4,
+      "other_hours": 0.0,
+      "total_hours": 1290.3999999999996
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2026-07",
+      "attendance_hours": 1136.6999999999996,
+      "sick_hours": 77.00000000000001,
+      "vacation_hours": 98.79999999999998,
+      "other_hours": 0.0,
+      "total_hours": 1312.4999999999995
+    },
+    {
+      "source": "planned_capacity",
+      "month": "2026-08",
+      "attendance_hours": 731.5000000000001,
+      "sick_hours": 23.1,
+      "vacation_hours": 207.89999999999998,
+      "other_hours": 0.0,
+      "total_hours": 962.5000000000003
+    }
+  ],
+  "forecasts": [
+    {
+      "month": "2026-10",
+      "count": 7507.555891146291,
+      "workload": 844.451849363696,
+      "workload_low": 726.3384182684339,
+      "workload_high": 956.020258608823,
+      "attendance": 908.223629791855,
+      "attendance_low": 715.9580217064577,
+      "attendance_high": 912.6780521097829
+    },
+    {
+      "month": "2026-11",
+      "count": 8660.245564397026,
+      "workload": 936.901545570434,
+      "workload_low": 816.7997483489554,
+      "workload_high": 1056.1069136386677,
+      "attendance": 1012.8570574197695,
+      "attendance_low": 824.8712816516531,
+      "attendance_high": 1008.9313716637884
+    },
+    {
+      "month": "2026-12",
+      "count": 7233.065241853242,
+      "workload": 760.8469846381764,
+      "workload_low": 670.6619052364841,
+      "workload_high": 878.5962907990966,
+      "attendance": 794.034473560503,
+      "attendance_low": 615.8948460118772,
+      "attendance_high": 812.349959373344
+    },
+    {
+      "month": "2027-01",
+      "count": 4125.350635437821,
+      "workload": 439.5147595485817,
+      "workload_low": 317.8531031148022,
+      "workload_high": 555.7996090933872,
+      "attendance": 554.5414058974209,
+      "attendance_low": 373.6820098277279,
+      "attendance_high": 563.8570148474489
+    },
+    {
+      "month": "2027-02",
+      "count": 8562.660974233768,
+      "workload": 803.0623375883686,
+      "workload_low": 661.9659001642138,
+      "workload_high": 911.2896188574962,
+      "attendance": 942.7060017140172,
+      "attendance_low": 740.969066843382,
+      "attendance_high": 948.2073025110574
+    },
+    {
+      "month": "2027-03",
+      "count": 9260.249001106147,
+      "workload": 865.2792845898364,
+      "workload_low": 718.851953228993,
+      "workload_high": 961.866228667238,
+      "attendance": 1009.99918418374,
+      "attendance_low": 802.7997940245216,
+      "attendance_high": 1002.9013499414996
+    },
+    {
+      "month": "2027-04",
+      "count": 7494.859042316873,
+      "workload": 778.7155020869621,
+      "workload_low": 639.5010563022265,
+      "workload_high": 879.05588446331,
+      "attendance": 857.9476520380111,
+      "attendance_low": 661.7185193067531,
+      "attendance_high": 850.1778318835749
+    },
+    {
+      "month": "2027-05",
+      "count": 7239.106444223252,
+      "workload": 819.4594796393119,
+      "workload_low": 668.2674917412164,
+      "workload_high": 925.6586297715751,
+      "attendance": 916.2511536209574,
+      "attendance_low": 715.4882896845127,
+      "attendance_high": 913.340270535654
+    },
+    {
+      "month": "2027-06",
+      "count": 7537.820181485245,
+      "workload": 823.7348631581159,
+      "workload_low": 673.8438295287181,
+      "workload_high": 912.9030932323446,
+      "attendance": 940.7268563454601,
+      "attendance_low": 742.9555153331347,
+      "attendance_high": 931.1094503715171
+    },
+    {
+      "month": "2027-07",
+      "count": 7702.9791719232335,
+      "workload": 854.6397073306894,
+      "workload_low": 727.8787234194156,
+      "workload_high": 961.0142370278498,
+      "attendance": 1048.2403407426664,
+      "attendance_low": 847.2573524700836,
+      "attendance_high": 1045.1877636087122
+    },
+    {
+      "month": "2027-08",
+      "count": 7804.478850095818,
+      "workload": 845.6946361633452,
+      "workload_low": 727.6962684462055,
+      "workload_high": 962.8006032342234,
+      "attendance": 1003.1164969701664,
+      "attendance_low": 801.6531416568149,
+      "attendance_high": 990.7634925864605
+    },
+    {
+      "month": "2027-09",
+      "count": 8309.719093860094,
+      "workload": 789.5408071453176,
+      "workload_low": 662.078112928384,
+      "workload_high": 899.7697508779116,
+      "attendance": 969.4298798749971,
+      "attendance_low": 779.9269905423536,
+      "attendance_high": 952.2078742762756
+    },
+    {
+      "month": "2027-10",
+      "count": 8676.0296093892,
+      "workload": 850.5849738933445,
+      "workload_low": 718.4239906022705,
+      "workload_high": 974.4426898416282,
+      "attendance": 949.4238280300636,
+      "attendance_low": 756.7398489818978,
+      "attendance_high": 946.4474586681906
+    }
+  ],
+  "models": {
+    "count": {
+      "target": "Calibration count",
+      "selected": "Gradient boosted trees",
+      "models": [
+        {
+          "name": "Recent 4-week mean",
+          "validation": {
+            "wape": 0.1781804792612054,
+            "mae": 344.3269230769232,
+            "bias": -0.005821590637688163,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.21860341916187484,
+            "mae": 396.1399999999999,
+            "bias": 0.012686657763748863,
+            "rows": 50
+          }
+        },
+        {
+          "name": "Seasonal 52-week baseline",
+          "validation": {
+            "wape": 0.25921503065042595,
+            "mae": 500.9230769230769,
+            "bias": -0.050951357376005015,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.22690299866456234,
+            "mae": 411.18,
+            "bias": 0.0677100003311003,
+            "rows": 50
+          }
+        },
+        {
+          "name": "Ridge regression",
+          "validation": {
+            "wape": 0.2714535855245973,
+            "mae": 524.5736135037641,
+            "bias": 0.2425721015682016,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.2439289044808978,
+            "mae": 442.0333249660141,
+            "bias": 0.12565314976446498,
+            "rows": 50
+          }
+        },
+        {
+          "name": "Gradient boosted trees",
+          "validation": {
+            "wape": 0.15806567869616395,
+            "mae": 305.4558446311562,
+            "bias": 0.010981567403940424,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.18776650934113795,
+            "mae": 340.2592022374497,
+            "bias": 0.07764636649041871,
+            "rows": 50
+          }
+        }
+      ],
+      "train_rows": 792,
+      "validation_rows": 156,
+      "test_rows": 600,
+      "mr7_test_rows": 50,
+      "validation_start": "2025-07-01",
+      "validation_end": "2025-09-30",
+      "test_start": "2025-10-01",
+      "test_end": "2026-09-14",
+      "holdout": [
+        {
+          "week": "2025-10-06",
+          "actual": 2293.0,
+          "predicted": 2046.8696704657352,
+          "lower": 1589.9707319300173,
+          "upper": 2445.354715699466
+        },
+        {
+          "week": "2025-10-13",
+          "actual": 2310.0,
+          "predicted": 2304.9462368343743,
+          "lower": 1858.529698849382,
+          "upper": 2696.4103922361696
+        },
+        {
+          "week": "2025-10-20",
+          "actual": 2090.0,
+          "predicted": 2170.739347942494,
+          "lower": 1734.805210508227,
+          "upper": 2555.182613512354
+        },
+        {
+          "week": "2025-10-27",
+          "actual": 1559.0,
+          "predicted": 2047.0354738784322,
+          "lower": 1621.5837369948906,
+          "upper": 2424.4578496163563
+        },
+        {
+          "week": "2025-11-03",
+          "actual": 2152.0,
+          "predicted": 2299.384908965909,
+          "lower": 1817.4524756322348,
+          "upper": 2669.7863948718973
+        },
+        {
+          "week": "2025-11-10",
+          "actual": 2115.0,
+          "predicted": 2354.700193015815,
+          "lower": 1873.784933106267,
+          "upper": 2718.0807890898677
+        },
+        {
+          "week": "2025-11-17",
+          "actual": 2583.0,
+          "predicted": 2210.0093475040544,
+          "lower": 1730.111261018633,
+          "upper": 2566.3690537461716
+        },
+        {
+          "week": "2025-11-24",
+          "actual": 1911.0,
+          "predicted": 2469.996836304729,
+          "lower": 1991.1159232434343,
+          "upper": 2846.9411060408406
+        },
+        {
+          "week": "2025-12-01",
+          "actual": 2000.0,
+          "predicted": 2465.4403789080575,
+          "lower": 1977.4049050296253,
+          "upper": 2838.431031404003
+        },
+        {
+          "week": "2025-12-08",
+          "actual": 2077.0,
+          "predicted": 2519.178975549968,
+          "lower": 2032.160675095662,
+          "upper": 2889.102355454144
+        },
+        {
+          "week": "2025-12-15",
+          "actual": 2011.0,
+          "predicted": 3401.829029035561,
+          "lower": 2915.8279020053815,
+          "upper": 3768.6851363479664
+        },
+        {
+          "week": "2025-12-22",
+          "actual": 223.0,
+          "predicted": 2.586986365158487,
+          "lower": 0,
+          "upper": 366.3758210857942
+        },
+        {
+          "week": "2025-12-29",
+          "actual": 0.0,
+          "predicted": 181.24412610886787,
+          "lower": 0,
+          "upper": 541.9656882377337
+        },
+        {
+          "week": "2026-01-05",
+          "actual": 1722.0,
+          "predicted": 1969.7857198450279,
+          "lower": 1446.2695647534472,
+          "upper": 2327.4400093821237
+        },
+        {
+          "week": "2026-01-12",
+          "actual": 2243.0,
+          "predicted": 1066.7522688082217,
+          "lower": 543.2361137166411,
+          "upper": 1424.4065583453175
+        },
+        {
+          "week": "2026-01-19",
+          "actual": 1899.0,
+          "predicted": 2455.653631417227,
+          "lower": 1972.7040246594268,
+          "upper": 2848.412370114001
+        },
+        {
+          "week": "2026-01-26",
+          "actual": 2244.0,
+          "predicted": 1903.3450447452713,
+          "lower": 1381.0004920974416,
+          "upper": 2296.103783442045
+        },
+        {
+          "week": "2026-02-02",
+          "actual": 1892.0,
+          "predicted": 2119.499492480455,
+          "lower": 1597.1549398326254,
+          "upper": 2512.258231177229
+        },
+        {
+          "week": "2026-02-09",
+          "actual": 2152.0,
+          "predicted": 2159.2046838750744,
+          "lower": 1636.8601312272447,
+          "upper": 2551.9634225718482
+        },
+        {
+          "week": "2026-02-16",
+          "actual": 2296.0,
+          "predicted": 2124.3723606941962,
+          "lower": 1602.0278080463665,
+          "upper": 2517.13109939097
+        },
+        {
+          "week": "2026-02-23",
+          "actual": 1732.0,
+          "predicted": 2080.008150627503,
+          "lower": 1557.663597979673,
+          "upper": 2472.7668893242767
+        },
+        {
+          "week": "2026-03-02",
+          "actual": 1805.0,
+          "predicted": 2006.462837425129,
+          "lower": 1484.1182847772993,
+          "upper": 2399.2215761219027
+        },
+        {
+          "week": "2026-03-09",
+          "actual": 1636.0,
+          "predicted": 2133.561147439432,
+          "lower": 1611.2165947916021,
+          "upper": 2490.383951314769
+        },
+        {
+          "week": "2026-03-16",
+          "actual": 1773.0,
+          "predicted": 1967.954841261706,
+          "lower": 1440.8474518333765,
+          "upper": 2324.7776451370432
+        },
+        {
+          "week": "2026-03-23",
+          "actual": 2192.0,
+          "predicted": 2044.0199449207296,
+          "lower": 1516.9125554924,
+          "upper": 2400.8427487960666
+        },
+        {
+          "week": "2026-03-30",
+          "actual": 1648.0,
+          "predicted": 2303.5375728992904,
+          "lower": 1776.4301834709609,
+          "upper": 2596.930215293787
+        },
+        {
+          "week": "2026-04-06",
+          "actual": 1734.0,
+          "predicted": 1818.5100071032207,
+          "lower": 1260.6847732422425,
+          "upper": 2111.9026494977174
+        },
+        {
+          "week": "2026-04-13",
+          "actual": 2209.0,
+          "predicted": 1640.0466973653956,
+          "lower": 1082.2214635044174,
+          "upper": 1920.5806818101807
+        },
+        {
+          "week": "2026-04-20",
+          "actual": 1996.0,
+          "predicted": 1913.4530413253435,
+          "lower": 1355.6278074643653,
+          "upper": 2270.2758452006806
+        },
+        {
+          "week": "2026-04-27",
+          "actual": 1527.0,
+          "predicted": 1730.6644565936494,
+          "lower": 1172.8392227326713,
+          "upper": 2087.4872604689867
+        },
+        {
+          "week": "2026-05-04",
+          "actual": 1606.0,
+          "predicted": 1735.346439011741,
+          "lower": 1177.5212051507629,
+          "upper": 2092.1692428870783
+        },
+        {
+          "week": "2026-05-11",
+          "actual": 915.0,
+          "predicted": 1855.978839812986,
+          "lower": 1298.1536059520079,
+          "upper": 2212.801643688323
+        },
+        {
+          "week": "2026-05-18",
+          "actual": 1613.0,
+          "predicted": 1667.714856978187,
+          "lower": 1060.4476523761773,
+          "upper": 2024.5376608535244
+        },
+        {
+          "week": "2026-05-25",
+          "actual": 1198.0,
+          "predicted": 1854.2824827060233,
+          "lower": 1247.0152781040135,
+          "upper": 2134.8164671508084
+        },
+        {
+          "week": "2026-06-01",
+          "actual": 2070.0,
+          "predicted": 1816.3346318547829,
+          "lower": 1160.4246040521261,
+          "upper": 2096.868616299568
+        },
+        {
+          "week": "2026-06-08",
+          "actual": 1925.0,
+          "predicted": 1760.3697669001328,
+          "lower": 1104.459739097476,
+          "upper": 2057.529928600106
+        },
+        {
+          "week": "2026-06-15",
+          "actual": 2072.0,
+          "predicted": 1969.724296115177,
+          "lower": 1313.8142683125202,
+          "upper": 2266.8844578151497
+        },
+        {
+          "week": "2026-06-22",
+          "actual": 1844.0,
+          "predicted": 1850.8197457546232,
+          "lower": 1244.7241435963645,
+          "upper": 2147.9799074545963
+        },
+        {
+          "week": "2026-06-29",
+          "actual": 1935.0,
+          "predicted": 1816.9757627591266,
+          "lower": 1210.8801606008678,
+          "upper": 2114.1359244590994
+        },
+        {
+          "week": "2026-07-06",
+          "actual": 2425.0,
+          "predicted": 1882.560058172946,
+          "lower": 1276.4644560146871,
+          "upper": 2179.7202198729187
+        },
+        {
+          "week": "2026-07-13",
+          "actual": 2036.0,
+          "predicted": 2091.819820504205,
+          "lower": 1485.7242183459462,
+          "upper": 2533.3672690450962
+        },
+        {
+          "week": "2026-07-20",
+          "actual": 2395.0,
+          "predicted": 2167.436474354046,
+          "lower": 1561.3408721957871,
+          "upper": 2464.5966360540187
+        },
+        {
+          "week": "2026-07-27",
+          "actual": 2001.0,
+          "predicted": 2238.132641055319,
+          "lower": 1661.5832808859577,
+          "upper": 2535.2928027552916
+        },
+        {
+          "week": "2026-08-03",
+          "actual": 1553.0,
+          "predicted": 2121.9306108492992,
+          "lower": 1545.3812506799381,
+          "upper": 2362.5450577448846
+        },
+        {
+          "week": "2026-08-10",
+          "actual": 1632.0,
+          "predicted": 2013.8056963756012,
+          "lower": 1401.5716045013064,
+          "upper": 2254.420143271187
+        },
+        {
+          "week": "2026-08-17",
+          "actual": 1531.0,
+          "predicted": 1751.426591643555,
+          "lower": 1139.1924997692602,
+          "upper": 1992.0410385391406
+        },
+        {
+          "week": "2026-08-24",
+          "actual": 1522.0,
+          "predicted": 2033.63179458181,
+          "lower": 1421.3977027075152,
+          "upper": 2274.2462414773954
+        },
+        {
+          "week": "2026-08-31",
+          "actual": 1691.0,
+          "predicted": 1921.4867331309017,
+          "lower": 1309.252641256607,
+          "upper": 2162.1011800264873
+        },
+        {
+          "week": "2026-09-07",
+          "actual": 1878.0,
+          "predicted": 1630.36951917775,
+          "lower": 1018.1354273034551,
+          "upper": 1870.9839660733355
+        },
+        {
+          "week": "2026-09-14",
+          "actual": 741.0,
+          "predicted": 1551.3641571531286,
+          "lower": 939.1300652788339,
+          "upper": 1802.0120816368621
+        }
+      ],
+      "forecast": [
+        {
+          "week": "2026-09-21",
+          "value": 1812.66846254998
+        },
+        {
+          "week": "2026-09-28",
+          "value": 1688.3020893132698
+        },
+        {
+          "week": "2026-10-05",
+          "value": 1553.4024227718694
+        },
+        {
+          "week": "2026-10-12",
+          "value": 1752.0844050279884
+        },
+        {
+          "week": "2026-10-19",
+          "value": 1718.1442363402834
+        },
+        {
+          "week": "2026-10-26",
+          "value": 1772.3775719649939
+        },
+        {
+          "week": "2026-11-02",
+          "value": 1856.7859078937613
+        },
+        {
+          "week": "2026-11-09",
+          "value": 1889.9175563373292
+        },
+        {
+          "week": "2026-11-16",
+          "value": 2066.999020996081
+        },
+        {
+          "week": "2026-11-23",
+          "value": 2278.728207304595
+        },
+        {
+          "week": "2026-11-30",
+          "value": 2202.326531091833
+        },
+        {
+          "week": "2026-12-07",
+          "value": 2321.8990980498957
+        },
+        {
+          "week": "2026-12-14",
+          "value": 2667.3827393250936
+        },
+        {
+          "week": "2026-12-21",
+          "value": 352.0288277705364
+        },
+        {
+          "week": "2026-12-28",
+          "value": 7.080712600761003
+        },
+        {
+          "week": "2027-01-04",
+          "value": 78.51376314143378
+        },
+        {
+          "week": "2027-01-11",
+          "value": 497.1825190107548
+        },
+        {
+          "week": "2027-01-18",
+          "value": 1494.1328748439691
+        },
+        {
+          "week": "2027-01-25",
+          "value": 2052.4868873270516
+        },
+        {
+          "week": "2027-02-01",
+          "value": 2341.67981983451
+        },
+        {
+          "week": "2027-02-08",
+          "value": 2001.4189003172994
+        },
+        {
+          "week": "2027-02-15",
+          "value": 2104.0667064141326
+        },
+        {
+          "week": "2027-02-22",
+          "value": 2115.495547667823
+        },
+        {
+          "week": "2027-03-01",
+          "value": 2183.1623085643205
+        },
+        {
+          "week": "2027-03-08",
+          "value": 2057.1002987562542
+        },
+        {
+          "week": "2027-03-15",
+          "value": 2193.0881526001676
+        },
+        {
+          "week": "2027-03-22",
+          "value": 2021.9360884403457
+        },
+        {
+          "week": "2027-03-29",
+          "value": 1878.245023071817
+        },
+        {
+          "week": "2027-04-05",
+          "value": 1853.8791729326524
+        },
+        {
+          "week": "2027-04-12",
+          "value": 1634.7381683226313
+        },
+        {
+          "week": "2027-04-19",
+          "value": 1691.7298078266704
+        },
+        {
+          "week": "2027-04-26",
+          "value": 1737.720632071433
+        },
+        {
+          "week": "2027-05-03",
+          "value": 1758.0974119132027
+        },
+        {
+          "week": "2027-05-10",
+          "value": 1430.145502433454
+        },
+        {
+          "week": "2027-05-17",
+          "value": 1774.3073407799486
+        },
+        {
+          "week": "2027-05-24",
+          "value": 1540.4676588626849
+        },
+        {
+          "week": "2027-05-31",
+          "value": 1677.1784474948586
+        },
+        {
+          "week": "2027-06-07",
+          "value": 1777.4137606375264
+        },
+        {
+          "week": "2027-06-14",
+          "value": 1795.948942137945
+        },
+        {
+          "week": "2027-06-21",
+          "value": 1782.873237880738
+        },
+        {
+          "week": "2027-06-28",
+          "value": 1736.0063336113644
+        },
+        {
+          "week": "2027-07-05",
+          "value": 1721.8500175552547
+        },
+        {
+          "week": "2027-07-12",
+          "value": 1773.9169124085313
+        },
+        {
+          "week": "2027-07-19",
+          "value": 1742.0709515648548
+        },
+        {
+          "week": "2027-07-26",
+          "value": 1718.6606163861152
+        },
+        {
+          "week": "2027-08-02",
+          "value": 1790.4757588829211
+        },
+        {
+          "week": "2027-08-09",
+          "value": 1690.4371954286103
+        },
+        {
+          "week": "2027-08-16",
+          "value": 1770.4888132554345
+        },
+        {
+          "week": "2027-08-23",
+          "value": 1770.4888132554345
+        },
+        {
+          "week": "2027-08-30",
+          "value": 1879.7286342639222
+        },
+        {
+          "week": "2027-09-06",
+          "value": 1948.0107387522537
+        },
+        {
+          "week": "2027-09-13",
+          "value": 1772.243142939879
+        },
+        {
+          "week": "2027-09-20",
+          "value": 2069.2207819740825
+        },
+        {
+          "week": "2027-09-27",
+          "value": 2060.766960009391
+        },
+        {
+          "week": "2027-10-04",
+          "value": 1852.2124487562176
+        },
+        {
+          "week": "2027-10-11",
+          "value": 2165.788389027857
+        },
+        {
+          "week": "2027-10-18",
+          "value": 1954.3366554928023
+        },
+        {
+          "week": "2027-10-25",
+          "value": 1820.5062761083
+        }
+      ],
+      "weekly_interval_coverage": 0.74,
+      "weekly_interval_nominal": 0.8,
+      "pooled_labs": 12
+    },
+    "workload": {
+      "target": "Standard workload hours",
+      "selected": "Gradient boosted trees",
+      "models": [
+        {
+          "name": "Recent 4-week mean",
+          "validation": {
+            "wape": 0.15987581619933142,
+            "mae": 31.800673076923054,
+            "bias": 0.000736228986811527,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.23796952735940352,
+            "mae": 44.457474940000004,
+            "bias": 0.014705551791024153,
+            "rows": 50
+          }
+        },
+        {
+          "name": "Seasonal 52-week baseline",
+          "validation": {
+            "wape": 0.29919425779123116,
+            "mae": 59.51230776923076,
+            "bias": -0.015325941785469584,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.24554896997975018,
+            "mae": 45.873466660000005,
+            "bias": 0.04979730082259347,
+            "rows": 50
+          }
+        },
+        {
+          "name": "Ridge regression",
+          "validation": {
+            "wape": 0.2565402049160708,
+            "mae": 51.02805028029582,
+            "bias": 0.2565402049160708,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.2511709354585403,
+            "mae": 46.92376243593512,
+            "bias": 0.12154749832466098,
+            "rows": 50
+          }
+        },
+        {
+          "name": "Gradient boosted trees",
+          "validation": {
+            "wape": 0.13717222145863187,
+            "mae": 27.284733073090536,
+            "bias": -0.043859791969917815,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.18696335348892948,
+            "mae": 34.928499857374675,
+            "bias": -0.0035751231624576545,
+            "rows": 50
+          }
+        }
+      ],
+      "train_rows": 772,
+      "validation_rows": 156,
+      "test_rows": 600,
+      "mr7_test_rows": 50,
+      "validation_start": "2025-07-01",
+      "validation_end": "2025-09-30",
+      "test_start": "2025-10-01",
+      "test_end": "2026-09-14",
+      "holdout": [
+        {
+          "week": "2025-10-06",
+          "actual": 225.538333,
+          "predicted": 179.10805671191218,
+          "lower": 163.1313766916,
+          "upper": 232.52829588280827
+        },
+        {
+          "week": "2025-10-13",
+          "actual": 257.356666,
+          "predicted": 195.20418481505857,
+          "lower": 179.38456661119164,
+          "upper": 248.42868958766445
+        },
+        {
+          "week": "2025-10-20",
+          "actual": 220.73,
+          "predicted": 188.220967231251,
+          "lower": 172.55841084382934,
+          "upper": 247.96698273431844
+        },
+        {
+          "week": "2025-10-27",
+          "actual": 159.711666,
+          "predicted": 182.667829162332,
+          "lower": 167.1623345913556,
+          "upper": 241.81222824493096
+        },
+        {
+          "week": "2025-11-03",
+          "actual": 218.456666,
+          "predicted": 197.2419085360354,
+          "lower": 178.28496107918096,
+          "upper": 255.78469119816586
+        },
+        {
+          "week": "2025-11-10",
+          "actual": 207.343333,
+          "predicted": 201.56626915650511,
+          "lower": 183.2758576505636,
+          "upper": 259.50743539816705
+        },
+        {
+          "week": "2025-11-17",
+          "actual": 265.036666,
+          "predicted": 196.6522350041109,
+          "lower": 179.02835944908233,
+          "upper": 253.99178482530436
+        },
+        {
+          "week": "2025-11-24",
+          "actual": 188.216666,
+          "predicted": 208.59215110327233,
+          "lower": 191.63481149915668,
+          "upper": 271.17067732203054
+        },
+        {
+          "week": "2025-12-01",
+          "actual": 201.368333,
+          "predicted": 209.95511818767838,
+          "lower": 189.57963308440605,
+          "upper": 272.1075993726198
+        },
+        {
+          "week": "2025-12-08",
+          "actual": 200.138333,
+          "predicted": 206.05265058772184,
+          "lower": 186.08563362945648,
+          "upper": 267.6035153521948
+        },
+        {
+          "week": "2025-12-15",
+          "actual": 189.858333,
+          "predicted": 122.61659716487497,
+          "lower": 103.05804835161658,
+          "upper": 183.56584550887942
+        },
+        {
+          "week": "2025-12-22",
+          "actual": 20.125,
+          "predicted": 1.251706996223335,
+          "lower": 0,
+          "upper": 66.38650341788224
+        },
+        {
+          "week": "2025-12-29",
+          "actual": 0.0,
+          "predicted": 23.18021493111391,
+          "lower": 4.438602407869428,
+          "upper": 87.88896631895605
+        },
+        {
+          "week": "2026-01-05",
+          "actual": 163.541666,
+          "predicted": 116.38767953661683,
+          "lower": 94.72185540381467,
+          "upper": 180.6703858906422
+        },
+        {
+          "week": "2026-01-12",
+          "actual": 215.968333,
+          "predicted": 190.61331398923676,
+          "lower": 168.9474898564346,
+          "upper": 254.8960203432621
+        },
+        {
+          "week": "2026-01-19",
+          "actual": 219.613333,
+          "predicted": 204.67172419402058,
+          "lower": 183.00590006121843,
+          "upper": 268.95443054804593
+        },
+        {
+          "week": "2026-01-26",
+          "actual": 261.4,
+          "predicted": 182.75654757230845,
+          "lower": 165.20871227629723,
+          "upper": 247.0392539263338
+        },
+        {
+          "week": "2026-02-02",
+          "actual": 171.306666,
+          "predicted": 210.68667484548243,
+          "lower": 196.20553970000708,
+          "upper": 277.51400852459955
+        },
+        {
+          "week": "2026-02-09",
+          "actual": 211.618333,
+          "predicted": 240.41588074019805,
+          "lower": 218.7500566073959,
+          "upper": 307.24321441931517
+        },
+        {
+          "week": "2026-02-16",
+          "actual": 252.716666,
+          "predicted": 215.28596902143772,
+          "lower": 192.21777997471477,
+          "upper": 282.11330270055487
+        },
+        {
+          "week": "2026-02-23",
+          "actual": 179.431666,
+          "predicted": 208.1536152928442,
+          "lower": 185.08542624612124,
+          "upper": 274.9809489719613
+        },
+        {
+          "week": "2026-03-02",
+          "actual": 186.505,
+          "predicted": 223.26772467578525,
+          "lower": 197.3166425638062,
+          "upper": 290.0950583549024
+        },
+        {
+          "week": "2026-03-09",
+          "actual": 154.19,
+          "predicted": 231.7730000893656,
+          "lower": 203.0132515728445,
+          "upper": 296.4701085993988
+        },
+        {
+          "week": "2026-03-16",
+          "actual": 181.638333,
+          "predicted": 208.59849577438686,
+          "lower": 175.8183595663952,
+          "upper": 273.2956042844201
+        },
+        {
+          "week": "2026-03-23",
+          "actual": 225.951666,
+          "predicted": 227.57555887422544,
+          "lower": 194.79542266623378,
+          "upper": 292.2726673842587
+        },
+        {
+          "week": "2026-03-30",
+          "actual": 175.075,
+          "predicted": 215.37534203232812,
+          "lower": 182.59520582433646,
+          "upper": 280.07245054236137
+        },
+        {
+          "week": "2026-04-06",
+          "actual": 190.291666,
+          "predicted": 196.00353825713242,
+          "lower": 157.9321714964986,
+          "upper": 260.70064676716567
+        },
+        {
+          "week": "2026-04-13",
+          "actual": 233.976666,
+          "predicted": 170.95955164158855,
+          "lower": 132.88818488095473,
+          "upper": 235.6566601516218
+        },
+        {
+          "week": "2026-04-20",
+          "actual": 221.395,
+          "predicted": 166.82012639230464,
+          "lower": 128.7487596316708,
+          "upper": 231.94955148907286
+        },
+        {
+          "week": "2026-04-27",
+          "actual": 168.653333,
+          "predicted": 168.38634370651266,
+          "lower": 130.3149769458788,
+          "upper": 233.51576880328088
+        },
+        {
+          "week": "2026-05-04",
+          "actual": 173.17,
+          "predicted": 192.11968361025262,
+          "lower": 154.0483168496188,
+          "upper": 257.24910870702087
+        },
+        {
+          "week": "2026-05-11",
+          "actual": 102.916666,
+          "predicted": 199.02893098926694,
+          "lower": 160.9575642286331,
+          "upper": 264.15835608603516
+        },
+        {
+          "week": "2026-05-18",
+          "actual": 162.941666,
+          "predicted": 196.64192038123525,
+          "lower": 156.80174494232998,
+          "upper": 261.77134547800347
+        },
+        {
+          "week": "2026-05-25",
+          "actual": 131.863333,
+          "predicted": 181.1335551217045,
+          "lower": 141.2933796827992,
+          "upper": 239.92954910475788
+        },
+        {
+          "week": "2026-06-01",
+          "actual": 232.166666,
+          "predicted": 173.96202627212932,
+          "lower": 129.17674419511303,
+          "upper": 232.7580202551827
+        },
+        {
+          "week": "2026-06-08",
+          "actual": 201.971666,
+          "predicted": 163.53415940090488,
+          "lower": 118.74887732388858,
+          "upper": 224.14503644404596
+        },
+        {
+          "week": "2026-06-15",
+          "actual": 200.778333,
+          "predicted": 203.66358804603186,
+          "lower": 158.87830596901557,
+          "upper": 264.2744650891729
+        },
+        {
+          "week": "2026-06-22",
+          "actual": 191.311666,
+          "predicted": 193.90421376188192,
+          "lower": 149.11893168486563,
+          "upper": 250.29397042966494
+        },
+        {
+          "week": "2026-06-29",
+          "actual": 192.303333,
+          "predicted": 206.37151031150157,
+          "lower": 161.58622823448525,
+          "upper": 262.7612669792846
+        },
+        {
+          "week": "2026-07-06",
+          "actual": 246.183333,
+          "predicted": 210.08020886822192,
+          "lower": 165.29492679120563,
+          "upper": 266.4699655360049
+        },
+        {
+          "week": "2026-07-13",
+          "actual": 194.308333,
+          "predicted": 189.903755143606,
+          "lower": 145.11847306658967,
+          "upper": 246.293511811389
+        },
+        {
+          "week": "2026-07-20",
+          "actual": 270.463333,
+          "predicted": 222.33181461144287,
+          "lower": 177.54653253442655,
+          "upper": 278.7215712792259
+        },
+        {
+          "week": "2026-07-27",
+          "actual": 215.696666,
+          "predicted": 208.81871238473119,
+          "lower": 164.03343030771487,
+          "upper": 265.2084690525142
+        },
+        {
+          "week": "2026-08-03",
+          "actual": 180.88,
+          "predicted": 206.53108111412513,
+          "lower": 161.74579903710884,
+          "upper": 257.88427711225137
+        },
+        {
+          "week": "2026-08-10",
+          "actual": 156.366666,
+          "predicted": 199.2027080476921,
+          "lower": 154.41742597067582,
+          "upper": 250.55590404581835
+        },
+        {
+          "week": "2026-08-17",
+          "actual": 153.818333,
+          "predicted": 206.81916918681299,
+          "lower": 160.7660371021147,
+          "upper": 258.1723651849392
+        },
+        {
+          "week": "2026-08-24",
+          "actual": 142.596666,
+          "predicted": 178.04390028911033,
+          "lower": 126.90837113485159,
+          "upper": 229.39709628723656
+        },
+        {
+          "week": "2026-08-31",
+          "actual": 165.035,
+          "predicted": 153.7875648259227,
+          "lower": 102.65203567166395,
+          "upper": 205.14076082404893
+        },
+        {
+          "week": "2026-09-07",
+          "actual": 195.726666,
+          "predicted": 153.19012171430424,
+          "lower": 102.0545925600455,
+          "upper": 204.54331771243048
+        },
+        {
+          "week": "2026-09-14",
+          "actual": 63.35,
+          "predicted": 178.49681534651236,
+          "lower": 132.44368326181407,
+          "upper": 229.8500113446386
+        }
+      ],
+      "forecast": [
+        {
+          "week": "2026-09-21",
+          "value": 153.12005706131754
+        },
+        {
+          "week": "2026-09-28",
+          "value": 171.14276651817107
+        },
+        {
+          "week": "2026-10-05",
+          "value": 172.6025734428177
+        },
+        {
+          "week": "2026-10-12",
+          "value": 206.11318230920375
+        },
+        {
+          "week": "2026-10-19",
+          "value": 190.41439041682764
+        },
+        {
+          "week": "2026-10-26",
+          "value": 207.113476048541
+        },
+        {
+          "week": "2026-11-02",
+          "value": 212.48445723973228
+        },
+        {
+          "week": "2026-11-09",
+          "value": 216.31035768309877
+        },
+        {
+          "week": "2026-11-16",
+          "value": 222.05740000266218
+        },
+        {
+          "week": "2026-11-23",
+          "value": 225.2069383013328
+        },
+        {
+          "week": "2026-11-30",
+          "value": 218.78327035671197
+        },
+        {
+          "week": "2026-12-07",
+          "value": 201.60170604673525
+        },
+        {
+          "week": "2026-12-14",
+          "value": 179.44426432636394
+        },
+        {
+          "week": "2026-12-21",
+          "value": 188.32486462892214
+        },
+        {
+          "week": "2026-12-28",
+          "value": 6.908356328203991
+        },
+        {
+          "week": "2027-01-04",
+          "value": 8.268771159943958
+        },
+        {
+          "week": "2027-01-11",
+          "value": 54.19193705546133
+        },
+        {
+          "week": "2027-01-18",
+          "value": 167.0262858902751
+        },
+        {
+          "week": "2027-01-25",
+          "value": 207.0670413022424
+        },
+        {
+          "week": "2027-02-01",
+          "value": 190.20551243567354
+        },
+        {
+          "week": "2027-02-08",
+          "value": 186.8384807139419
+        },
+        {
+          "week": "2027-02-15",
+          "value": 214.154913784242
+        },
+        {
+          "week": "2027-02-22",
+          "value": 211.86343065451095
+        },
+        {
+          "week": "2027-03-01",
+          "value": 211.4823006149297
+        },
+        {
+          "week": "2027-03-08",
+          "value": 178.86470531946964
+        },
+        {
+          "week": "2027-03-15",
+          "value": 192.37710501100273
+        },
+        {
+          "week": "2027-03-22",
+          "value": 199.95426612348098
+        },
+        {
+          "week": "2027-03-29",
+          "value": 192.7354508822243
+        },
+        {
+          "week": "2027-04-05",
+          "value": 185.9636359192017
+        },
+        {
+          "week": "2027-04-12",
+          "value": 185.07942318990195
+        },
+        {
+          "week": "2027-04-19",
+          "value": 171.20927698416924
+        },
+        {
+          "week": "2027-04-26",
+          "value": 176.8600716853855
+        },
+        {
+          "week": "2027-05-03",
+          "value": 186.25985988370124
+        },
+        {
+          "week": "2027-05-10",
+          "value": 178.64461458675754
+        },
+        {
+          "week": "2027-05-17",
+          "value": 203.87928495089295
+        },
+        {
+          "week": "2027-05-24",
+          "value": 174.0302140960939
+        },
+        {
+          "week": "2027-05-31",
+          "value": 182.79839948229443
+        },
+        {
+          "week": "2027-06-07",
+          "value": 193.39243481228732
+        },
+        {
+          "week": "2027-06-14",
+          "value": 183.42077278183996
+        },
+        {
+          "week": "2027-06-21",
+          "value": 208.00341982735435
+        },
+        {
+          "week": "2027-06-28",
+          "value": 191.87908442089136
+        },
+        {
+          "week": "2027-07-05",
+          "value": 182.6100136899421
+        },
+        {
+          "week": "2027-07-12",
+          "value": 203.88136789587915
+        },
+        {
+          "week": "2027-07-19",
+          "value": 191.79166528772822
+        },
+        {
+          "week": "2027-07-26",
+          "value": 194.49671425273596
+        },
+        {
+          "week": "2027-08-02",
+          "value": 204.18948776302602
+        },
+        {
+          "week": "2027-08-09",
+          "value": 167.68374273544907
+        },
+        {
+          "week": "2027-08-16",
+          "value": 195.8834024276508
+        },
+        {
+          "week": "2027-08-23",
+          "value": 196.85950328506482
+        },
+        {
+          "week": "2027-08-30",
+          "value": 186.5263927061726
+        },
+        {
+          "week": "2027-09-06",
+          "value": 169.5494588823358
+        },
+        {
+          "week": "2027-09-13",
+          "value": 170.81427142723476
+        },
+        {
+          "week": "2027-09-20",
+          "value": 200.4469419913788
+        },
+        {
+          "week": "2027-09-27",
+          "value": 202.1197450949286
+        },
+        {
+          "week": "2027-10-04",
+          "value": 179.9801658082227
+        },
+        {
+          "week": "2027-10-11",
+          "value": 202.3456868193668
+        },
+        {
+          "week": "2027-10-18",
+          "value": 200.3909365342816
+        },
+        {
+          "week": "2027-10-25",
+          "value": 181.24543683364635
+        }
+      ],
+      "weekly_interval_coverage": 0.66,
+      "weekly_interval_nominal": 0.8,
+      "pooled_labs": 12
+    },
+    "attendance": {
+      "target": "Attendance hours",
+      "selected": "Gradient boosted trees",
+      "models": [
+        {
+          "name": "Recent 4-week mean",
+          "validation": {
+            "wape": 0.1374975713357317,
+            "mae": 31.573461538461515,
+            "bias": 0.00613698336448723,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.22417711330030438,
+            "mae": 47.47863095238095,
+            "bias": -0.011404733558847913,
+            "rows": 42
+          }
+        },
+        {
+          "name": "Seasonal 52-week baseline",
+          "validation": {
+            "wape": 0.20472802310078453,
+            "mae": 47.01153846153847,
+            "bias": -0.0037217186233325238,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.2201769266830126,
+            "mae": 46.63142857142858,
+            "bias": 0.13056015540948449,
+            "rows": 42
+          }
+        },
+        {
+          "name": "Ridge regression",
+          "validation": {
+            "wape": 0.13101562782716977,
+            "mae": 30.085017836700825,
+            "bias": 0.06369316455391102,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.2003558569677931,
+            "mae": 42.4335100585353,
+            "bias": 0.01949914457877513,
+            "rows": 42
+          }
+        },
+        {
+          "name": "Gradient boosted trees",
+          "validation": {
+            "wape": 0.10839841969906178,
+            "mae": 24.891445732095796,
+            "bias": 0.05135492836809358,
+            "rows": 13
+          },
+          "test": {
+            "wape": 0.1601671964696691,
+            "mae": 33.92192494545155,
+            "bias": 0.10571269940553381,
+            "rows": 42
+          }
+        }
+      ],
+      "train_rows": 722,
+      "validation_rows": 156,
+      "test_rows": 504,
+      "mr7_test_rows": 42,
+      "validation_start": "2025-07-01",
+      "validation_end": "2025-09-30",
+      "test_start": "2025-10-01",
+      "test_end": "2026-07-20",
+      "holdout": [
+        {
+          "week": "2025-10-06",
+          "actual": 226.76999999999998,
+          "predicted": 255.2608047073335,
+          "lower": 213.45388701325322,
+          "upper": 276.6875445841471
+        },
+        {
+          "week": "2025-10-13",
+          "actual": 244.87,
+          "predicted": 270.6827704136699,
+          "lower": 229.36544953017489,
+          "upper": 290.32708560332
+        },
+        {
+          "week": "2025-10-20",
+          "actual": 231.83,
+          "predicted": 254.19738988745317,
+          "lower": 213.36966581454342,
+          "upper": 272.05928038993966
+        },
+        {
+          "week": "2025-10-27",
+          "actual": 129.42000000000002,
+          "predicted": 239.20274184845218,
+          "lower": 198.86461458612771,
+          "upper": 255.28220766377513
+        },
+        {
+          "week": "2025-11-03",
+          "actual": 239.24,
+          "predicted": 285.7693101359979,
+          "lower": 231.49238754495127,
+          "upper": 300.0663512641573
+        },
+        {
+          "week": "2025-11-10",
+          "actual": 253.39,
+          "predicted": 273.70079541080366,
+          "lower": 219.67633646418307,
+          "upper": 286.2154118517995
+        },
+        {
+          "week": "2025-11-17",
+          "actual": 265.39,
+          "predicted": 297.0665749359234,
+          "lower": 245.54049892617707,
+          "upper": 307.7987666897557
+        },
+        {
+          "week": "2025-11-24",
+          "actual": 246.71,
+          "predicted": 297.45905898185833,
+          "lower": 248.4313659089862,
+          "upper": 306.4088260485271
+        },
+        {
+          "week": "2025-12-01",
+          "actual": 221.21,
+          "predicted": 294.60564018630487,
+          "lower": 243.85658120444654,
+          "upper": 301.77298256581
+        },
+        {
+          "week": "2025-12-08",
+          "actual": 237.63,
+          "predicted": 268.0774957102576,
+          "lower": 198.6407642578055,
+          "upper": 274.8635895308672
+        },
+        {
+          "week": "2025-12-15",
+          "actual": 215.21000000000004,
+          "predicted": 233.14727619673255,
+          "lower": 165.78695279656864,
+          "upper": 239.55212145844658
+        },
+        {
+          "week": "2025-12-22",
+          "actual": 30.8,
+          "predicted": 0.44331128016442606,
+          "lower": 0,
+          "upper": 6.466907982982867
+        },
+        {
+          "week": "2025-12-29",
+          "actual": 0.0,
+          "predicted": 8.479271016194595,
+          "lower": 0,
+          "upper": 26.341161518681105
+        },
+        {
+          "week": "2026-01-05",
+          "actual": 211.35000000000002,
+          "predicted": 216.56109415718862,
+          "lower": 155.4299949138893,
+          "upper": 232.64055997251154
+        },
+        {
+          "week": "2026-01-12",
+          "actual": 278.47,
+          "predicted": 267.2836230686585,
+          "lower": 206.1525238253592,
+          "upper": 283.36308888398145
+        },
+        {
+          "week": "2026-01-19",
+          "actual": 260.73,
+          "predicted": 299.5291434942615,
+          "lower": 238.3980442509622,
+          "upper": 317.61812658550264
+        },
+        {
+          "week": "2026-01-26",
+          "actual": 262.5,
+          "predicted": 273.30487856459143,
+          "lower": 212.1737793212921,
+          "upper": 291.39386165583255
+        },
+        {
+          "week": "2026-02-02",
+          "actual": 226.29,
+          "predicted": 271.0123836033813,
+          "lower": 209.88128436008196,
+          "upper": 289.10136669462236
+        },
+        {
+          "week": "2026-02-09",
+          "actual": 257.94,
+          "predicted": 249.6031804917085,
+          "lower": 188.4720812484092,
+          "upper": 258.78004014713184
+        },
+        {
+          "week": "2026-02-16",
+          "actual": 265.93,
+          "predicted": 270.66145846265874,
+          "lower": 209.5303592193594,
+          "upper": 280.42305668247525
+        },
+        {
+          "week": "2026-02-23",
+          "actual": 216.19,
+          "predicted": 284.8624852389437,
+          "lower": 223.73138599564436,
+          "upper": 294.6240834587602
+        },
+        {
+          "week": "2026-03-02",
+          "actual": 210.65,
+          "predicted": 249.30005806773437,
+          "lower": 179.20724569589237,
+          "upper": 259.0616562875509
+        },
+        {
+          "week": "2026-03-09",
+          "actual": 204.14,
+          "predicted": 255.3139566415064,
+          "lower": 185.2211442696644,
+          "upper": 261.1597947909268
+        },
+        {
+          "week": "2026-03-16",
+          "actual": 259.57,
+          "predicted": 253.76149660264133,
+          "lower": 183.66868423079933,
+          "upper": 255.56417712545772
+        },
+        {
+          "week": "2026-03-23",
+          "actual": 256.3,
+          "predicted": 258.28447428651197,
+          "lower": 188.19166191466996,
+          "upper": 265.357135739337
+        },
+        {
+          "week": "2026-03-30",
+          "actual": 193.41,
+          "predicted": 273.31520751976797,
+          "lower": 203.22239514792597,
+          "upper": 280.387868972593
+        },
+        {
+          "week": "2026-04-06",
+          "actual": 180.70999999999998,
+          "predicted": 206.28592479352767,
+          "lower": 135.25186208090338,
+          "upper": 213.35858624635273
+        },
+        {
+          "week": "2026-04-13",
+          "actual": 238.74,
+          "predicted": 185.90043836394238,
+          "lower": 114.86637565131811,
+          "upper": 192.97309981676744
+        },
+        {
+          "week": "2026-04-20",
+          "actual": 213.61,
+          "predicted": 198.32898472245333,
+          "lower": 127.29492200982905,
+          "upper": 208.0905829422698
+        },
+        {
+          "week": "2026-04-27",
+          "actual": 161.40999999999997,
+          "predicted": 201.56757519479675,
+          "lower": 130.53351248217245,
+          "upper": 214.80127129924085
+        },
+        {
+          "week": "2026-05-04",
+          "actual": 168.44,
+          "predicted": 205.92837762820128,
+          "lower": 146.00515668797624,
+          "upper": 219.16207373264535
+        },
+        {
+          "week": "2026-05-11",
+          "actual": 131.48,
+          "predicted": 213.6583788910112,
+          "lower": 153.73515795078617,
+          "upper": 226.8920749954553
+        },
+        {
+          "week": "2026-05-18",
+          "actual": 206.69999999999996,
+          "predicted": 211.94225244648223,
+          "lower": 140.90818973385797,
+          "upper": 225.1759485509263
+        },
+        {
+          "week": "2026-05-25",
+          "actual": 137.93,
+          "predicted": 197.40600271692728,
+          "lower": 126.371940004303,
+          "upper": 210.63969882137138
+        },
+        {
+          "week": "2026-06-01",
+          "actual": 234.05,
+          "predicted": 195.36554377979604,
+          "lower": 124.33148106717177,
+          "upper": 208.59923988424015
+        },
+        {
+          "week": "2026-06-08",
+          "actual": 244.55,
+          "predicted": 210.6055452141142,
+          "lower": 146.5313012361787,
+          "upper": 233.42439721280533
+        },
+        {
+          "week": "2026-06-15",
+          "actual": 203.74,
+          "predicted": 235.21544025843428,
+          "lower": 171.1411962804988,
+          "upper": 267.36601201129497
+        },
+        {
+          "week": "2026-06-22",
+          "actual": 204.59,
+          "predicted": 235.77333666462297,
+          "lower": 171.6990926866875,
+          "upper": 267.9239084174837
+        },
+        {
+          "week": "2026-06-29",
+          "actual": 205.99,
+          "predicted": 235.28535509421593,
+          "lower": 171.21111111628045,
+          "upper": 259.8980901259322
+        },
+        {
+          "week": "2026-07-06",
+          "actual": 247.10999999999999,
+          "predicted": 227.3271212821035,
+          "lower": 163.252877304168,
+          "upper": 251.93985631381975
+        },
+        {
+          "week": "2026-07-13",
+          "actual": 203.39,
+          "predicted": 233.21184113828446,
+          "lower": 169.13759716034897,
+          "upper": 260.07550789017563
+        },
+        {
+          "week": "2026-07-20",
+          "actual": 266.83,
+          "predicted": 240.85866177948444,
+          "lower": 176.78441780154895,
+          "upper": 267.7223285313756
+        }
+      ],
+      "forecast": [
+        {
+          "week": "2026-07-27",
+          "value": 233.0051850823077
+        },
+        {
+          "week": "2026-08-03",
+          "value": 217.58682522039692
+        },
+        {
+          "week": "2026-08-10",
+          "value": 187.93422386351284
+        },
+        {
+          "week": "2026-08-17",
+          "value": 226.3619516146669
+        },
+        {
+          "week": "2026-08-24",
+          "value": 216.18390861841664
+        },
+        {
+          "week": "2026-08-31",
+          "value": 231.77394870564416
+        },
+        {
+          "week": "2026-09-07",
+          "value": 214.58986134721556
+        },
+        {
+          "week": "2026-09-14",
+          "value": 222.89080835101623
+        },
+        {
+          "week": "2026-09-21",
+          "value": 233.0415767399266
+        },
+        {
+          "week": "2026-09-28",
+          "value": 187.97747658606403
+        },
+        {
+          "week": "2026-10-05",
+          "value": 202.04169341712665
+        },
+        {
+          "week": "2026-10-12",
+          "value": 228.89396640575143
+        },
+        {
+          "week": "2026-10-19",
+          "value": 203.4841321664445
+        },
+        {
+          "week": "2026-10-26",
+          "value": 194.1194930455784
+        },
+        {
+          "week": "2026-11-02",
+          "value": 240.5839942271214
+        },
+        {
+          "week": "2026-11-09",
+          "value": 234.80678984482836
+        },
+        {
+          "week": "2026-11-16",
+          "value": 234.9598370195097
+        },
+        {
+          "week": "2026-11-23",
+          "value": 241.34347829834027
+        },
+        {
+          "week": "2026-11-30",
+          "value": 234.02121316421264
+        },
+        {
+          "week": "2026-12-07",
+          "value": 237.63154195352462
+        },
+        {
+          "week": "2026-12-14",
+          "value": 234.21017523391944
+        },
+        {
+          "week": "2026-12-21",
+          "value": 120.77386017434428
+        },
+        {
+          "week": "2026-12-28",
+          "value": 1.4512486014319526
+        },
+        {
+          "week": "2027-01-04",
+          "value": 77.69632286042301
+        },
+        {
+          "week": "2027-01-11",
+          "value": 65.73170776592302
+        },
+        {
+          "week": "2027-01-18",
+          "value": 186.17535416119694
+        },
+        {
+          "week": "2027-01-25",
+          "value": 224.31605742354978
+        },
+        {
+          "week": "2027-02-01",
+          "value": 218.27108605181854
+        },
+        {
+          "week": "2027-02-08",
+          "value": 235.1766248774343
+        },
+        {
+          "week": "2027-02-15",
+          "value": 243.0368472728764
+        },
+        {
+          "week": "2027-02-22",
+          "value": 246.22144351188763
+        },
+        {
+          "week": "2027-03-01",
+          "value": 250.0998615977713
+        },
+        {
+          "week": "2027-03-08",
+          "value": 204.42467728114627
+        },
+        {
+          "week": "2027-03-15",
+          "value": 239.73028905636392
+        },
+        {
+          "week": "2027-03-22",
+          "value": 236.73618713803208
+        },
+        {
+          "week": "2027-03-29",
+          "value": 184.352394590995
+        },
+        {
+          "week": "2027-04-05",
+          "value": 168.2562249103922
+        },
+        {
+          "week": "2027-04-12",
+          "value": 214.00680031066025
+        },
+        {
+          "week": "2027-04-19",
+          "value": 224.39292520196977
+        },
+        {
+          "week": "2027-04-26",
+          "value": 204.3264665881888
+        },
+        {
+          "week": "2027-05-03",
+          "value": 223.20731563418406
+        },
+        {
+          "week": "2027-05-10",
+          "value": 201.9241315211501
+        },
+        {
+          "week": "2027-05-17",
+          "value": 233.92137109315502
+        },
+        {
+          "week": "2027-05-24",
+          "value": 167.77995531029808
+        },
+        {
+          "week": "2027-05-31",
+          "value": 217.27572725881322
+        },
+        {
+          "week": "2027-06-07",
+          "value": 220.6255951963836
+        },
+        {
+          "week": "2027-06-14",
+          "value": 218.6755712597695
+        },
+        {
+          "week": "2027-06-21",
+          "value": 218.50571527973207
+        },
+        {
+          "week": "2027-06-28",
+          "value": 225.5951529047141
+        },
+        {
+          "week": "2027-07-05",
+          "value": 252.4398857541796
+        },
+        {
+          "week": "2027-07-12",
+          "value": 237.57490760866733
+        },
+        {
+          "week": "2027-07-19",
+          "value": 223.99531832509433
+        },
+        {
+          "week": "2027-07-26",
+          "value": 239.53849862737047
+        },
+        {
+          "week": "2027-08-02",
+          "value": 245.07962814769286
+        },
+        {
+          "week": "2027-08-09",
+          "value": 202.17743963456513
+        },
+        {
+          "week": "2027-08-16",
+          "value": 229.5131217200302
+        },
+        {
+          "week": "2027-08-23",
+          "value": 225.53641705514696
+        },
+        {
+          "week": "2027-08-30",
+          "value": 233.06536713087465
+        },
+        {
+          "week": "2027-09-06",
+          "value": 214.58986134721556
+        },
+        {
+          "week": "2027-09-13",
+          "value": 226.713823741643
+        },
+        {
+          "week": "2027-09-20",
+          "value": 231.67864088909536
+        },
+        {
+          "week": "2027-09-27",
+          "value": 227.45151040623165
+        },
+        {
+          "week": "2027-10-04",
+          "value": 199.093995977719
+        },
+        {
+          "week": "2027-10-11",
+          "value": 241.58819030851748
+        },
+        {
+          "week": "2027-10-18",
+          "value": 211.6427227919553
+        },
+        {
+          "week": "2027-10-25",
+          "value": 199.6197002063447
+        }
+      ],
+      "weekly_interval_coverage": 0.7142857142857143,
+      "weekly_interval_nominal": 0.8,
+      "pooled_labs": 12
+    }
+  },
+  "recurrence": {
+    "target": "Calibration during a 30-day risk interval, conditional on no earlier return",
+    "train_rows": 156857,
+    "validation_rows": 112699,
+    "test_rows": 180402,
+    "sampled_instruments": 24000,
+    "test_events": 3869,
+    "event_rate": 0.0214465471557965,
+    "roc_auc": 0.7653016679818403,
+    "average_precision": 0.058454007896230856,
+    "brier": 0.02065761070158762,
+    "constant_brier": 0.021094716738153343,
+    "raw_brier": 0.039094899873461576,
+    "probability_calibration": "Isotonic",
+    "calibration_selection_brier": {
+      "Raw": 0.01688275196322729,
+      "Sigmoid": 0.014530746625518032,
+      "Isotonic": 0.014438429084974141
+    },
+    "features": [
+      "Elapsed time since last calibration",
+      "Previous observed interval",
+      "Number of prior calibrations",
+      "Equipment group",
+      "Season"
+    ],
+    "caveats": [
+      "Risk rows for the same instrument are correlated; this is a temporal prototype, not independent-subject validation.",
+      "Latest equipment group is used as a static proxy; historical reassignment could bias the benchmark.",
+      "A 30-day hazard is not an official due date or a calibrated customer booking probability.",
+      "No-return tails are right-censored; observations do not imply the instrument is lost."
+    ]
+  },
+  "missing_due_forecast": [
+    {
+      "month": "2026-10",
+      "expected_first_returns": 312.45215554105,
+      "supported_instruments": 53384
+    },
+    {
+      "month": "2026-11",
+      "expected_first_returns": 341.06725446522694,
+      "supported_instruments": 51816
+    },
+    {
+      "month": "2026-12",
+      "expected_first_returns": 285.98481333938315,
+      "supported_instruments": 49912
+    },
+    {
+      "month": "2027-01",
+      "expected_first_returns": 294.9550821939529,
+      "supported_instruments": 48540
+    },
+    {
+      "month": "2027-02",
+      "expected_first_returns": 295.4324117829415,
+      "supported_instruments": 46978
+    },
+    {
+      "month": "2027-03",
+      "expected_first_returns": 298.74421469238393,
+      "supported_instruments": 45172
+    },
+    {
+      "month": "2027-04",
+      "expected_first_returns": 284.6306762992716,
+      "supported_instruments": 43759
+    },
+    {
+      "month": "2027-05",
+      "expected_first_returns": 277.0849915730245,
+      "supported_instruments": 42137
+    },
+    {
+      "month": "2027-06",
+      "expected_first_returns": 339.4689341625767,
+      "supported_instruments": 40715
+    },
+    {
+      "month": "2027-07",
+      "expected_first_returns": 319.8297039334982,
+      "supported_instruments": 39374
+    },
+    {
+      "month": "2027-08",
+      "expected_first_returns": 289.3933675778014,
+      "supported_instruments": 37922
+    },
+    {
+      "month": "2027-09",
+      "expected_first_returns": 302.6982741068795,
+      "supported_instruments": 36550
+    },
+    {
+      "month": "2027-10",
+      "expected_first_returns": 259.92519483063853,
+      "supported_instruments": 35503
+    }
+  ],
+  "recorded_due_counts": {
+    "2027-08": 5363,
+    "2027-04": 5427,
+    "2027-02": 5958,
+    "2027-01": 5684,
+    "2027-06": 6035,
+    "2027-09": 5322,
+    "2027-10": 3988,
+    "2027-07": 5888,
+    "2026-12": 4428,
+    "2026-11": 6028,
+    "2027-03": 6136,
+    "2027-05": 5321,
+    "2026-10": 4528
+  },
+  "drivers": [
+    {
+      "description": "Werks-Kalibr. Gewindelehrring Option 1",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 15692,
+      "matched_services": 15692,
+      "standard_hours": 1855.233333,
+      "share": 0.18661988087173603
+    },
+    {
+      "description": "Werks-Kalibr. Grenzlehrdorn Option 4",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 24068,
+      "matched_services": 24068,
+      "standard_hours": 1840.983333,
+      "share": 0.18518645831775357
+    },
+    {
+      "description": "Werks-Kalibr. Gew.-Grenzlehrdorn Opt. 1",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 20489,
+      "matched_services": 20489,
+      "standard_hours": 1691.85,
+      "share": 0.17018497880387456
+    },
+    {
+      "description": "Werks-Kalibr. Grenzrachenlehre",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 3475,
+      "matched_services": 3475,
+      "standard_hours": 513.666666,
+      "share": 0.05167027258058748
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Gewinde-Grenzlehrdorn",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 3325,
+      "matched_services": 3325,
+      "standard_hours": 443.333333,
+      "share": 0.0445953683125904
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Grenzlehrdorn  Opt. 4",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 3680,
+      "matched_services": 3680,
+      "standard_hours": 432.916666,
+      "share": 0.04354754477468691
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Gewindelehrring Opt. 1",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 2918,
+      "matched_services": 2918,
+      "standard_hours": 418.666666,
+      "share": 0.042114122220704465
+    },
+    {
+      "description": "Werks-Kalibr. Gut/Auss.GW-Lehrdorn Opt.1",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 3815,
+      "matched_services": 3815,
+      "standard_hours": 415.716666,
+      "share": 0.04181737860426599
+    },
+    {
+      "description": "Werks-Kalibr. Prüfstift Satz ab 10 St.",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 14253,
+      "matched_services": 14253,
+      "standard_hours": 356.325,
+      "share": 0.035843108178792805
+    },
+    {
+      "description": "Werks-Kalibr. Prüfstift Opt. 1",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 5291,
+      "matched_services": 5291,
+      "standard_hours": 264.55,
+      "share": 0.026611363975863712
+    },
+    {
+      "description": "Werks-Kalibr. kegel. Gew.-grenzlehrdorn",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 981,
+      "matched_services": 981,
+      "standard_hours": 228.383333,
+      "share": 0.022973320735149825
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Prüfstift Option 1",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 6848,
+      "matched_services": 6848,
+      "standard_hours": 196.175,
+      "share": 0.019733450493158434
+    },
+    {
+      "description": "Werks-Kalibr. Gut/Aussch-Lehrdorn Opt. 4",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 1578,
+      "matched_services": 1578,
+      "standard_hours": 178.65,
+      "share": 0.017970592229401068
+    },
+    {
+      "description": "Werks-Kalibr. Lehren",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 300,
+      "matched_services": 300,
+      "standard_hours": 114.0,
+      "share": 0.011467380431859622
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) kegeliger Gewinde-",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 358,
+      "matched_services": 358,
+      "standard_hours": 92.783333,
+      "share": 0.009333173484622063
+    },
+    {
+      "description": "Werks-Kalibr. kegeliger Gewindelehrring",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 402,
+      "matched_services": 402,
+      "standard_hours": 91.2,
+      "share": 0.0091739043454877
+    },
+    {
+      "description": "Werks-Kalibr. Kegel-Lehrdorn mit Absatz",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 243,
+      "matched_services": 243,
+      "standard_hours": 90.033333,
+      "share": 0.009056548079467555
+    },
+    {
+      "description": "Bauteilmessung mit KMG",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 103,
+      "matched_services": 103,
+      "standard_hours": 83.25,
+      "share": 0.008374205446950118
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Grenzrachenlehre",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 472,
+      "matched_services": 472,
+      "standard_hours": 78.75,
+      "share": 0.007921545693060923
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) G/A LD Opt. 4",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 736,
+      "matched_services": 736,
+      "standard_hours": 73.6,
+      "share": 0.0074035017524988435
+    },
+    {
+      "description": "Werks-Kalibr. Verzahnungslehrdorn",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 125,
+      "matched_services": 125,
+      "standard_hours": 62.5,
+      "share": 0.006286941026238828
+    },
+    {
+      "description": "Werks-Kalibr. Feinzeigerrachenlehre",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 195,
+      "matched_services": 195,
+      "standard_hours": 49.725,
+      "share": 0.005001890280475612
+    },
+    {
+      "description": "Werks-Kalibr. Gewindelehrdorn mit",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 139,
+      "matched_services": 139,
+      "standard_hours": 46.333333,
+      "share": 0.004660718913921366
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Gut/Aus.-Gewindelehr-",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 330,
+      "matched_services": 330,
+      "standard_hours": 40.366666,
+      "share": 0.004060525577086081
+    },
+    {
+      "description": "Zusatzaufwand durch Sonderform",
+      "service_type": "ZUSATZLEISTUNG",
+      "services": 149,
+      "matched_services": 149,
+      "standard_hours": 37.25,
+      "share": 0.0037470168516383416
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Gewindemessdrahtsatz",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 146,
+      "matched_services": 146,
+      "standard_hours": 36.5,
+      "share": 0.0036715735593234756
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Lehren",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 62,
+      "matched_services": 62,
+      "standard_hours": 35.0,
+      "share": 0.003520686974693744
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Gewindelehrdorn",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 74,
+      "matched_services": 74,
+      "standard_hours": 27.133333,
+      "share": 0.002729370630660798
+    },
+    {
+      "description": "Werks-Kalibr. Kegel-Lehrdorn",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 98,
+      "matched_services": 98,
+      "standard_hours": 26.166666,
+      "share": 0.0026321325759246185
+    },
+    {
+      "description": "Werks-Kalibr. Messschrauben",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 22,
+      "matched_services": 22,
+      "standard_hours": 16.0,
+      "share": 0.00160945690271714
+    },
+    {
+      "description": "Werks-Kalibr. Lehren mit KMG",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 26,
+      "matched_services": 26,
+      "standard_hours": 14.25,
+      "share": 0.0014334225539824527
+    },
+    {
+      "description": "Werks-Kalibr. Grenzlehrdorn Option 1",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 19,
+      "matched_services": 19,
+      "standard_hours": 11.083333,
+      "share": 0.0011148841751226666
+    },
+    {
+      "description": "Werks-Kalibr. Gewindemessdrahtsatz",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 63,
+      "matched_services": 63,
+      "standard_hours": 10.5,
+      "share": 0.0010562060924081231
+    },
+    {
+      "description": "Werks-Kalibr. Gewinde-Grenzrollenlehre",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 34,
+      "matched_services": 34,
+      "standard_hours": 9.066666,
+      "share": 0.0009120255111456751
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Feinzeigerrachenlehre",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 24,
+      "matched_services": 24,
+      "standard_hours": 8.0,
+      "share": 0.00080472845135857
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) G/A-LD Opt. 4",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 48,
+      "matched_services": 48,
+      "standard_hours": 8.0,
+      "share": 0.00080472845135857
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Prüfstift Option 2",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 12,
+      "matched_services": 12,
+      "standard_hours": 5.0,
+      "share": 0.0005029552820991063
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Prüfstift Option 3",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 12,
+      "matched_services": 12,
+      "standard_hours": 5.0,
+      "share": 0.0005029552820991063
+    },
+    {
+      "description": "Werks-Kalibr. Gewindelehrring Option 4",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 25,
+      "matched_services": 25,
+      "standard_hours": 4.583333,
+      "share": 0.0004610423083938286
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Lehrdorn eins. Opt. 1",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 7,
+      "matched_services": 7,
+      "standard_hours": 4.333333,
+      "share": 0.00043589454428887323
+    },
+    {
+      "description": "Werks-Kalibr. Gut/Auss.GW-Lehrdorn Opt.4",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 12,
+      "matched_services": 12,
+      "standard_hours": 4.0,
+      "share": 0.000402364225679285
+    },
+    {
+      "description": "Werks-Kalibr. Gut/Aussch.-Lehrdorn Opt.3",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 22,
+      "matched_services": 22,
+      "standard_hours": 2.566666,
+      "share": 0.00025818364441683694
+    },
+    {
+      "description": "Werks-Kalibr. Lehren",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 10,
+      "matched_services": 10,
+      "standard_hours": 2.5,
+      "share": 0.0002514776410495531
+    },
+    {
+      "description": "Werks-Kalibr. Einstellring Option 4",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 18,
+      "matched_services": 18,
+      "standard_hours": 2.1,
+      "share": 0.00021124121848162464
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Lehren mit KMG",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 4,
+      "matched_services": 4,
+      "standard_hours": 2.0,
+      "share": 0.0002011821128396425
+    },
+    {
+      "description": "Werks-Kalibr. Gewindegrenzlehrdorn Opt.4",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 5,
+      "matched_services": 5,
+      "standard_hours": 1.25,
+      "share": 0.00012573882052477656
+    },
+    {
+      "description": "Werks-Kalibr. Feinzeigermessschraube",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 4,
+      "matched_services": 4,
+      "standard_hours": 1.116666,
+      "share": 0.00011232661260809611
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Lehren",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 2,
+      "matched_services": 2,
+      "standard_hours": 1.0,
+      "share": 0.00010059105641982125
+    },
+    {
+      "description": "Werks-Kalibr. Gewindegrenzlehrdorn Opt.2",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 4,
+      "matched_services": 4,
+      "standard_hours": 1.0,
+      "share": 0.00010059105641982125
+    },
+    {
+      "description": "Kleinreparaturen  Handmessmittel",
+      "service_type": "ZUSATZLEISTUNG",
+      "services": 12,
+      "matched_services": 12,
+      "standard_hours": 1.0,
+      "share": 0.00010059105641982125
+    },
+    {
+      "description": "Werks-Kalibr. Gewindelehrring Option 3",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 4,
+      "matched_services": 4,
+      "standard_hours": 0.733333,
+      "share": 7.376674117751678e-05
+    },
+    {
+      "description": "Werks-Kalibr. Einstellring Option 1",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.6,
+      "share": 6.035463385189275e-05
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Lehrdorn eins. Opt. 2",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.583333,
+      "share": 5.867808271454359e-05
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Grenzlehrdorn  Opt. 2",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.5,
+      "share": 5.0295528209910624e-05
+    },
+    {
+      "description": "Werks-Kalibr. Verzahnungslehrring",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.5,
+      "share": 5.0295528209910624e-05
+    },
+    {
+      "description": "Werks-Kalibr. Gut/Aussch.-Lehrdorn Opt.2",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.5,
+      "share": 5.0295528209910624e-05
+    },
+    {
+      "description": "Werks-Kalibr. Gewindelehrring Option 2",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 2,
+      "matched_services": 2,
+      "standard_hours": 0.366666,
+      "share": 3.6883320293230177e-05
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Feinzeigermessschraube",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 2,
+      "matched_services": 2,
+      "standard_hours": 0.366666,
+      "share": 3.6883320293230177e-05
+    },
+    {
+      "description": "Werks-Kalibr. Grenzlehrdorn Option 3",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 2,
+      "matched_services": 2,
+      "standard_hours": 0.333333,
+      "share": 3.3530318609588276e-05
+    },
+    {
+      "description": "Werks-Kalibr. Kegel-Lehrring",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.3,
+      "share": 3.0177316925946376e-05
+    },
+    {
+      "description": "Werks-Kalibr. Kegel-Lehrring mit Absatz",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.3,
+      "share": 3.0177316925946376e-05
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Lehrdorn eins. Opt. 3",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 2,
+      "matched_services": 2,
+      "standard_hours": 0.2,
+      "share": 2.011821128396425e-05
+    },
+    {
+      "description": "7 Dienstleistung in Klärung",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 2,
+      "matched_services": 2,
+      "standard_hours": 0.166666,
+      "share": 1.6765109009265928e-05
+    },
+    {
+      "description": "Akkr.Kal.(DAkkS) Einstellring Opt. 4",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.133333,
+      "share": 1.3412107325624028e-05
+    },
+    {
+      "description": "Batteriewechsel inkl.Batterie",
+      "service_type": "ZUSATZLEISTUNG",
+      "services": 2,
+      "matched_services": 2,
+      "standard_hours": 0.1,
+      "share": 1.0059105641982126e-05
+    },
+    {
+      "description": "7 Dienstleistung in Klärung",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.083333,
+      "share": 8.382554504632964e-06
+    },
+    {
+      "description": "4 Dienstleistung in Klärung",
+      "service_type": "KALIBRIERUNG_WERK",
+      "services": 1,
+      "matched_services": 1,
+      "standard_hours": 0.083333,
+      "share": 8.382554504632964e-06
+    },
+    {
+      "description": "SIGNIERUNG",
+      "service_type": "SIGNIERUNG",
+      "services": 100,
+      "matched_services": 0,
+      "standard_hours": 0.0,
+      "share": 0.0
+    },
+    {
+      "description": "UNKALIBRIERT_ZURUECK",
+      "service_type": "UNKALIBRIERT_ZURUECK",
+      "services": 5,
+      "matched_services": 0,
+      "standard_hours": 0.0,
+      "share": 0.0
+    },
+    {
+      "description": "FREMDKAL_WERK",
+      "service_type": "FREMDKAL_WERK",
+      "services": 2,
+      "matched_services": 0,
+      "standard_hours": 0.0,
+      "share": 0.0
+    },
+    {
+      "description": "KALIBRIERUNG_DAKKS",
+      "service_type": "KALIBRIERUNG_DAKKS",
+      "services": 2,
+      "matched_services": 0,
+      "standard_hours": 0.0,
+      "share": 0.0
+    },
+    {
+      "description": "ZUSATZLEISTUNG",
+      "service_type": "ZUSATZLEISTUNG",
+      "services": 2539,
+      "matched_services": 0,
+      "standard_hours": 0.0,
+      "share": 0.0
+    },
+    {
+      "description": "FREMDKAL_DAKKS",
+      "service_type": "FREMDKAL_DAKKS",
+      "services": 11,
+      "matched_services": 0,
+      "standard_hours": 0.0,
+      "share": 0.0
+    },
+    {
+      "description": "SCHMELZTAUCHEN",
+      "service_type": "SCHMELZTAUCHEN",
+      "services": 33,
+      "matched_services": 0,
+      "standard_hours": 0.0,
+      "share": 0.0
+    }
+  ],
+  "quality": {
+    "instruments": 207638,
+    "missing_due": 53980,
+    "missing_due_pct": 0.2599716814841214,
+    "calibration_events": 273700,
+    "instruments_with_history": 206980,
+    "missing_due_with_repeated_history": 9188,
+    "missing_due_supported_now": 53384,
+    "missing_due_unsupported_now": 529,
+    "missing_due_stopped": 67,
+    "workload_services": 288624,
+    "workload_matched_services": 284260,
+    "time_match_pct": 0.9848799822606574,
+    "due_dates_after_2040": 140,
+    "actual_attendance_null_rows": 21
+  },
+  "assumptions": {
+    "default_productive_share": 0.8,
+    "productive_share_measured": false,
+    "forecast_month_allocation": "Weekly forecasts prorated over seven calendar days",
+    "long_horizon_uncertainty": "Four-week residual block bootstrap; historical variability, not a calibrated annual guarantee",
+    "driver_allocation": "Historical service-workload shares Sep 2025–Aug 2026; assumes the mix persists",
+    "recurrence_aggregation": "Missing-date first-return signals are contextual and are not added to the aggregate forecast",
+    "capacity_meaning": "Standard-work-hour equivalent; attendance is converted by a manager-controlled assumption"
+  }
+}

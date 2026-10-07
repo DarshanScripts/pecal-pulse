@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+frontend/node_modules/
+frontend/.next/
+frontend/*.tsbuildinfo
+.env
+.env.*
+!.env.example
+data/runtime/
+*.log
+analysis/mr7/instruments.json
+analysis/mr7/calibration_events.json
+analysis/mr7/service_key_sample.json
+
+# Local lint cache
+.ruff_cache/
+
+# Extracted/pseudonymous customer data and model outputs
+analysis/customers/
