@@ -619,9 +619,26 @@ Status: planning only; this request updates the plan rather than the application
 
 The Dashboard becomes an action workspace: filter a market/service cohort → inspect the opportunity map → select a cluster → review four scoped metrics → inspect a priority-sorted account shortlist → open an account or ask Pulse to act on the selected group. Existing frequency/volume segments remain attributes and optional filters; they never define opportunity-cluster membership.
 
-Order: compact page title and filters, large 2D opportunity map with a clickable four-color legend, four selection-dependent metric cards, then the account action table. Cluster selection has an obvious All opportunities reset and a compact label showing the selected group and account count. No decorative demo profile or source banner is restored.
+Order: compact page title and filters, large 2D opportunity map with a clickable four-color legend, four selection-dependent metric cards, deadline/unassigned attention strip, then the ranked account table with action controls and a preparation drawer. Cluster selection has an obvious All opportunities reset and a compact label showing the selected group and account count. No decorative demo profile or source banner is restored.
 
 Proposed top-level navigation remains three tabs: Dashboard, Customers, Insights. Move sector history, correlation, next-month sector outlook and model quality into Insights. Follow-ups become a Customers subview and remain accessible from the Dashboard follow-up card. Preserve existing `/follow-ups` links and agent navigation during the transition. This keeps the earlier three-tab limit while adding the requested analytics page.
+
+### Agreed Dashboard contents
+
+Primary question: **Which customers should the team act on next, why, and who will handle them?** Implement the following screen composition, reusing the existing services and components:
+
+1. **Filters:** sector/industry, equipment category, behavioral segment, opportunity purpose and due window. Keep advanced evidence and display controls compact.
+2. **Opportunity map:** customer points on urgency (X) and opportunity size (Y), with four evaluated clusters or clearly identified priority zones if clustering is unstable. Clicking a group selects its whole filtered cohort; clicking a customer opens evidence. Provide an All opportunities reset.
+3. **Four scoped cards:** upcoming due instruments, expected next-three-month calibration volume, accounts needing inactivity review, and open follow-ups with overdue count. Show forecast coverage/target dates where relevant. Optional financial-scenario mode replaces the demand value with estimated contribution from supplied assumptions, retaining the quantity basis.
+4. **Attention strip:** overdue follow-ups and timely opportunities without an assigned owner; each links to the relevant account/action rather than creating a second uncoordinated queue.
+5. **Ranked customer table:** customer identifier/name when supplied, sector, behavioral segment, opportunity reason, relevant quantity, activity-review signal, priority, owner and suggested next action. Offer supported return probability with its target window as secondary detail. Keep evidence/readiness badges visible.
+6. **Preparation drawer:** relevant history and instruments, why this account is flagged, supported forecasts, unknown checks and conversation questions. Support ownership, confirmed outcome and next-follow-up entry without losing the map selection.
+7. **Action toolbar:** select five/ten/custom accounts, save the shortlist and export a handover brief. Full time-budget planning follows the core workflow; required effort assumptions must be supplied rather than inferred from the extract.
+8. **Pulse drawer:** preserve streaming Markdown, returned reasoning, tool traces and conversation memory. Ground answers and typed filter/cluster/chart actions in the current page, selection and visible metrics; only registered, data-supported chart types are available.
+
+Sector activity, sector-movement correlation, next-month sector outlook and model quality belong on **Insights**. The Dashboard should not duplicate those charts. Keep the initial manager screen minimal; financial scenarios, time-budget planning and outcome analytics must not delay the core selection → preparation → owner/next-step workflow.
+
+Acceptance: selecting a cluster or changing a filter updates all four cards, attention counts and table against the same full cohort; drawing fewer points does not change totals. Closing the preparation drawer preserves selection. Persisted ownership/follow-up changes refresh affected actions, readiness and counts without changing the historical forecast reference date. Unknown forecasts/financial inputs show an unavailable state. Pulse reports the same labels, units, periods and values as the page.
 
 ### What the local data actually supports
 
@@ -733,7 +750,7 @@ First controls: industry, service/equipment category, purpose (all/upcoming/acti
 
 Point display limit: 500 / 1,000 / All. Sampling is deterministic and balanced across clusters; clearly show displayed count versus all matching accounts. KPI totals and table never aggregate the sampled points. Full filtered count is available even when fewer dots are shown.
 
-Table columns: account, industry, behavioral segment, opportunity reason, due instruments, activity-review badge, supported return probability with target window, priority score, next action. Priority is a rule score rather than a calibrated percentage. Separate the activity-review badge from the return probability. Default sort uses existing transparent priority; purpose-specific sort presets can emphasize due quantity or activity concerns. Opening an account preserves the Dashboard selection for returning to it.
+Table columns: account, industry, behavioral segment, opportunity reason, due instruments, activity-review badge, supported return probability with target window, priority score, owner, next action. Priority is a rule score rather than a calibrated percentage. Separate the activity-review badge from the return probability. Default sort uses existing transparent priority; purpose-specific sort presets can emphasize due quantity or activity concerns. Opening an account preserves the Dashboard selection for returning to it.
 
 ### Integration contracts and agent controls
 
