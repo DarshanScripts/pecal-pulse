@@ -609,3 +609,102 @@ Reserve the final three hours for integration and presentation. If delayed, cut 
 ### Start here
 
 **Aditya + Codex:** publish the baseline, agree v2 contracts with Member 1, and own the checkpointed chatbot, page context, workspace controls and artifacts. **Member 1:** produce the normalized snapshot and API/workflow skeleton. **Member 2:** reproduce the existing benchmark and export typed predictions/sector data. **Member 3:** build peer/ranking/preparation and explainable evidence services against the agreed fixture, then validate them on the shared snapshot.
+
+
+## 9. Proposed opportunity dashboard redesign — 7 October 2026
+
+Status: planning only; no application changes are authorized by this planning request. Main was clean and checkpointed first at `04b1182` (after `63b6217`). This section supersedes the earlier dashboard layout proposal after review.
+
+### Manager workflow and layout
+
+The Dashboard becomes an action workspace: filter a market/service cohort → inspect the opportunity map → select a cluster → review four scoped metrics → inspect a priority-sorted account shortlist → open an account or ask Pulse to act on the selected group. Existing frequency/volume segments remain attributes and optional filters; they never define opportunity-cluster membership.
+
+Order: compact page title and filters, large 2D opportunity map with a clickable four-color legend, four selection-dependent metric cards, then the account action table. Cluster selection has an obvious All opportunities reset and a compact label showing the selected group and account count. No decorative demo profile or source banner is restored.
+
+Proposed top-level navigation remains three tabs: Dashboard, Customers, Insights. Move sector history, correlation, next-month sector outlook and model quality into Insights. Follow-ups become a Customers subview and remain accessible from the Dashboard follow-up card. Preserve existing `/follow-ups` links and agent navigation during the transition. This keeps the earlier three-tab limit while adding the requested analytics page.
+
+### What the local data actually supports
+
+Current selected snapshot is `historical-full-20260831-v2`, history ending 31 August 2026. Saved predictions contain 6,564 accounts; 3,180 have supported three-month activity and volume predictions; 4,003 have supported inactivity evidence, with 1,805 flagged for review. Existing behavioral clustering assigns 4,113 accounts across three segments; opportunity clustering will be a separate model. These counts describe the saved artifacts, not a refreshed production database.
+
+Activity means at least one calibration at this provider in September–November 2026. Customer volume has 65.05% holdout WAPE and is directional. We have due-date tiers, instrument IDs/groups, observed calibration quantities, industry, cadence, volume deficit, peer discovery, local follow-ups and transparent ranking. Confirmed churn, quotation conversion, distinct future orders, prices/costs/margins and incremental outreach benefit are unavailable.
+
+### Two axes and engineered features
+
+Use two understandable axes, each scaled 0–100:
+
+- **X: action urgency** — how soon a supported need needs attention, or how unusual the activity slowdown is.
+- **Y: opportunity size** — a quantity-based proxy for the scale of a relevant conversation. It is a score, not euros, expected profit or an uplift estimate.
+
+Build independent components before fitting clusters. Proposed rules are business assumptions to evaluate and version, not learned commercial returns:
+
+1. **Due quantity D:** unique unstopped, unsuppressed instruments with a supported requirement overlapping the chosen next 30/60/90 days. Recorded evidence dominates inferred evidence for the same instrument. Keep separate counts and evidence strength; unknown dates do not enter D. Past-due records form a separate review toggle and require confirmation.
+2. **Activity gap G:** `max(0, prior_year_quarterly_average - recent_3_month_calibrations)` only when inactivity evidence is supported and flagged. This is an observed activity gap against a baseline, not recoverable orders or lost revenue.
+3. **Discovery scale H:** prior-12-month observed calibration volume for accounts with a sufficiently supported peer-discovery reason. It estimates account scale, not ownership of missing equipment or cross-sell conversion.
+4. Normalize each quantity channel independently using a frozen source-population log transform and a robust upper percentile. Clip scores to [0,100]; do not mix raw instrument and calibration-event counts. Proposed size = max(normalized D, normalized G, 0.5 × normalized H). Using max avoids summing overlapping opportunity signals. Preserve every contributing reason and distinguish the dominant channel.
+5. Urgency = max(due-timing urgency, supported cadence/volume-deviation urgency). Due-timing uses days to the supported window; cadence compares observed silence with median recurrence, and deficit uses its supported baseline. Discovery alone receives a lower planning urgency. Follow-up deadlines are displayed separately using the workflow date rather than silently mixing current task dates with historical source cutoffs.
+
+Unknown components remain null with explicit reasons. Accounts with enough due evidence can be scored without a forecast. Accounts without sufficient information for either axis remain in a Needs evidence list and count, rather than receiving fabricated zeros or a low-opportunity assignment. Evidence strength and outreach readiness remain visible; a high score never overrides stop/suppression or missing live checks.
+
+### Four opportunity clusters
+
+Fit a separate deterministic KMeans model with k=4 on the two visible engineered coordinates. Do not include behavioral segment, industry or customer ID as clustering features. Existing supervised activity forecasts and behavioral segments remain separate outputs. No PCA/t-SNE view is needed because the plotted coordinates are the fitted features.
+
+Use four proposed business names only after inspecting actual cluster centers and distributions:
+
+| Center profile | Proposed name | Manager action |
+|---|---|---|
+| Larger size, greater urgency | Act now | Investigate or prepare the largest timely conversations |
+| Larger size, lower urgency | Plan larger opportunities | Prepare batches and peer-supported discovery |
+| Smaller size, greater urgency | Focused follow-up | Resolve timely smaller needs or activity concerns |
+| Smaller size, lower urgency | Nurture and monitor | Maintain coverage and wait for stronger triggers |
+
+These are proposed interpretations, not predetermined model findings. Check silhouette, cluster sizes, outlier sensitivity and seed agreement. If the data does not produce four stable, distinct groups, show four explicit urgency/size priority zones instead of claiming four natural ML clusters. Clusters can contain any behavioral segment and any industry. Seed/model version and stable cluster IDs are published once per source/configuration; dropdown filters restrict membership without refitting or recoloring the same model.
+
+Render small customer points in four colors, with clickable centroid circles/cluster outlines and a selectable legend. Cluster circles summarize groups; they are not measured confidence regions. Hover shows account, industry, behavioral segment, urgency, size, dominant opportunity reason, evidence status and available forecast. Point click opens account evidence; group click selects the whole cluster. Do not inflate customer bubble size based on invented monetary value.
+
+### Four cards for the selected cohort
+
+Every card and table uses the full intersection of filters and selected cluster, including customers not currently drawn or on the first list page.
+
+| Card | Definition and action |
+|---|---|
+| Due instruments | Deduplicated supported instruments within the selected window, with recorded/inferred breakdown; prepare a calibration conversation |
+| Calibration demand outlook | Sum of supported next-three-month calibration-event forecasts for selected accounts; show forecast coverage and fixed target dates, with directional-quality disclosure |
+| Activity concerns | Selected accounts with a supported inactivity flag; show cadence/volume evidence and investigate the explanation |
+| Open follow-ups | Open local tasks for selected accounts, including due/overdue subset; progress agreed next steps |
+
+These replace the current all-database totals. Never relabel calibration events as orders or inactivity flags as churn probability. No profit card is populated from unsupported estimates. A later optional scenario mode can accept explicit service prices, costs/margins and conversion assumptions, with scenario-only amounts and unit alignment; that is outside this first dashboard implementation. Probability of a return is not probability of recovery after outreach.
+
+The demand card is account-wide. A product/category cohort filter selects relevant accounts, but cannot turn an existing account forecast into a product-specific forecast. Its caption must retain all-services scope. Due-instrument breakdown can additionally show selected-category counts. Do not prorate three-month predictions into 30/60-day figures.
+
+### Controls and table
+
+First controls: industry, service/equipment category, purpose (all/upcoming/activity review/discovery), requirement window (30/60/90 days), optional behavioral segment, recorded-only/include inferred, and past-due review. Default history lookback is twelve covered months; keep any 6/12-month lookback switch behind separately versioned cached feature sets. Initially support the current historical reference only; arbitrary as-of dates need point-in-time source reconstruction.
+
+Point display limit: 500 / 1,000 / All. Sampling is deterministic and balanced across clusters; clearly show displayed count versus all matching accounts. KPI totals and table never aggregate the sampled points. Full filtered count is available even when fewer dots are shown.
+
+Table columns: account, industry, behavioral segment, opportunity reason, due instruments, activity-review badge, supported return probability with target window, priority score, next action. Priority is a rule score rather than a calibrated percentage. Separate the activity-review badge from the return probability. Default sort uses existing transparent priority; purpose-specific sort presets can emphasize due quantity or activity concerns. Opening an account preserves the Dashboard selection for returning to it.
+
+### Integration contracts and agent controls
+
+Implement one cached opportunity-dashboard response keyed by snapshot/model/configuration/filter/selection revision. Reuse Pydantic v2 contracts, the existing composition boundary, Zustand, ECharts and the event router. Avoid N individual customer-detail HTTP calls for plotting.
+
+Proposed point fields: customer_id, industry_id/label, segment_id/label, cluster_id, urgency_score, size_score, size_basis, component values/evidence_refs, priority_score, due counts, inactivity support/flag, activity_probability with horizon, volume outlook with support, and readiness. Missing values are null. No profit/churn_probability fields receive invented numbers.
+
+Response sections: metadata (snapshot/reference/model/rule versions), selection/filters, full eligible/matching/unassigned counts, sampled points and sample count, four cluster summaries/centroids, four scoped metric definitions/values/support counts, and a paginated priority-sorted customer table. Every section carries the same selection revision and metric scope; stale responses cannot overwrite a newer selection.
+
+Planned endpoint: `GET /api/v2/opportunities` using the selected snapshot, versioned config, filters, optional cluster ID, display limit and table pagination. The server calculates totals from the complete cohort and validates cluster/category IDs. Insights reuses current sector/model-report APIs.
+
+Agent context includes current page, selected cluster ID/name, axes and component definitions, filters, counts, card values/scope, visible IDs, sampling state and current model/reference date. Add typed tools/events to select/reset a cluster, change opportunity filters, list selected-cluster accounts, and inspect cluster evidence. Insights must be added to page/navigation schemas, frontend types, tools and routing; retain compatibility for existing Follow-ups links. Extend service-backed chart views explicitly: the current chat create_chart tool only supports industry-population, observed activity and portfolio charts, despite broader plot types existing on the Dashboard.
+
+### Implementation order after plan review
+
+1. Quantify feature coverage/distributions, validate instrument deduplication and score components; fit and assess the separate four-cluster model. Publish immutable opportunity artifacts and quality evidence.
+2. Add one shared response contract/composition/API for map, metrics and ranked members. Verify missing-data, stop/suppression, period/product scope and full-cohort aggregation.
+3. Build ECharts group/point interactions and Zustand filter/selection state; connect all four cards and the paginated table to the same selection.
+4. Move sector/quality views to Insights and fold Follow-ups into Customers while preserving existing routes.
+5. Add typed agent selection/filter/evidence tools and exact page context, then exercise the full manager workflow in the browser. Preserve streamed Markdown, returned reasoning, tool traces and chat memory.
+6. Commit each passing data, API, UI and agent slice separately. Verify selection totals, deterministic membership, sample-vs-population consistency, product/forecast scope, legacy navigation and mobile/desktop chart behavior.
+
+Demo: choose Act now, inspect due demand/activity concerns, filter to an industry and service category, open a ranked account, explain the reason with Pulse, record a timing correction, and see its next step reflected in the selected cohort. Success is a coherent supported decision workflow; incremental sales, prevented churn and profit require later outcome evidence.
