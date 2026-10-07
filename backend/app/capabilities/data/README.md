@@ -9,7 +9,23 @@ uv sync
 uv run python -m unittest discover -s backend/tests -v
 ```
 
-## Inputs
+## Source access (read-only; workflow writes stay in local SQLite)
+
+- Server `tcp:192.168.1.200,1433`, database `PeCalHackathon2026`, account
+  `PeCalHackathonParticipant`, driver `ODBC Driver 18 for SQL Server`.
+  Reachable from the lab network only. Password is prompted interactively
+  and never saved; `.env` files are gitignored.
+- Extract scripts (all read-only): `analysis/export_customer_data.py`
+  (monthly history, industry, group counts) and
+  `analysis/export_instrument_data.py` (instruments, instrument events).
+  Outputs land in `analysis/customers/*.json` (gitignored).
+- Build a runnable snapshot without SQL access:
+  `uv run python -m backend.app.capabilities.data.build_snapshot --help`
+  (reads the extracts above, writes `data/runtime/snapshots/<id>.json`).
+  Select it with `PECAL_SNAPSHOT=<id>`; default is the synthetic fixture.
+- Demo "today" for workflow/snooze logic: `PECAL_TODAY` (default 2026-10-07).
+
+## Extract inputs (what the builder consumes)
 
 - `analysis/export_customer_data.py` — read-only SQL Server extract (lab network,
   password prompted, never saved). Outputs land in `analysis/customers/`
