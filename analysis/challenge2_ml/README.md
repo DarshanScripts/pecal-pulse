@@ -1,6 +1,6 @@
 # Member 2 analytics handoff
 
-Branch: `feat/ml-analytics`. Member 1's `member-1` branch at `ffd0e31` is merged as a dependency. Analytics imports the shared models from `backend/app/contracts/sales_v2.py` and accepts the typed `data.service.load_snapshot()` result. `synthetic_fixture.py` generates a longer **synthetic only** fixture using the same contracts: 30 fictional IDs, 36 complete months and explicit zeros after observed tenure. No source extracts or credentials are committed.
+Branch: `feat/ml-analytics`. Member 1's `member-1` branch through `5938324` is merged as a dependency, including Member 3's compatibility adapters. Analytics imports the shared models from `backend/app/contracts/sales_v2.py` and accepts the typed `data.service.load_snapshot()` result. `synthetic_fixture.py` generates a longer **synthetic only** fixture using the same contracts: 30 fictional IDs, 36 complete months and explicit zeros after observed tenure. No source extracts or credentials are committed.
 
 ## Build and load
 
@@ -48,8 +48,31 @@ Eligibility requires two active months, at least twelve observed tenure months a
 
 [example_prediction.json](example_prediction.json) contains a complete shared `CustomerPrediction` from `synthetic-analytics-v2` with reference `2026-12-31` and target `2027-01` through `2027-03`. Synthetic holdout scores are artificially strong because the fixture repeats simple periodic patterns and must not be presented as historical performance.
 
-## Integration still needed
+## API integration and local demo
 
-Member 1's contracts and loader are connected and checked. Their v2 API composition still returns analytics-unavailable placeholders until they wire the service functions above. Member 3 should import the canonical nested `CustomerPrediction` (`activity.probability`, `calibration_volume.expected_total`) or adapt explicitly at its boundary; its provisional flat prediction model differs.
+Member 1's v2 API and composition now consume the published outputs through `analytics.context.for_snapshot`. The context checks the snapshot ID, reference date, complete-month cutoff, customer coverage, model versions and forecast horizon before providing results. Missing/invalid artifacts remain unavailable; publication is detected without a restart. API startup and requests do not import the training pipeline. Customer lookup uses a cached prediction index and returns independent values.
+
+- Bootstrap publishes dynamic segment filter options and sector data.
+- Customer summaries/details include shared nested predictions; segment filtering precedes pagination.
+- Ranking, preparation, queue splitting and correction refresh receive Member 2 predictions through Member 3's `prediction_from_shared` adapter.
+- `/api/v2/sectors` returns `{metadata, sectors}`; `/api/v2/model-report` returns `{metadata, model_report}`. Missing artifacts return 503. A valid report remains readable even if no customer models are supported. Module readiness distinguishes artifact availability from supported predictions.
+
+Generate and publish the integrated **synthetic** snapshot from the repository root:
+
+```bash
+uv run python -m analysis.challenge2_ml.synthetic_fixture --demo
+uv run python -m analysis.challenge2_ml.run --snapshot-id synthetic-analytics-demo-v1
+uv run python -m unittest backend.tests.test_analytics_integration -v
+```
+
+The demo is registered in ignored `data/runtime/snapshots/`, with analytics in ignored `data/runtime/analytics/`. It has reference `2026-08-31`, 36 synthetic months and a September–November outlook. It includes 30 fictional accounts, 29 supported predictions, unsupported history, a stopped instrument, an active recorded requirement, an inactivity signal and peer discovery with 24 peer accounts. Instrument events are illustrative, not the full synthetic monthly history; this is recorded in its quality flags. IDs/dates/records are generated and do not represent the actual historical export. Regeneration cannot overwrite the immutable demo snapshot.
+
+Select it with `PECAL_SNAPSHOT=synthetic-analytics-demo-v1`, or pass `?snapshot_id=synthetic-analytics-demo-v1` to each v2 endpoint. `PECAL_ANALYTICS_ROOT` can override the artifact directory. The existing frontend still uses v1 mock APIs; Aditya owns the v2 frontend/chat connection. [example_integration_response.json](example_integration_response.json) is the complete synthetic customer-detail response showing all three reason types.
+
+Checks: 101 backend tests pass. Integration tests isolate snapshots, artifacts and SQLite; they cover missing-to-published recovery, wrong source dates/customer IDs, segment pagination, unsupported values, independent reads, and preserving inactivity evidence after correcting an unrelated upcoming requirement. Separate live HTTP checks of bootstrap/customers/sectors/model-report/detail all returned 200 for the synthetic demo.
+
+## Remaining historical validation and owner handoff
 
 The real customer export is still absent from this machine. Supply the approved normalized snapshot, run the same CLI and inspect the model report on that exact snapshot ID before historical mode is enabled. Source quality flags, input SHA256, seed, runtime versions, stage sizes, coverage and evaluation metrics are recorded.
+
+The integration touches Member 1's API/composition seams without changing shared schemas or recalculating Member 3 scores. Member 1 should review these seams when merging. Their due-month helper still uses the weekday instead of month length, unknown-date requirements can remain eligible, and the group-count export's trailing-year window is labelled as one month. Bundled Member 3 action IDs also need alignment with the workflow API, which currently accepts requirement IDs only. Member 3 still needs to exclude canonical `IND-SONSTIGES` from specific-industry discovery. These issues are outside the analytics implementation and remain owner follow-ups.
