@@ -19,8 +19,9 @@ longer owns `/chat`; Member 1 should retain `chat_router` and lifespan wiring wh
 merging app composition. Core dependencies were added here so Member 1 must merge
 these `pyproject.toml`/`uv.lock` changes before editing dependency files.
 
-Currently all evidence is synthetic. The registry wraps existing mock services;
-Members 1/2/3 later supply historical services through this boundary. Tools read
+Tools use shared v2 APIs/services whenever WorkspaceContext.snapshot_id is supplied.
+The selected historical snapshot and exact page metrics ground each turn. Legacy
+contexts without a snapshot retain the original mock service for compatibility. Tools read
 context/account evidence, list accounts, change filters, select customers, navigate,
 change tabs/list size, and create service-backed industry/activity/portfolio charts.
 Tool validation is applied before event publication. Replies propose actions for
@@ -33,7 +34,8 @@ No direct SQL execution, arbitrary browser JavaScript, live outreach, or Daytona
 execution is exposed in this slice. Next slice: sandbox execution/artifact downloads,
 application receipts with state revision handling.
 
-Validation: 13 focused backend tests, frontend TypeScript and production build.
+Validation: 119 backend tests, frontend TypeScript and production build; see
+[integration audit](../../../../integration-audit.md) for real-data and browser evidence.
 Live provider probe on 7 Oct 2026 reached OpenRouter but returned HTTP 404: the account's
 paid-model training privacy restriction excludes the model's only endpoint. The app
 surfaces a safe explanatory error; no privacy setting or model is changed automatically.

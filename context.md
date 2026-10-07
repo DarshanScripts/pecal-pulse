@@ -23,7 +23,7 @@ The demo should show a complete customer action, not just prediction dashboards:
 - **Chat:** assistant-ui thread/composer/actions in a drawer. Reuse React Bits and `/c/micro` components where suitable; do not rebuild library behavior.
 - **Backend:** FastAPI, uv, NumPy/scikit-learn as needed. SQLite for local workflow and conversation persistence.
 - **Agent:** LangChain/LangGraph ReAct via `langchain.agents.create_agent`, using registered sales tools.
-- **Provider/model:** OpenRouter, exact model `meta/muse-spark-1.3-contributor`.
+- **Provider/model:** OpenRouter; use root `LLM_MODEL`. The earlier fixed Muse choice is superseded.
 - **Credential:** `OPENROUTER_API_KEY` in the repository-root `.env`, already supplied on Aditya's machine. Do not display/copy/commit its value; it is not part of a clone. Backend settings load the root file and respect environment overrides. Never expose the key to Next.js/browser code.
 - **Conversation memory:** `langgraph-checkpoint-sqlite`, async `AsyncSqliteSaver`, persistent `thread_id` and conversation history recovery.
 - **Agent UI control:** typed filters/navigation/customer-selection/chart commands through the existing event router. No generated JavaScript/React or arbitrary SQL.
@@ -33,16 +33,15 @@ The demo should show a complete customer action, not just prediction dashboards:
 
 ## What exists now — distinguish implementation from the plan
 
-The current application is a **runnable mock**, not the completed historical-data product:
+The current application integrates all three members' shared v2 services with the frontend and chatbot. Read [integration-audit.md](integration-audit.md) before extending it.
 
-- Dashboard has 10 initial opportunity rows, segment/industry charts and an illustrative sector correlation heatmap.
-- Customers has dropdown filters, search, a list/detail view, mock activity probability/forecast, reason evidence, portfolio discovery and conversation/follow-up form.
-- Follow-ups persist in local SQLite and support complete/reopen.
-- assistant-ui chat now uses a **LangChain ReAct agent** with typed workspace tools and SQLite conversation recovery. Evidence is still synthetic; the active model comes from `LLM_MODEL` and its live streaming/tool-call probe succeeds.
-- LangChain/OpenRouter/checkpoint dependencies are installed. See `backend/app/agents/README.md` for chat routes and merge boundaries. The v2 business APIs/modules/contracts remain **proposed work**.
-- The agent/streaming slice adds nine tests for checkpoint recovery, fresh context, thread isolation, selection commands and tool validation to the four existing backend tests. Token Markdown, provider-returned Thinking blocks, tool calls/results and cancellation are implemented. Historical-data integration and Daytona execution remain pending.
-
-The project is now a Git repository on `main`; Aditya has published the baseline. Check current Git state before integration.
+- Dashboard: ranked account actions, real sector history/correlation/one-month outlook, coverage and model-quality disclosures.
+- Customers: paginated server-side filters, independent account details, history and supported three-month forecasts, due-date tiers, peer discovery, preparation export and local workflow corrections.
+- Follow-ups: persisted local tasks, completion/reopening; historical views exclude old synthetic account tasks.
+- Chat: assistant-ui streamed Markdown, returned reasoning/tool parts, history/cancellation, exact page metrics, actual industry/segment controls and observed-data chart artifacts.
+- `PECAL_SNAPSHOT` selects the source. Default `synthetic-v1` is a fixture with unsupported analytics. Aditya's ignored `.env` selects `historical-full-20260831-v2`; private extracts and model artifacts are not in Git.
+- New UI types: `frontend/src/types/sales-v2.ts`. Preserve v1 compatibility routes and chat history while changing v2 APIs.
+- Current validation: 119 backend tests, frontend typecheck/build, live browser grounding and industry-filter/navigation checks. Daytona/voice/CRM and browser event receipts remain enhancements.
 
 ### Current code map
 
@@ -68,9 +67,9 @@ Next.js sends `/api/sales/*` through its rewrite to Python `/api/*`. New `/api/v
 
 ## Existing analysis and important meanings
 
-The saved customer analysis is **as of 31 August 2026**, targeting September–November 2026. It has 6,515 accounts under its extraction filters and 3,321 model-supported accounts. The mock instead uses fictional names and a 30 September reference. These dates/data must not be substituted for one another.
+The selected integrated snapshot is **as of 31 August 2026**, targeting September–November 2026. It contains 6,564 accounts (including current owners without historical activity) and 3,180 model-supported accounts. Earlier analysis had 6,515/3,321 under different extraction filters; use the current model report for performance claims. The mock instead uses fictional names and a 30 September reference. These dates/data must not be substituted for one another.
 
-- Current activity benchmark selected logistic regression with isotonic calibration.
+- Integrated activity benchmark selects raw logistic regression using disjoint chronological evaluation stages (ROC AUC 0.789; Brier 0.186). Earlier isotonic results refer to the previous analysis.
 - Current volume comparison selected the **previous 12 months divided by four** baseline. Do not claim a boosted volume model won.
 - Existing behavior clusters have four labels: Long inactive, Intermittent batches, Frequent/high-volume, Occasional/low-volume. The mock's three fixed segment labels are not the real clustering contract.
 - Existing training code uses hard-coded month indices and emits a quarterly total. Parameterize its cutoff before refreshing and do not fabricate three monthly predictions from one quarterly number.

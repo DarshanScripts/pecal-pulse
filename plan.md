@@ -8,13 +8,9 @@ The user has superseded the fixed Muse model choice: use `LLM_MODEL` from the ro
 
 ## Implementation update — 7 October 2026
 
-Aditya/Codex's first agent slice is implemented: ReAct/OpenRouter wiring, async SQLite
-memory/display history, fresh page context, registered evidence/filter/navigation/
-selection/tab/list-size/chart tools, and assistant-ui integration. See
-`backend/app/agents/README.md` for endpoints and Member 1 merge boundaries. Evidence
-remains synthetic. Live model access is currently blocked by the OpenRouter account's
-paid-model training privacy restriction; no provider/model substitution was made.
-Streaming Markdown, returned reasoning, and tool-call parts are now implemented and verified with the env-selected model. Daytona execution and browser application acknowledgements remain pending.
+All three teammate branches are integrated into main, preserving assistant-ui streaming, provider-returned reasoning, tool calls, cancellation and checkpoint recovery. The frontend now consumes the shared v2 APIs on Dashboard, Customers and Follow-ups; chatbot tools use the same selected snapshot. Historical extraction and offline training have run on Aditya's machine. See [integration-audit.md](integration-audit.md) for delivered scope, source repairs, measured results, verification and remaining enhancements.
+
+The active model is read from `LLM_MODEL`. Live historical page grounding and filter/navigation controls were verified with the configured OpenRouter model. Daytona execution, browser application acknowledgements, voice and live CRM integrations remain pending; standard charts and evidence tools work without them.
 
 ## 1. What we are building
 

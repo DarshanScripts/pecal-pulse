@@ -10,3 +10,26 @@ Copy `.env.example` to a local `.env` and supply `OPENROUTER_API_KEY` privately.
 
 Team ownership and contracts: [plan.md](plan.md) and [context.md](context.md).
 Implemented chatbot routes, controls, tests and remaining work: [agent README](backend/app/agents/README.md).
+
+## Integrated Challenge 2 workspace
+
+All teammate modules are merged with the streaming chatbot. Read [integration-audit.md](integration-audit.md) for validation, data repairs and remaining scope.
+
+A fresh clone defaults to the explicit `synthetic-v1` fixture. Private SQL extracts, snapshots, trained outputs, workflow records and chat history stay in ignored local directories. They are **not** bundled in Git.
+
+For Aditya's existing historical workspace, set `PECAL_SNAPSHOT=historical-full-20260831-v2` in root `.env` and restart the backend. For another authorized extract, build a new immutable snapshot and train offline:
+
+```bash
+uv run python -m backend.app.capabilities.data.build_snapshot --snapshot-id YOUR_NEW_ID --extracted-at YOUR_ACTUAL_UTC_TIMESTAMP
+uv run python -m analysis.challenge2_ml.run --snapshot-id YOUR_NEW_ID
+```
+
+The builder consumes local `analysis/customers/` JSON extracts. Run `analysis/export_customer_data.py` and `analysis/export_instrument_data.py` only with authorized SQL/network access; passwords are prompted and never committed. Use the actual extraction timestamp, historical reference and complete-month cutoff. Set `PECAL_SNAPSHOT=YOUR_NEW_ID` after successful publication. Cold loading the full local snapshot took about 56 seconds; warmed navigation is much faster. Training is never performed in API requests.
+
+Checks:
+
+```bash
+uv run python -m unittest discover -s backend/tests -q
+pnpm --dir frontend typecheck
+pnpm --dir frontend build
+```
