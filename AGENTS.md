@@ -20,7 +20,7 @@ Last updated: 8 October 2026. Applies to this repository. Keep this file current
 
 ## Current implementation
 
-Verified code checkpoint: `407b735` (following UI commit `f723c68`). Both were pushed to `main`; this handover is a subsequent documentation change.
+Verified code checkpoint: `3f5161b` (compact customer layout and grouped timing details), following sales-language checkpoints `f723c68` / `407b735`. This handover is a subsequent documentation change.
 
 - Dashboard: a larger two-axis opportunity map, four clickable shaded model regions, bounded customer dots, scoped metrics and ranked accounts. Group selection and filters update cards/table from the same full cohort. One global top-bar assistant entry replaces repeated Ask Pulse buttons.
 - Opportunity groups are separate from behavioral customer segments. Coordinates use frozen mid-rank cohort percentiles, displayed from −100 to +100, with zero at the median. Identical evidence retains identical positions. Market filters do not refit the model or change reference normalization.
@@ -30,6 +30,8 @@ Verified code checkpoint: `407b735` (following UI commit `f723c68`). Both were p
 - Overview: grouped reasons and compact calibration batch cards. Cards show quantity, equipment category, readable timing, recorded/estimated date source and previous work in that category. Previous category work is not restricted to the displayed batch. Keep each original reason ID for workflow updates.
 - Next step: **confirm the calibration need → check in after a longer gap → ask about specific additional services → check team activity → save the next step**. Raw preparation paragraphs were replaced by short facts/questions. Exported briefs use this sales language too.
 - Equipment: “Calibration work with us” shows category and completed calibrations; the unavailable inventory-count column was removed. “Services to ask about” gives a named category, an actual conversation question and peer-supported context. Instrument-date records are collapsed.
+- Customer tabs and Accounts/Follow-ups are styled pill buttons with visible selection and keyboard focus. Desktop Customers uses the viewport height, independently scrollable account/detail panels and a compact toolbar. At the verified 830px viewport height, page height was also 830px. Small screens retain natural page scrolling.
+- Equipment categories paginate five per page. `InstrumentTiming.tsx` replaces repeated raw rows with full-account recorded/estimated/missing timing counts and expandable, paginated groups of the loaded sample (five groups per page). Group by equipment, basis, date range and eligibility; deduplicate instrument IDs within each group. Sample group quantities must never be presented as full-account totals. These new category/date paginations are manual UI controls, not yet typed chatbot controls.
 - Batch action controls appear only for calibration batches. Inactivity/discovery are conversation reasons, not generic “Review opportunity” batch cards. Do not reintroduce duplicate technical paragraphs.
 - Chat: assistant-ui streamed Markdown, reasoning returned by the provider, tool-call displays, cancellation, history, expandable drawer and SQLite checkpointing. Typed tools manipulate existing controls and create supported chart artifacts. Pulse's system prompt now asks for nontechnical sales language. No new live LLM test was performed after that wording change.
 - Financial scenarios are retained as an optional backend capability but removed from the main sales UI. Do not add unsupported profit cards.
@@ -54,6 +56,7 @@ Verified code checkpoint: `407b735` (following UI commit `f723c68`). Both were p
 |---|---|
 | Dashboard/map | `frontend/src/modules/sales/OpportunityDashboard.tsx`, `opportunity-regions.ts` |
 | Customer views/copy | `frontend/src/modules/sales/IntegratedWorkspace.tsx`, `CustomerSignals.tsx` |
+| Date coverage / grouped sample | `frontend/src/modules/sales/InstrumentTiming.tsx` |
 | UI state / commands | `frontend/src/modules/sales/store.ts`, `frontend/src/core/events/router.ts` |
 | Chat UI | `frontend/src/modules/chat/SalesAssistant.tsx` |
 | Shared frontend contracts | `frontend/src/types/sales-v2.ts`, `frontend/src/types/sales.ts` (also compatibility/chat types) |
@@ -73,10 +76,10 @@ Verified code checkpoint: `407b735` (following UI commit `f723c68`). Both were p
 
 - This machine has limited RAM; earlier large loads crashed the shell/browser. Compact runtime JSON is about 63 MB versus roughly 652 MB raw; indexed SQLite retains full requirement evidence. API memory was measured around 724–850 MB after the fix.
 - Never load the full raw snapshot into the API or browser. The API rejects raw snapshots above 100 MB. Keep compact JSON and its evidence index together; use `analysis.build_runtime_snapshot` for streaming generation.
-- Plot sample defaults to 200, capped at 1,000. Samples do not change full-cohort totals. Account detail loads at most 500 evidence records and displays at most 50, with separate full-source tier counts.
+- Plot sample defaults to 200, capped at 1,000. Samples do not change full-cohort totals. Account detail loads at most 500 evidence records; date details group this loaded sample into five rows per page, with separate full-source tier counts. Chat evidence is independently capped; do not confuse its limits with UI grouping.
 - Train offline, with the existing single-thread limit. Prefer the snapshot-ID loader. Stop owned previews before heavy training/building when needed; avoid duplicate API processes, concurrent cold loads and unnecessary browser tabs. Preserve old analytics directories for rollback, and republish compatible opportunity artifacts after changing analytics versions.
 - Standard development: `uv sync`, `pnpm --dir frontend install`, `bash scripts/dev.sh`. Preview ports: frontend 3000, API 8001. Check existing listeners before starting another server; stop only processes you verified belong to this task.
-- Latest verification: **142 backend tests passed**, frontend TypeScript check and production build passed. Browser verified account `970CE027` shows its two-instrument September need, longer gap with last observed activity in September 2025, specific peer-category questions and simplified equipment history. No customer outreach or SQL writes were performed.
+- Latest frontend verification: TypeScript and production build passed; browser verified account `20ADBF21`, category page 1→2, grouped timing sample and desktop viewport fit. Last backend verification remains **142 passing tests** (backend unchanged in this layout slice). Earlier browser verification covered account `970CE027` preparation and specific peer-category questions. No customer outreach or SQL writes were performed.
 
 ```bash
 uv run python -m unittest discover -s backend/tests -q
