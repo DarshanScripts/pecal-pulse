@@ -111,6 +111,8 @@ Use checks appropriate to the change; do not add tests that merely mirror trivia
 
 ## Remaining work and handover maintenance
 
+- Orb icon refinement after `abd8091`: the idle orb has no microphone glyph; the stop square still appears during recording/processing/playback. Space/tap input and accessible labels are unchanged. Frontend typecheck and production build pass; production preview restored on 3000.
+
 - No unfinished implementation from the latest sales-language request. Await the user's next priority.
 - Planned later work includes contact-time budgeting and clearer shared follow-up handling. CRM/live quote checks, confirmed churn labels, validated financial inputs, monthly customer quantity forecasts/intervals, causal uplift and full sandbox execution remain unimplemented or unsupported; do not present them as working.
 - Update this file after material changes: current code checkpoint, what shipped, latest checks, source/model configuration, risks and any precise outstanding task. Correct stale summaries in `context.md`/`README.md` instead of appending contradictory claims. Never copy `.env` values or credentials into handover documents.
