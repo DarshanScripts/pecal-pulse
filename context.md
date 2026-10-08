@@ -39,11 +39,11 @@ The current application integrates all three members' shared v2 services with th
 
 - Dashboard: opportunity map with four shaded model regions, frozen relative axes, shared filters/selection, scoped metrics, ranked accounts and preparation drawer. Sector history/correlation/one-month outlook and quality disclosures are on Insights.
 - Customers: paginated server-side filters, independent account details, history and supported three-month forecasts, due-date tiers, peer discovery, preparation export and local workflow corrections.
-- Follow-ups inside Customers: persisted local tasks, completion/reopening; historical views exclude old synthetic account tasks.
-- Chat: assistant-ui streamed Markdown, returned reasoning/tool parts, history/cancellation, exact page metrics, actual industry/segment controls and observed-data chart artifacts.
+- Follow-ups inside Customers: persisted local tasks, completion/reopening and customer-specific English/German email drafts with copy/review controls; historical views exclude old synthetic account tasks.
+- Chat: assistant-ui streamed Markdown, returned reasoning/tool parts, history/cancellation, fresh page context, filters/pagination/customer previews, bulk assignment and local workflow tools. Generated chart artifacts remain in chat only. No email sending tool.
 - `PECAL_SNAPSHOT` selects the source. Default `synthetic-v1` is a fixture with unsupported analytics. Aditya's ignored `.env` selects `historical-full-20260831-v2`; private extracts and model artifacts are not in Git.
 - New UI types: `frontend/src/types/sales-v2.ts`. Preserve v1 compatibility routes and chat history while changing v2 APIs.
-- Current validation: 142 backend tests, frontend typecheck/build, live browser grounding and industry-filter/navigation checks. Daytona/voice/CRM and browser event receipts remain enhancements.
+- Current validation: 186 backend tests and frontend typecheck/build pass. Live provider/browser checks cover assignment, persisted drafts, Follow-ups navigation and chat-only charts; see AGENTS.md for the latest historical filtering check. Daytona/voice/CRM and browser event receipts remain enhancements.
 
 ### Current code map
 

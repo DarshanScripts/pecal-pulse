@@ -13,11 +13,9 @@ history reads return presentation metadata and never replay UI events.
 
 `agents/contracts.py` extends the existing chat context with visible customer IDs,
 source reference date, customer detail tab, Dashboard action limit and artifact IDs.
-New `ui.control.set` commands have two validated controls: `customers.tab` and
-`dashboard.action_limit`. Other command names remain unchanged. The sales API no
-longer owns `/chat`; Member 1 should retain `chat_router` and lifespan wiring when
-merging app composition. Core dependencies were added here so Member 1 must merge
-these `pyproject.toml`/`uv.lock` changes before editing dependency files.
+Validated `ui.control.set` commands cover customer tabs/view/pagination and Dashboard
+shortlist size/pagination/plot sampling/preview. All teammate modules are already
+merged; preserve `chat_router` and lifespan wiring when changing app composition.
 
 Tools use shared v2 APIs/services whenever WorkspaceContext.snapshot_id is supplied.
 The selected historical snapshot and exact page metrics ground each turn. Legacy
@@ -33,6 +31,35 @@ Cancelling the stream stops token updates and releases the active thread. Comple
 No direct SQL execution, arbitrary browser JavaScript, live outreach, or Daytona code
 execution is exposed in this slice. Next slice: sandbox execution/artifact downloads,
 application receipts with state revision handling.
+
+## Sales workflow tools (8 October)
+
+The agent can open/close the Dashboard customer preview, switch Accounts/Follow-ups,
+paginate lists, change plot sampling, assign up to 20 explicit account IDs to a user-specified
+team, record next steps, complete/reopen tasks, record user-confirmed team checks and
+snooze/resolve an exact calibration reason. Writes use the same local SQLite services
+as the human UI and publish refresh events; they never change source SQL or CRM records.
+
+`draft_followup_emails` builds and saves individual English/German drafts for up to 10
+accounts from their active action evidence. Dashboard date scope carries into the draft.
+Owner defaults to the saved account owner or Unassigned; internal review date defaults
+to the browser's current date. Source dates, linked reasons and pre-send checks stay with
+the saved draft. Identical requests reuse the task. No email address is fabricated and
+there is no send-email tool. Unsupported batch accounts are rejected before any tasks
+are saved. The Follow-ups view provides the draft and Copy email action.
+
+Artifacts are shown only inside their chat message and restored from chat history.
+They are not appended to Dashboard/Insights. The send-time workspace context includes
+the current date, preview account, list offsets, plot sample, page sections, visible rows
+and loading state. Current context overrides checkpointed selections on every new turn.
+Page metrics are invalidated when tools change filters/navigation. Browser application
+receipts remain deferred; tool results distinguish persisted writes from proposed UI changes.
+
+Verification checkpoint: 186 backend tests, frontend typecheck and production build passed. This includes
+the assignment → saved draft → Follow-ups agent path using a deterministic test model;
+live provider/browser checks verified assignment, saved drafts, Follow-ups navigation,
+two chat-only charts and historical sector/30-day filtering with customer preview.
+Detailed observations and remaining limits are tracked in AGENTS.md.
 
 Validation: 119 backend tests, frontend TypeScript and production build; see
 [integration audit](../../../../integration-audit.md) for real-data and browser evidence.
