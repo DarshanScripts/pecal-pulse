@@ -3,7 +3,7 @@
 The assistant-ui drawer streams from `/api/chat/stream` through the existing Next.js rewrite; `/api/chat` remains available for non-streaming clients.
 `create_agent` with the official `langchain-openrouter` adapter uses the OpenRouter model selected by root `.env` variable `LLM_MODEL`, fresh runtime
 context on every turn, registered workspace tools, and `AsyncSqliteSaver` for memory.
-Root `.env` holds `LLM_MODEL` and `OPENROUTER_API_KEY`; environment overrides take precedence. Credentials never become browser variables. Restart the backend after model changes.
+Root `.env` holds `LLM_MODEL`, `RESONING_LVL='low'` (spelling intentional), and `OPENROUTER_API_KEY`; environment overrides take precedence. Reasoning defaults to low and is passed as OpenRouter `reasoning.effort`; provider-returned reasoning remains available to the streaming UI. Credentials never become browser variables. Restart the backend after model or reasoning changes.
 
 Run `uv sync`, `pnpm --dir frontend install`, then `bash scripts/dev.sh`.
 Chat status: `GET /api/chat/status`. History:
