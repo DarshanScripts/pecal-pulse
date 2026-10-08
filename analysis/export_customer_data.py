@@ -1,7 +1,6 @@
-"""Read-only anonymous customer context; SQL password prompted, never saved."""
-import getpass,json,re
+"""Read-only anonymous customer context; settings from .env, password prompted only if absent."""
+import json,re
 from pathlib import Path
-import pyodbc
 ROOT=Path(__file__).parent/'customers'
 ROOT.mkdir(exist_ok=True)
 queries={
@@ -11,10 +10,11 @@ queries={
  'monthly_history':"""SELECT CONVERT(varchar(64),HASHBYTES('SHA2_256',KUNDENNUMMER_SAP),2) AS customer,CONVERT(char(7),BEGINN,126) AS month,COUNT_BIG(*) AS calibrations,COUNT(DISTINCT MESSMITTEL_UUID) AS instruments,COUNT(DISTINCT MESSMITTELGRUPPE) AS equipment_groups,COUNT(DISTINCT MESSRAUM) AS labs FROM dbo.KALIBRIERUNGEN WHERE BEGINN>='20240101' AND BEGINN<'20260901' AND NULLIF(LTRIM(RTRIM(KUNDENNUMMER_SAP)),'') IS NOT NULL GROUP BY KUNDENNUMMER_SAP,CONVERT(char(7),BEGINN,126) ORDER BY customer,month""",
  'date_settings':"""SELECT @@LANGUAGE AS language,CONVERT(char(10),CAST('2025-09-01' AS datetime),126) AS interpreted_hyphenated_date"""
 }
-pw=getpass.getpass('SQL password (not saved): ')
-conn=pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=tcp:192.168.1.200,1433;DATABASE=PeCalHackathon2026;UID=PeCalHackathonParticipant;PWD={'+pw.replace('}','}}')+'};Encrypt=yes;TrustServerCertificate=yes;',timeout=20,autocommit=True)
-del pw
-conn.timeout=120
+try:
+ from .source_connection import connect_source
+except ImportError:
+ from source_connection import connect_source
+conn=connect_source()
 for name,sql in queries.items():
  sql=re.sub(r"'(\d{4})-(\d{2})-(\d{2})'",r"'\1\2\3'",sql) if name!='date_settings' else sql
  c=conn.execute(sql); cols=[v[0] for v in c.description]; rows=[dict(zip(cols,row)) for row in c.fetchall()]
