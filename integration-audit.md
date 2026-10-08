@@ -2,6 +2,8 @@
 
 Date: 7 October 2026. Historical source reference: 31 August 2026. This is a local historical prototype, not live sales operations.
 
+**8 October follow-up:** [the current requirement audit](docs/challenge-validation.md) supersedes completion/remaining-work claims below. Voice is now implemented; TXT/JSON exports exist, CSV/PDF and generated chart downloads do not. Fresh checks passed 211 backend tests, 14 frontend voice/output cases and typecheck. The extraction timestamps/model results below describe the earlier integration checkpoint, not an independently verified current runtime.
+
 ## Merge and ownership verification
 
 Member 3 (`origin/feat/sales-intelligence`, `015ee7b`) delivered peer portfolio discovery, instrument bundling, transparent ranking, preparation and compatibility adapters. Member 1 (`origin/member-1`, `5938324`) incorporated it and delivered shared contracts, immutable snapshots, requirements, v2 APIs and SQLite workflow. Member 2 (`origin/feat/ml-analytics`, `67b0f54`) incorporated both and delivered offline segmentation, activity/volume evaluation, inactivity and sector analytics.

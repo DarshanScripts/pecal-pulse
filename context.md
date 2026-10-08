@@ -2,6 +2,8 @@
 
 Updated: 8 October 2026. Read [AGENTS.md](AGENTS.md) first for the current implementation checkpoint, then read this for team/product context. [plan.md](plan.md) is the detailed work split and contract specification; [README.md](README.md) contains current run commands. Earlier dated notes below are historical; current-state instructions in `AGENTS.md` take precedence over stale implementation descriptions.
 
+Latest validation: [docs/challenge-validation.md](docs/challenge-validation.md) maps the brief and 31 proposed features to actual implementation. Bilingual LiveKit push-to-talk, interruption and on-demand chat charts exist. TXT/JSON sharing exists; CSV/PDF/chart downloads and live operational data graphs are absent. Fresh 8 October checks passed 211 backend tests, 14 frontend voice/output cases and typecheck; earlier counts, snapshot IDs and voice-deferred notes below are historical.
+
 Current customer layout uses visible selected pill tabs, a compact toolbar and independently scrollable desktop account/detail panels. Equipment categories show five per page. Calibration date coverage counts refer to the full account; expandable date groups cover only the loaded sample and show five groups per page. The old repeated raw instrument-date table has been removed. New category/date pagination is local UI state and is not yet exposed as an assistant command.
 
 ## Model selection update — 7 October 2026
