@@ -1,46 +1,43 @@
-# perschmann-hack
-Hack The Lab by Perschmann Calibration
+# PeCal Pulse
 
+An Inside Sales assistant for Perschmann Calibration's **Challenge 2: Customer Activity Monitoring**. Choose a customer, understand the evidence, prepare a conversation, and save the next step.
 
-## Local development
+## What works
 
-Run `uv sync`, `pnpm --dir frontend install`, then `bash scripts/dev.sh`.
-Open http://127.0.0.1:3000. API docs: http://127.0.0.1:8001/docs.
-Copy `.env.example` to a local `.env` and supply `OPENROUTER_API_KEY` privately.
+- **Dashboard:** filtered opportunity map, explainable account ranking, shortlists, ownership and overdue-task coverage.
+- **Customers:** calibration history, recorded/inferred requirement windows, supported three-month calibration outlook, industry portfolio questions and conversation preparation.
+- **Insights:** sector history/outlook, correlation, retention evidence and model-quality disclosures.
+- **Pulse:** streamed English/German chat, conversation history, workspace controls, local workflow tools, email drafts and on-demand charts with an enlarged view.
+- **Voice:** English/German LiveKit push-to-talk. Hold Space and release to send, or tap the orb to start/finish. Space starts a new request during a reply; tapping the active orb stops it.
+- **Sharing:** TXT preparation briefs/action shortlists and JSON saved shortlist IDs.
 
-Agent continuation instructions: [AGENTS.md](AGENTS.md).
+**CSV/PDF export is not implemented.** Charts use the selected snapshot; they are not a live SQL feed. Forecast volume means calibration events, not commercial orders. Churn signals and quantity-based priority are proxies; CRM, live quotation/contact feeds and validated revenue/margin are unavailable. See the [complete implementation checklist](docs/challenge-validation.md).
 
-Team ownership and contracts: [plan.md](plan.md) and [context.md](context.md).
-Implemented chatbot routes, controls, tests and remaining work: [agent README](backend/app/agents/README.md).
+## Run locally
 
-## Integrated Challenge 2 workspace
-
-All teammate modules are merged with the streaming chatbot. Read [integration-audit.md](integration-audit.md) for validation, data repairs and remaining scope.
-
-A fresh clone defaults to the explicit `synthetic-v1` fixture. Private SQL extracts, snapshots, trained outputs, workflow records and chat history stay in ignored local directories. They are **not** bundled in Git.
-
-Pulse uses LiveKit streaming voice. Set `LIVEKIT_URL`, `LIVEKIT_API_KEY` and `LIVEKIT_API_SECRET` in the ignored root `.env`; restart the API after changing them. LiveKit Cloud inference supplies Deepgram Nova-3 multilingual transcription and Inworld TTS 2 Flash (Ashley), using the same server-side LiveKit credentials. No Gradium requests or separate voice LLM are used. Open the assistant and hold Space to speak, then release to send; tapping the orb remains available. The first connection warms the room; subsequent turns reuse it. Pulse speaks one immediate acknowledgement while LangGraph starts work, then the final opening summary (up to 600 characters). Tool narration, reasoning, charts and details stay in assistant-ui. Space can interrupt speech/the current agent turn to start another request; tapping the active orb stops it. The speaker button tests output or replays the latest summary. Closing/new conversation disconnects audio and releases the voice room. Microphone selection remains available. This is push-to-talk; the microphone stops on release, and recordings are capped at 44 seconds. Audio streams over WebRTC and is not saved by this app; transcripts use the existing chat history. Credentials stay server-side; the browser receives only a short-lived room-scoped participant token. LiveKit Cloud inference must be enabled on the configured project.
-
-For Aditya's existing historical workspace, set `PECAL_SNAPSHOT=historical-full-20260831-v2` in root `.env` and restart the backend. For another authorized extract, build a new immutable snapshot and train offline:
+Requires Python 3.13+, uv, Node.js and pnpm (the frontend declares pnpm 11.21.0). From this directory, create an ignored `.env` using [.env.example](.env.example), then:
 
 ```bash
-uv run python -m backend.app.capabilities.data.build_snapshot --snapshot-id YOUR_NEW_ID --extracted-at YOUR_ACTUAL_UTC_TIMESTAMP
-uv run python -m analysis.challenge2_ml.run --snapshot-id YOUR_NEW_ID --output data/runtime/analytics-v3
-uv run python -m analysis.build_runtime_snapshot --snapshot-id YOUR_NEW_ID
-PECAL_ANALYTICS_ROOT=data/runtime/analytics-v3 uv run python -m analysis.build_opportunities --snapshot-id YOUR_NEW_ID
+uv sync
+pnpm --dir frontend install
+bash scripts/dev.sh
 ```
 
-The builder consumes local `analysis/customers/` JSON extracts. Run `analysis/export_customer_data.py` and `analysis/export_instrument_data.py` only with authorized SQL/network access; passwords are prompted and never committed. Use the actual extraction timestamp, historical reference and complete-month cutoff. Set `PECAL_SNAPSHOT=YOUR_NEW_ID` after successful publication. The API uses a compact runtime snapshot plus indexed account evidence, generated by the commands above. Keep both runtime files together. Raw snapshots above 100 MB are rejected by the API to prevent excessive memory use. Plotting defaults to 200 customers, with a 1,000-point cap; totals still cover the full filtered cohort. Training is never performed in API requests.
+Open [the app](http://127.0.0.1:3000) or [API docs](http://127.0.0.1:8001/docs).
 
-Checks:
+Set `OPENROUTER_API_KEY` and `LLM_MODEL` for AI chat. Voice additionally needs `LIVEKIT_URL`, `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET` and enabled LiveKit Cloud inference. Voice uses Deepgram Nova-3 transcription and Cartesia Sonic-3 speech. Restart the API after changing configuration; keep keys server-side.
+
+A fresh clone uses the labeled `synthetic-v1` fixture. Historical data and trained outputs are private local files, not bundled in Git. For a prepared historical dataset, set `PECAL_SNAPSHOT` to its snapshot ID and `PECAL_ANALYTICS_ROOT` to its matching analytics directory. Keep compact snapshot JSON and its indexed requirements database together. See [data preparation and refresh](docs/data-refresh.md).
+
+## Checks
 
 ```bash
 uv run python -m unittest discover -s backend/tests -q
+node --test frontend/tests/*.test.mjs
 pnpm --dir frontend typecheck
 pnpm --dir frontend build
 ```
 
+Stop the frontend before building into its active `.next` directory. The 8 October audit passed 211 backend tests, 14 frontend voice/output cases and typecheck; fresh browser/hardware acceptance remains separate.
 
-Customer analytics v3 adds annual/seasonal volume features and compares Poisson boosting, squared-error boosting, Extra Trees and three volume baselines using chronological validation. Configure `PECAL_ANALYTICS_ROOT=data/runtime/analytics-v3` in the local `.env` after publishing; keep older artifact directories for rollback. On the current historical extract, logistic activity prediction improved to holdout ROC AUC 0.810 and Brier error 0.176. The prior-year average remains the best validated volume estimate (65.05% WAPE): quantities are directional, and no monthly customer forecasts are claimed.
-
-The preparation overview shows historical calibration bars (24 or 3 months) followed by a shaded three-month forecast window with the estimated total. No future bars or line are drawn. Its info icon reports the forecast input window and selected volume model’s chronological holdout error and evaluation sample; WAPE is not individual customer accuracy. These bars are calibration events, not distinct orders. A single top-bar assistant button, keyboard-accessible info icons and grouped equipment reasons keep the main workflow compact. Dashboard numbers reuse the existing React Bits CountUp component through `AnimatedNumber`, with reduced-motion support. Financial assumptions remain an optional backend capability and are not part of the main sales UI.
+Next.js/TypeScript, assistant-ui, Zustand and ECharts provide the UI; FastAPI, LangGraph/OpenRouter, SQLite and offline scikit-learn analytics provide the backend. [Agent details](backend/app/agents/README.md), [project plan](plan.md), [handover](AGENTS.md).

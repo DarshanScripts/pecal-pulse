@@ -10,7 +10,7 @@ The user has superseded the fixed Muse model choice: use `LLM_MODEL` from the ro
 
 All three teammate branches are integrated into main, preserving assistant-ui streaming, provider-returned reasoning, tool calls, cancellation and checkpoint recovery. The frontend now consumes the shared v2 APIs on Dashboard, Customers and Follow-ups; chatbot tools use the same selected snapshot. Historical extraction and offline training have run on Aditya's machine. See [integration-audit.md](integration-audit.md) for delivered scope, source repairs, measured results, verification and remaining enhancements.
 
-The active model is read from `LLM_MODEL`. Live historical page grounding and filter/navigation controls were verified with the configured OpenRouter model. Daytona execution, browser application acknowledgements, voice and live CRM integrations remain pending; standard charts and evidence tools work without them.
+The active model is read from `LLM_MODEL`. Live historical page grounding and filter/navigation controls were verified with the configured OpenRouter model. **8 October status:** bilingual interruptible LiveKit voice and supported on-demand chat charts are implemented. Sharing is TXT/JSON; CSV/PDF and chart downloads are missing. Daytona execution, browser application acknowledgements and live CRM integrations remain pending. See the [complete code/test audit](docs/challenge-validation.md); deferred voice descriptions below reflect the original plan.
 
 ## 1. What we are building
 
