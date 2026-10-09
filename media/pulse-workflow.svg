@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="650" viewBox="0 0 1400 650" role="img" aria-labelledby="title desc">
+<title id="title">Pulse: from a spoken question to a useful next step</title>
+<desc id="desc">English or German voice and typed chat guide navigation, account preparation, charts, team assignment, follow-ups and email drafts for review.</desc>
+<defs><linearGradient id="orb" x2="1" y2="1"><stop stop-color="#f7a565"/><stop offset="1" stop-color="#c85418"/></linearGradient><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#c85418" stroke-width="1.5"/></marker></defs>
+<rect width="1400" height="650" rx="28" fill="#fcf9f5"/>
+<g font-family="Segoe UI, Arial, sans-serif" fill="#302c29">
+<text x="64" y="65" font-size="16" fill="#c85418" letter-spacing="3">YOUR SALES ASSISTANT</text>
+<text x="64" y="119" font-size="38" font-weight="600">One conversation. A useful next step.</text>
+<text x="64" y="158" font-size="19" fill="#756b62">Ask in English or German. Pulse works through the workspace's existing controls.</text>
+<rect x="64" y="225" width="330" height="210" rx="24" fill="white" stroke="#eee1d6"/>
+<text x="90" y="264" font-size="14" fill="#c85418">VOICE OR TEXT</text>
+<text x="90" y="304" font-size="22" font-weight="600">“Show upcoming</text><text x="90" y="334" font-size="22" font-weight="600">calibration needs.”</text>
+<text x="90" y="384" font-size="16" fill="#756b62">Hold Space to speak;</text><text x="90" y="408" font-size="16" fill="#756b62">release to send.</text>
+<path d="M414 330H486" stroke="#c85418" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="595" cy="315" r="80" fill="url(#orb)"/><circle cx="571" cy="288" r="26" fill="#fff" opacity=".17"/>
+<text x="595" y="323" text-anchor="middle" font-size="32" font-weight="600" fill="white">Pulse</text>
+<text x="595" y="433" text-anchor="middle" font-size="17" fill="#756b62">Grounded in account evidence</text>
+<path d="M696 330H775" stroke="#c85418" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="805" y="220" width="531" height="260" rx="24" fill="white" stroke="#eee1d6"/>
+<text x="837" y="261" font-size="15" fill="#c85418">FROM QUESTION TO ACTION</text>
+<text x="837" y="303" font-size="22" font-weight="600">Find the right account</text><text x="837" y="331" font-size="17" fill="#756b62">Navigate · Filter · Open account details</text>
+<text x="837" y="374" font-size="22" font-weight="600">Prepare the conversation</text><text x="837" y="402" font-size="17" fill="#756b62">Inspect evidence · Generate and enlarge charts</text>
+<text x="837" y="445" font-size="20" font-weight="600">Assign a team · Save a follow-up · Draft an email</text>
+<rect x="64" y="525" width="1272" height="65" rx="18" fill="#faecdf"/>
+<text x="90" y="566" font-size="18">Spoken summaries + visible workspace actions. Email drafts stay available for human review.</text>
+</g></svg>
