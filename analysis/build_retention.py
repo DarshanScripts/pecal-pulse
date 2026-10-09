@@ -1,6 +1,6 @@
 """Build the empirical retention (return) curve sidecar for a snapshot.
 
-Usage: uv run python -m analysis.build_retention --snapshot-id historical-full-20260831-v2
+Usage: uv run python -m analysis.build_retention --snapshot-id private-snapshot
 
 Reads the compact snapshot history with plain JSON (no contract validation;
 shape is checked minimally) and writes retention.json next to the published

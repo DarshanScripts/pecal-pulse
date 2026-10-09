@@ -1,7 +1,7 @@
 """Rank-stability (sensitivity) check for the priority weights.
 
 Usage: PECAL_ANALYTICS_ROOT=data/runtime/analytics-v2 ... actually v3:
-  PECAL_ANALYTICS_ROOT=data/runtime/analytics-v3 uv run python -m analysis.evaluate_priority --snapshot-id historical-full-20260831-v2 --sample 250 --seed 7
+  PECAL_ANALYTICS_ROOT=data/runtime/analytics-v3 uv run python -m analysis.evaluate_priority --snapshot-id private-snapshot --sample 250 --seed 7
 
 Rebuilds account actions for a seeded sample under perturbed weight sets
 (near-default Dirichlet draws plus targeted extremes) and reports Spearman

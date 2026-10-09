@@ -1,6 +1,6 @@
 """Build the Insights summary sidecar for a snapshot.
 
-Usage: uv run python -m analysis.build_insights --snapshot-id historical-full-20260831-v2
+Usage: uv run python -m analysis.build_insights --snapshot-id private-snapshot
 
 Aggregates (plain JSON, no contract validation):
 - due calendar: supported requirements by window-start month, recorded vs

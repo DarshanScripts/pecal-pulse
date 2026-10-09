@@ -1,6 +1,6 @@
 """Evaluate intermittent-demand volume challengers on pipeline windows.
 
-Usage: uv run python -m analysis.evaluate_volume --snapshot-id historical-full-20260831-v2
+Usage: uv run python -m analysis.evaluate_volume --snapshot-id private-snapshot
 
 Reuses the analytics pipeline's chronological train/calibration/validation/
 test customer-origin windows and MAE selection rule, then scores Croston,
